@@ -1,0 +1,53 @@
+name: Deploy React Web to akra-devs.github.io
+
+on:
+  push:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  build-deploy:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout source
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
+          cache: 'npm'
+
+      - name: Install Dependencies
+        run: npm install
+
+      - name: Build React Web (root)
+        run: npm run build -- --base="/"
+
+      - name: Add .nojekyll
+        run: echo "" > dist/.nojekyll
+
+      - name: Checkout akra-devs.github.io
+        uses: actions/checkout@v4
+        with:
+          repository: akra-devs/akra-devs.github.io
+          token: ${{ secrets.PERSONAL_TOKEN }}
+          path: site
+          fetch-depth: 1
+
+      - name: Replace docs contents (keep CNAME)
+        run: |
+          mkdir -p site/docs
+          # Except CNAME, remove everything in docs
+          find site/docs -mindepth 1 ! -name 'CNAME' -exec rm -rf {} +
+          cp -R dist/* site/docs/
+
+      - name: Commit and push
+        run: |
+          cd site
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add docs
+          git commit -m "Deploy from akra-devs/home CI" || echo "No changes to commit"
+          git push origin main
