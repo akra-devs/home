@@ -1,74 +1,20 @@
 import React from 'react';
-import { ArrowUpRight, Lock } from 'lucide-react';
 import { motion } from 'framer-motion';
-
-interface Project {
-  id: number;
-  category: 'Own Service' | 'Partnership';
-  title: string;
-  description: string;
-  tags: string[];
-  imageUrl: string;
-  isPrivate?: boolean;
-}
-
-const projects: Project[] = [
-  {
-    id: 1,
-    category: 'Own Service',
-    title: 'Habitree',
-    description: '글로벌 20만 다운로드를 달성한 습관 형성 플랫폼. 게이미피케이션 요소를 도입하여 사용자 리텐션을 극대화했습니다.',
-    tags: ['Flutter', 'Node.js', 'AWS'],
-    imageUrl: 'https://picsum.photos/800/600?random=1',
-  },
-  {
-    id: 2,
-    category: 'Own Service',
-    title: 'F&B Console',
-    description: '프랜차이즈 운영 효율화를 위한 SaaS 솔루션. 재고 관리부터 발주까지 원스톱으로 처리합니다.',
-    tags: ['React', 'Supabase', 'SaaS'],
-    imageUrl: 'https://picsum.photos/800/600?random=2',
-  },
-  {
-    id: 3,
-    category: 'Partnership',
-    title: 'EduLabs Reform',
-    description: '기존 레거시 교육 플랫폼의 대규모 리뉴얼. MSA 전환을 통해 트래픽 처리 성능을 5배 향상시켰습니다.',
-    tags: ['Next.js', 'NestJS', 'Microservices'],
-    imageUrl: 'https://picsum.photos/800/600?random=3',
-  },
-  {
-    id: 4,
-    category: 'Own Service',
-    title: 'Crypto Signal',
-    description: '실시간 데이터 분석을 통한 암호화폐 트레이딩 보조 도구.',
-    tags: ['Python', 'AI', 'Fintech'],
-    imageUrl: 'https://picsum.photos/800/600?random=4',
-    isPrivate: true,
-  }
-];
-
-const container = {
-  hidden: { opacity: 0 },
-  show: {
-    opacity: 1,
-    transition: {
-      staggerChildren: 0.2
-    }
-  }
-};
-
-const item = {
-  hidden: { opacity: 0, y: 50 },
-  show: { opacity: 1, y: 0, transition: { duration: 0.6 } }
-};
-
 import { AnimatePresence } from 'framer-motion';
 import { useState } from 'react';
 import HoloCard from './HoloCard';
+import { ProjectCategory, projects } from '../data/products';
 
 const Showcase: React.FC = () => {
-  const [filter, setFilter] = useState<'All' | 'Own Service' | 'Partnership'>('All');
+  const categories = Array.from(new Set(projects.map((project) => project.category)));
+  const tabs: { label: string; value: 'All' | ProjectCategory }[] = [
+    { label: 'All', value: 'All' },
+    ...categories.map((category) => ({
+      label: category === 'Own Service' ? 'Own Services' : 'Client Works',
+      value: category,
+    })),
+  ];
+  const [filter, setFilter] = useState<'All' | ProjectCategory>('All');
 
   const filteredProjects = projects.filter(project =>
     filter === 'All' ? true : project.category === filter
@@ -95,14 +41,10 @@ const Showcase: React.FC = () => {
             transition={{ duration: 0.6 }}
             className="flex gap-2 p-1 bg-zinc-900/50 backdrop-blur rounded-full border border-white/5"
           >
-            {[
-              { label: 'All', value: 'All' },
-              { label: 'Own Services', value: 'Own Service' },
-              { label: 'Client Works', value: 'Partnership' }
-            ].map((tab) => (
+            {tabs.map((tab) => (
               <button
                 key={tab.value}
-                onClick={() => setFilter(tab.value as any)}
+                onClick={() => setFilter(tab.value)}
                 className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all ${filter === tab.value
                   ? 'text-black'
                   : 'text-zinc-400 hover:text-white'

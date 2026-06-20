@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X, ChevronRight } from 'lucide-react';
+import { Menu, X } from 'lucide-react';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,16 +14,16 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '#philosophy' },
-    { name: 'Portfolio', href: '#showcase' },
-    { name: 'Services', href: '#services' },
+    { name: 'About', href: '/#philosophy' },
+    { name: 'Portfolio', href: '/#showcase' },
+    { name: 'Services', href: '/#services' },
   ];
 
   return (
     <nav className={`fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 transition-all duration-300 rounded-full border ${scrolled ? 'bg-black/40 backdrop-blur-md border-white/10 py-3 shadow-lg shadow-black/20' : 'bg-transparent border-transparent py-4'}`}>
       <div className="px-6 flex justify-between items-center">
         {/* Logo */}
-        <a href="#" className="flex items-center gap-2">
+        <a href="/" className="flex items-center gap-2">
           <img
             src="/logo-01.png"
             alt="Akra Dev"

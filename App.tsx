@@ -7,19 +7,45 @@ import Showcase from './components/Showcase';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import {
+  QuickTranslatePage,
+  QuickTranslatePrivacyPage,
+  QuickTranslateSupportPage,
+} from './components/QuickTranslatePages';
+
+const normalizePath = (path: string) => {
+  if (path.length > 1 && path.endsWith('/')) {
+    return path.slice(0, -1);
+  }
+
+  return path;
+};
 
 function App() {
+  const path = normalizePath(window.location.pathname);
+  const productRoutes: Record<string, React.ReactNode> = {
+    '/quick-translate': <QuickTranslatePage />,
+    '/quick-translate/privacy': <QuickTranslatePrivacyPage />,
+    '/quick-translate/support': <QuickTranslateSupportPage />,
+  };
+
+  const isProductRoute = path in productRoutes;
+
   return (
     <div className="min-h-screen bg-zinc-950 text-white selection:bg-primary-500 selection:text-white">
       <Navbar />
-      <main>
-        <Hero />
-        <Philosophy />
-        <Showcase />
-        <Services />
-        <Process />
-        <Contact />
-      </main>
+      {isProductRoute ? (
+        <main>{productRoutes[path]}</main>
+      ) : (
+        <main>
+          <Hero />
+          <Philosophy />
+          <Showcase />
+          <Services />
+          <Process />
+          <Contact />
+        </main>
+      )}
       <Footer />
     </div>
   );

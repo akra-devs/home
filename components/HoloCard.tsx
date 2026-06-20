@@ -1,22 +1,13 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion';
 import { ArrowUpRight, Lock } from 'lucide-react';
+import { Project } from '../data/products';
 
 interface HoloCardProps {
-    project: {
-        id: number;
-        category: 'Own Service' | 'Partnership';
-        title: string;
-        description: string;
-        tags: string[];
-        imageUrl: string;
-        isPrivate?: boolean;
-    };
+    project: Project;
 }
 
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
-    const ref = useRef<HTMLDivElement>(null);
-
     // Motion values for mouse position
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -37,10 +28,8 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     // Holographic sheen opacity (visible mostly when moving)
     const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.3, 0, 0.3]);
 
-    const handleMouseMove = (e: React.MouseEvent<HTMLDivElement>) => {
-        if (!ref.current) return;
-
-        const rect = ref.current.getBoundingClientRect();
+    const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+        const rect = e.currentTarget.getBoundingClientRect();
 
         const width = rect.width;
         const height = rect.height;
@@ -61,22 +50,8 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
         y.set(0);
     };
 
-    return (
-        <motion.div
-            ref={ref}
-            style={{
-                transformStyle: "preserve-3d",
-                rotateX,
-                rotateY,
-            }}
-            initial={{ scale: 0.9, opacity: 0 }}
-            animate={{ scale: 1, opacity: 1 }}
-            exit={{ scale: 0.9, opacity: 0 }}
-            layout
-            onMouseMove={handleMouseMove}
-            onMouseLeave={handleMouseLeave}
-            className="relative w-full h-full rounded-2xl cursor-pointer group perspective-1000"
-        >
+    const cardContent = (
+        <>
             {/* Shadow Drop (Static behind to emphasize lift) */}
             <div className="absolute inset-4 bg-black/50 blur-xl rounded-2xl transform translate-z-[-20px] transition-all group-hover:bg-black/80 group-hover:scale-95" />
 
@@ -163,6 +138,41 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <div className="absolute inset-0 rounded-2xl ring-1 ring-inset ring-white/10 group-hover:ring-white/30 transition-all z-40 pointer-events-none" />
 
             </div>
+        </>
+    );
+
+    const commonProps = {
+        style: {
+            transformStyle: "preserve-3d",
+            rotateX,
+            rotateY,
+        },
+        initial: { scale: 0.9, opacity: 0 },
+        animate: { scale: 1, opacity: 1 },
+        exit: { scale: 0.9, opacity: 0 },
+        layout: true,
+        onMouseMove: handleMouseMove,
+        onMouseLeave: handleMouseLeave,
+        className: "relative w-full h-full rounded-2xl cursor-pointer group perspective-1000",
+    };
+
+    if (project.href && !project.isPrivate) {
+        return (
+            <motion.a
+                {...commonProps}
+                href={project.href}
+                aria-label={`${project.title} 상세 페이지로 이동`}
+            >
+                {cardContent}
+            </motion.a>
+        );
+    }
+
+    return (
+        <motion.div
+            {...commonProps}
+        >
+            {cardContent}
         </motion.div>
     );
 };
