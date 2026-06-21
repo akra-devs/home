@@ -23,7 +23,6 @@ export interface Project {
   imageUrl: string;
   href?: string;
   isPrivate?: boolean;
-  isFeatured?: boolean;
   highlightLabel?: string;
   release?: ProjectRelease;
 }
@@ -41,7 +40,6 @@ export const quickTranslateProduct: ReleasedProject = {
   tags: ['Chrome 확장', '번역', 'TypeScript'],
   imageUrl: '/quick-translate/promo-small-440x280.png',
   href: '/quick-translate',
-  isFeatured: true,
   highlightLabel: '최신 대표 제품',
   release: {
     version: '0.1.0',

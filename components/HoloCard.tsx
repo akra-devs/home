@@ -7,10 +7,13 @@ interface HoloCardProps {
     project: Project;
 }
 
+const CARD_FRAME_CLASS_NAME = 'relative w-full h-full min-h-[360px] rounded-2xl group perspective-1000';
+const CARD_IMAGE_CLASS_NAME = 'aspect-[16/10] overflow-hidden bg-zinc-800 relative';
+const CARD_SURFACE_CLASS_NAME = 'relative h-full w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-zinc-500/50 transition-colors';
+
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const isClickable = Boolean(project.href && !project.isPrivate);
     const categoryLabel = project.category === 'Own Service' ? '자체 서비스' : '파트너십';
-    const isFeatured = Boolean(project.isFeatured);
 
     // Motion values for mouse position
     const x = useMotionValue(0);
@@ -22,15 +25,15 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
     // Calculating rotation: Screen Top/Left -> Tilt Back/Right
     // Adjust these limits (e.g., 15deg) for more/less extreme tilt
-    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["5deg", "-5deg"]);
-    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-5deg", "5deg"]);
+    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["15deg", "-15deg"]);
+    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
 
     // Highlight/Glare position (moves opposite to tilt for realism)
     const glareX = useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]);
     const glareY = useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]);
 
     // Holographic sheen opacity (visible mostly when moving)
-    const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.12, 0, 0.12]);
+    const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.3, 0, 0.3]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -57,15 +60,15 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const cardContent = (
         <>
             {/* Shadow Drop (Static behind to emphasize lift) */}
-            <div className="absolute inset-4 bg-black/35 blur-xl rounded-2xl transform translate-z-[-20px] transition-all group-hover:bg-black/50 group-hover:scale-95" />
+            <div className="absolute inset-4 bg-black/50 blur-xl rounded-2xl transform translate-z-[-20px] transition-all group-hover:bg-black/80 group-hover:scale-95" />
 
             <div
-                className={`relative h-full w-full rounded-2xl overflow-hidden border transition-colors ${isFeatured ? 'bg-zinc-900 border-blue-300/35 group-hover:border-blue-200/60' : 'bg-zinc-900/90 border-zinc-800 group-hover:border-zinc-600/60'}`}
+                className={CARD_SURFACE_CLASS_NAME}
                 style={{ transform: "translateZ(0px)" }} // Fix z-fighting
             >
 
                 {/* --- Image Layer --- */}
-                <div className={`${isFeatured ? 'aspect-[16/7]' : 'aspect-[16/10]'} overflow-hidden bg-zinc-800 relative`}>
+                <div className={CARD_IMAGE_CLASS_NAME}>
                     <motion.img
                         src={project.imageUrl}
                         alt={project.title}
@@ -134,7 +137,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                     style={{
                         background: useMotionTemplate`radial-gradient(
                     circle at ${glareX} ${glareY}, 
-                    rgba(255,255,255,0.08) 0%, 
+                    rgba(255,255,255,0.15) 0%, 
                     transparent 60%
                 )`
                     }}
@@ -144,7 +147,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <motion.div
                     className="absolute inset-0 w-full h-full z-30 pointer-events-none mix-blend-color-dodge opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
-                        background: "linear-gradient(115deg, transparent 0%, rgba(96,165,250,0.08) 35%, rgba(255,255,255,0.08) 65%, transparent 100%)",
+                        background: "linear-gradient(115deg, transparent 0%, rgba(0,255,255,0.1) 30%, rgba(255,0,255,0.1) 70%, transparent 100%)",
                         opacity: sheenOpacity,
                     }}
                 />
@@ -168,7 +171,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
         layout: true,
         onMouseMove: handleMouseMove,
         onMouseLeave: handleMouseLeave,
-        className: `relative w-full h-full rounded-2xl group perspective-1000 ${isClickable ? 'cursor-pointer' : 'cursor-default'} ${isFeatured ? 'md:col-span-2 lg:col-span-2 min-h-[420px]' : 'min-h-[360px]'}`,
+        className: `${CARD_FRAME_CLASS_NAME} ${isClickable ? 'cursor-pointer' : 'cursor-default'}`,
     };
 
     if (project.href && !project.isPrivate) {
