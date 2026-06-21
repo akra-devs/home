@@ -1,0 +1,4 @@
+Approved Deep Interview spec: `.gjc/specs/deep-interview-quick-translate-homepage-refinement.md`.
+
+@goal: Implement Quick Translate homepage refinement
+Implement the approved spec without router/CMS/catalog expansion. Preserve current React/Vite app structure. Partially consolidate Quick Translate product metadata into `data/products.ts`; make Quick Translate read as Akra's latest representative Chrome extension in the home showcase; keep the home list to 4-5 clean cards with future paging only as a visual/future affordance; frame ZIP download as a calm temporary CTA before Web Store; keep copy trust-first, natural Korean, and free of AI/agency/translationese wording except necessary product/platform/technical terms; update `/quick-translate`, support/privacy copy, `Showcase`, and `HoloCard` as needed. Verify with focused TypeScript/build checks and browser surface QA before checkpoint.

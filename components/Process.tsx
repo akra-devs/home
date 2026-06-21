@@ -6,26 +6,26 @@ const Process: React.FC = () => {
     const steps = [
         {
             id: "01",
-            title: "Discovery",
-            desc: "비즈니스 목표와 요구사항을 심층 분석합니다.",
+            title: "문제 정리",
+            desc: "무엇을 만들어야 하는지보다 왜 필요한지부터 맞춥니다.",
             icon: <Search size={24} />
         },
         {
             id: "02",
-            title: "Design",
-            desc: "사용자 경험(UX)과 아름다운 인터페이스(UI)를 설계합니다.",
+            title: "흐름 설계",
+            desc: "사용자가 실제로 지나갈 화면과 동선을 먼저 정리합니다.",
             icon: <PenTool size={24} />
         },
         {
             id: "03",
-            title: "Development",
-            desc: "확장 가능한 아키텍처로 견고한 코드를 작성합니다.",
+            title: "개발",
+            desc: "운영을 생각한 구조로 기능을 작게 쪼개 안정적으로 만듭니다.",
             icon: <Code2 size={24} />
         },
         {
             id: "04",
-            title: "Deploy",
-            desc: "철저한 테스트 후 프로덕션 환경에 배포합니다.",
+            title: "출시",
+            desc: "검증한 뒤 배포하고, 이후 개선할 지점까지 남깁니다.",
             icon: <Rocket size={24} />
         }
     ];
@@ -40,8 +40,8 @@ const Process: React.FC = () => {
                     transition={{ duration: 0.8 }}
                     className="text-center mb-24"
                 >
-                    <span className="text-blue-400 font-medium tracking-wider uppercase text-sm mb-4 block">Workflow</span>
-                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">How We Work</h2>
+                    <span className="text-blue-400 font-medium tracking-wider uppercase text-sm mb-4 block">진행 방식</span>
+                    <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">이렇게 만듭니다</h2>
                     <p className="text-zinc-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
                         체계적인 프로세스로 <span className="text-white font-medium">예측 가능한 결과</span>를 만듭니다.<br />
                         불필요한 소통 비용을 줄이고 본질에 집중합니다.

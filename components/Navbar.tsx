@@ -14,9 +14,9 @@ const Navbar: React.FC = () => {
   }, []);
 
   const navLinks = [
-    { name: 'About', href: '/#philosophy' },
-    { name: 'Portfolio', href: '/#showcase' },
-    { name: 'Services', href: '/#services' },
+    { name: '소개', href: '/#philosophy' },
+    { name: '작업', href: '/#showcase' },
+    { name: '서비스', href: '/#services' },
   ];
 
   return (
@@ -46,7 +46,7 @@ const Navbar: React.FC = () => {
             href="mailto:contact@akradev.studio"
             className="group flex items-center gap-2 px-6 py-2 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors"
           >
-            Start Project
+            문의하기
           </a>
         </div>
 
@@ -76,7 +76,7 @@ const Navbar: React.FC = () => {
             href="mailto:contact@akradev.studio"
             className="mt-2 w-full text-center py-3 bg-white text-black rounded-full text-sm font-bold uppercase tracking-wider"
           >
-            Contact Us
+            문의하기
           </a>
         </div>
       )}

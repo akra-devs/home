@@ -1,0 +1,26 @@
+{
+  "run_id": "2026-06-20-0519-f090",
+  "skill": "ralplan",
+  "active": true,
+  "current_phase": "architect",
+  "version": 2,
+  "updated_at": "2026-06-20T05:19:43.795Z",
+  "receipt": {
+    "version": 1,
+    "skill": "ralplan",
+    "owner": "gjc-runtime",
+    "command": "gjc ralplan persist-run-id",
+    "state_path": "/home/akra/dev/home/.gjc/state/skill-active-state.json",
+    "storage_path": "/home/akra/dev/home/.gjc/state/ralplan-state.json",
+    "mutated_at": "2026-06-20T05:19:43.795Z",
+    "fresh_until": "2026-06-20T05:49:43.795Z",
+    "status": "fresh",
+    "mutation_id": "ralplan:2026-06-20T05:19:43.795Z",
+    "content_sha256": {
+      "algorithm": "sha256",
+      "value": "bfe35b42993d7a0aa118f1ac227f4b018e0b3bc3ae0d40ce270353a2f1e46b67",
+      "covered_path": "/home/akra/dev/home/.gjc/state/ralplan-state.json",
+      "computed_at": "2026-06-20T05:19:43.795Z"
+    }
+  }
+}

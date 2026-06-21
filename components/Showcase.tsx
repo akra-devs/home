@@ -8,9 +8,9 @@ import { ProjectCategory, projects } from '../data/products';
 const Showcase: React.FC = () => {
   const categories = Array.from(new Set(projects.map((project) => project.category)));
   const tabs: { label: string; value: 'All' | ProjectCategory }[] = [
-    { label: 'All', value: 'All' },
+    { label: '전체', value: 'All' },
     ...categories.map((category) => ({
-      label: category === 'Own Service' ? 'Own Services' : 'Client Works',
+      label: category === 'Own Service' ? '자체 서비스' : '파트너십',
       value: category,
     })),
   ];
@@ -30,8 +30,8 @@ const Showcase: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
           >
-            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-serif">Selected Works</h2>
-            <p className="text-zinc-400">우리가 만든, 그리고 함께 만든 성과들입니다.</p>
+            <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-serif">제품과 작업</h2>
+            <p className="text-zinc-400">직접 만든 제품을 먼저 보여주고, 공개 가능한 작업만 깔끔하게 모았습니다.</p>
           </motion.div>
 
           <motion.div
@@ -73,6 +73,10 @@ const Showcase: React.FC = () => {
             ))}
           </AnimatePresence>
         </motion.div>
+
+        <p className="mt-8 text-sm text-zinc-500">
+          작업이 더 늘어나면 한 화면에 쌓아 두지 않고 넘겨 보는 방식으로 정리합니다.
+        </p>
       </div>
     </section>
   );

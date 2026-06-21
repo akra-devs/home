@@ -6,23 +6,23 @@ const Services: React.FC = () => {
   const services = [
     {
       icon: <Smartphone size={24} />,
-      title: "Cross-Platform App",
-      desc: "Flutter를 이용한 iOS, Android 동시 개발. 네이티브에 준하는 성능과 빠른 출시 속도를 보장합니다."
+      title: "앱 개발",
+      desc: "Flutter로 iOS와 Android를 함께 만듭니다. 출시 속도와 사용감을 균형 있게 가져갑니다."
     },
     {
       icon: <Monitor size={24} />,
-      title: "Modern Web",
-      desc: "React, Next.js 기반의 고성능 웹 어플리케이션. SEO 최적화부터 복잡한 대시보드까지 구현합니다."
+      title: "웹 서비스",
+      desc: "React와 Next.js 기반으로 빠른 웹앱을 만듭니다. 랜딩 페이지부터 복잡한 대시보드까지 다룹니다."
     },
     {
       icon: <Cloud size={24} />,
-      title: "Cloud Infrastructure",
-      desc: "AWS, Google Cloud 기반의 확장 가능한 서버 아키텍처 설계. 트래픽 급증에도 안정적입니다."
+      title: "클라우드 인프라",
+      desc: "AWS와 Google Cloud 위에서 트래픽 변화에 버티는 서버 구조를 설계합니다."
     },
     {
       icon: <Database size={24} />,
-      title: "MVP & Scale-up",
-      desc: "초기 아이디어 검증을 위한 MVP부터, 대규모 유저를 위한 스케일업까지 단계별 솔루션을 제공합니다."
+      title: "MVP와 스케일업",
+      desc: "아이디어 검증용 MVP부터 운영 중인 서비스 개선까지 단계에 맞춰 함께합니다."
     }
   ];
 
@@ -39,8 +39,8 @@ const Services: React.FC = () => {
           transition={{ duration: 0.8 }}
           className="text-center mb-24"
         >
-          <span className="text-blue-400 font-medium tracking-wider uppercase text-sm mb-4 block">Our Expertise</span>
-          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">Core Technologies</h2>
+          <span className="text-blue-400 font-medium tracking-wider uppercase text-sm mb-4 block">잘하는 일</span>
+          <h2 className="text-4xl md:text-6xl font-serif text-white mb-8">필요한 기술만 정확히</h2>
           <p className="text-zinc-400 max-w-2xl mx-auto text-lg font-light leading-relaxed">
             우리가 가장 <span className="text-white font-medium">잘 쓰고, 잘 아는 기술</span>로만 만듭니다.<br />
             실험적인 선택보다는 검증된 안정성을 최우선으로 합니다.

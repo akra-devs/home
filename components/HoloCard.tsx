@@ -8,6 +8,10 @@ interface HoloCardProps {
 }
 
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
+    const isClickable = Boolean(project.href && !project.isPrivate);
+    const categoryLabel = project.category === 'Own Service' ? '자체 서비스' : '파트너십';
+    const isFeatured = Boolean(project.isFeatured);
+
     // Motion values for mouse position
     const x = useMotionValue(0);
     const y = useMotionValue(0);
@@ -18,15 +22,15 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
     // Calculating rotation: Screen Top/Left -> Tilt Back/Right
     // Adjust these limits (e.g., 15deg) for more/less extreme tilt
-    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["15deg", "-15deg"]);
-    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
+    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["5deg", "-5deg"]);
+    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-5deg", "5deg"]);
 
     // Highlight/Glare position (moves opposite to tilt for realism)
     const glareX = useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]);
     const glareY = useTransform(mouseY, [-0.5, 0.5], ["0%", "100%"]);
 
     // Holographic sheen opacity (visible mostly when moving)
-    const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.3, 0, 0.3]);
+    const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.12, 0, 0.12]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
         const rect = e.currentTarget.getBoundingClientRect();
@@ -53,15 +57,15 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const cardContent = (
         <>
             {/* Shadow Drop (Static behind to emphasize lift) */}
-            <div className="absolute inset-4 bg-black/50 blur-xl rounded-2xl transform translate-z-[-20px] transition-all group-hover:bg-black/80 group-hover:scale-95" />
+            <div className="absolute inset-4 bg-black/35 blur-xl rounded-2xl transform translate-z-[-20px] transition-all group-hover:bg-black/50 group-hover:scale-95" />
 
             <div
-                className="relative h-full w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-zinc-500/50 transition-colors"
+                className={`relative h-full w-full rounded-2xl overflow-hidden border transition-colors ${isFeatured ? 'bg-zinc-900 border-blue-300/35 group-hover:border-blue-200/60' : 'bg-zinc-900/90 border-zinc-800 group-hover:border-zinc-600/60'}`}
                 style={{ transform: "translateZ(0px)" }} // Fix z-fighting
             >
 
                 {/* --- Image Layer --- */}
-                <div className="aspect-[16/10] overflow-hidden bg-zinc-800 relative">
+                <div className={`${isFeatured ? 'aspect-[16/7]' : 'aspect-[16/10]'} overflow-hidden bg-zinc-800 relative`}>
                     <motion.img
                         src={project.imageUrl}
                         alt={project.title}
@@ -74,13 +78,20 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4 z-10">
-                        <span className={`px-3 py-1 rounded-md text-xs font-bold uppercase tracking-wider ${project.category === 'Own Service'
+                        <span className={`px-3 py-1 rounded-md text-xs font-bold tracking-wider ${project.category === 'Own Service'
                                 ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/20'
                                 : 'bg-white text-black'
                             }`}>
-                            {project.category}
+                            {categoryLabel}
                         </span>
                     </div>
+                    {project.highlightLabel && (
+                        <div className="absolute top-4 right-4 z-10">
+                            <span className="px-3 py-1 rounded-md bg-white/90 text-black text-xs font-bold tracking-wider shadow-lg shadow-black/20">
+                                {project.highlightLabel}
+                            </span>
+                        </div>
+                    )}
                 </div>
 
                 {/* --- Content Content --- */}
@@ -91,10 +102,14 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                         </h3>
                         {project.isPrivate ? (
                             <Lock className="text-zinc-500 w-5 h-5" />
-                        ) : (
+                        ) : isClickable ? (
                             <div className="p-2 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-all">
                                 <ArrowUpRight className="w-5 h-5" />
                             </div>
+                        ) : (
+                            <span className="px-3 py-1 rounded-full border border-white/10 bg-black/20 text-[11px] font-semibold text-zinc-400">
+                                샘플
+                            </span>
                         )}
                     </div>
 
@@ -119,7 +134,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                     style={{
                         background: useMotionTemplate`radial-gradient(
                     circle at ${glareX} ${glareY}, 
-                    rgba(255,255,255,0.15) 0%, 
+                    rgba(255,255,255,0.08) 0%, 
                     transparent 60%
                 )`
                     }}
@@ -129,7 +144,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <motion.div
                     className="absolute inset-0 w-full h-full z-30 pointer-events-none mix-blend-color-dodge opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                     style={{
-                        background: "linear-gradient(115deg, transparent 0%, rgba(0,255,255,0.1) 30%, rgba(255,0,255,0.1) 70%, transparent 100%)",
+                        background: "linear-gradient(115deg, transparent 0%, rgba(96,165,250,0.08) 35%, rgba(255,255,255,0.08) 65%, transparent 100%)",
                         opacity: sheenOpacity,
                     }}
                 />
@@ -153,7 +168,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
         layout: true,
         onMouseMove: handleMouseMove,
         onMouseLeave: handleMouseLeave,
-        className: "relative w-full h-full rounded-2xl cursor-pointer group perspective-1000",
+        className: `relative w-full h-full rounded-2xl group perspective-1000 ${isClickable ? 'cursor-pointer' : 'cursor-default'} ${isFeatured ? 'md:col-span-2 lg:col-span-2 min-h-[420px]' : 'min-h-[360px]'}`,
     };
 
     if (project.href && !project.isPrivate) {

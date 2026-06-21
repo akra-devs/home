@@ -55,7 +55,7 @@ const Hero: React.FC = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-xs font-medium text-blue-200 mb-8 shadow-lg shadow-blue-500/10"
         >
           <Zap size={12} className="fill-current text-blue-400" />
-          <span className="tracking-wide uppercase">Builders first, Agency second</span>
+          <span className="tracking-wide uppercase">제품을 직접 운영해 본 개발팀</span>
         </motion.div>
 
         <motion.h1
@@ -64,9 +64,9 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-6xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8 leading-[1.1] text-white drop-shadow-2xl"
         >
-          <span className="block italic opacity-90">Own your</span>
+          <span className="block italic opacity-90">아이디어를</span>
           <span className="block bg-gradient-to-r from-blue-100 via-white to-blue-200 bg-clip-text text-transparent">
-            Digital Future.
+            작동하는 제품으로.
           </span>
         </motion.h1>
 
@@ -76,8 +76,8 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-zinc-300/90 mb-12 leading-relaxed font-light tracking-wide"
         >
-          우리는 단순한 대행사가 아닙니다.<br className="md:hidden" /> 80%의 자체 서비스와 20%의 파트너십.<br />
-          <span className="text-white font-medium">직접 비즈니스를 성공시킨 노하우</span>로 당신의 아이디어를 현실로 만듭니다.
+          우리 일의 대부분은 직접 제품을 만들고 운영하는 데 씁니다.<br />
+          <span className="text-white font-medium">현장에서 검증한 방식</span>으로 필요한 기능부터 단단하게 만듭니다.
         </motion.p>
 
         <motion.div
@@ -90,14 +90,14 @@ const Hero: React.FC = () => {
             href="#showcase"
             className="w-full sm:w-auto px-8 py-4 bg-white text-black font-serif text-lg rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
           >
-            Explore Work
+            작업 보기
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
           <a
             href="#philosophy"
             className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-serif text-lg rounded-full hover:bg-white/20 transition-all"
           >
-            Our Philosophy
+            우리가 일하는 방식
           </a>
         </motion.div>
       </div>
@@ -109,7 +109,7 @@ const Hero: React.FC = () => {
         transition={{ delay: 1, duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
       >
-        <span className="text-xs tracking-widest uppercase mb-2 block text-center">Scroll</span>
+        <span className="text-xs tracking-widest uppercase mb-2 block text-center">아래로</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
           <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
         </svg>

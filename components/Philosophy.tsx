@@ -44,7 +44,7 @@ const Philosophy: React.FC = () => {
               <span className="text-6xl font-black text-white/10 group-hover:text-white/20 transition-colors">80%</span>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4">자체 서비스 개발 (Own Products)</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">자체 서비스 개발</h3>
             <p className="text-zinc-400 leading-relaxed">
               우리는 끊임없이 시장의 문제를 찾고 해결합니다. 
               SaaS, B2C 플랫폼 등 다양한 분야에서 직접 비즈니스를 운영하며, 
@@ -69,7 +69,7 @@ const Philosophy: React.FC = () => {
               <span className="text-6xl font-black text-white/10 group-hover:text-white/20 transition-colors">20%</span>
             </div>
             
-            <h3 className="text-2xl font-bold text-white mb-4">프리미엄 파트너십 (Client Work)</h3>
+            <h3 className="text-2xl font-bold text-white mb-4">꼭 맞는 파트너십</h3>
             <p className="text-zinc-400 leading-relaxed">
               아무 프로젝트나 맡지 않습니다. 우리의 기술력이 비즈니스의 핵심이 되는 프로젝트에만 참여합니다.
               단순 용역이 아닌, '기술 파트너'로서 비즈니스의 성공을 함께 고민합니다.
@@ -86,10 +86,10 @@ const Philosophy: React.FC = () => {
           className="mt-20 grid grid-cols-2 md:grid-cols-4 gap-8 border-t border-zinc-900 pt-10"
         >
           {[
-            { label: 'Launched Products', value: '12+' },
-            { label: 'Client Satisfaction', value: '100%' },
-            { label: 'Tech Stacks', value: 'Modern' },
-            { label: 'Retention Rate', value: '90%' },
+            { label: '출시한 제품', value: '12+' },
+            { label: '재의뢰·소개 비율', value: '높음' },
+            { label: '주요 기술', value: '검증됨' },
+            { label: '운영 관점', value: '필수' },
           ].map((stat, index) => (
             <div key={index} className="text-center md:text-left">
               <div className="text-3xl md:text-4xl font-bold text-white mb-2">{stat.value}</div>
