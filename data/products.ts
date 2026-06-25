@@ -2,8 +2,7 @@ export type ProjectCategory = 'Own Service' | 'Partnership';
 
 export interface ProjectRelease {
   version: string;
-  temporaryDownloadUrl: string;
-  webStoreUrl: string | null;
+  webStoreUrl: string;
   webStoreStatus: string;
   supportUrl: string;
   privacyUrl: string;
@@ -43,9 +42,9 @@ export const quickTranslateProduct: ReleasedProject = {
   highlightLabel: '최신 대표 제품',
   release: {
     version: '0.1.0',
-    temporaryDownloadUrl: '/quick-translate/akra-quick-translate-0.1.0.zip',
-    webStoreUrl: null,
-    webStoreStatus: 'Chrome Web Store 등록 예정',
+    webStoreUrl:
+      'https://chromewebstore.google.com/detail/akra-quick-translate/afacgkpmacdmecpmhbnegiegokdjfafc',
+    webStoreStatus: 'Chrome Web Store 공개',
     supportUrl: '/quick-translate/support',
     privacyUrl: '/quick-translate/privacy',
     contactEmail: 'contact@akradev.studio',

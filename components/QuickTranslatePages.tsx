@@ -5,7 +5,7 @@ import {
   ArrowLeft,
   ArrowRight,
   CheckCircle2,
-  Download,
+  ExternalLink,
   FileText,
   Keyboard,
   Languages,
@@ -20,9 +20,7 @@ import { quickTranslateProduct } from '../data/products';
 
 const product = quickTranslateProduct;
 const release = product.release;
-const webStoreUrl = release.webStoreUrl?.trim() || null;
-const primaryDownloadHref = webStoreUrl ?? release.temporaryDownloadUrl;
-const primaryDownloadText = webStoreUrl ? 'Chrome Web Store에서 설치' : '임시 ZIP 내려받기';
+const webStoreUrl = release.webStoreUrl;
 
 const features = [
   {
@@ -79,11 +77,11 @@ const usageSteps = [
   '한 번 더 실행하면 번역 전 원문으로 돌아갑니다.',
 ];
 
-const temporaryInstallSteps = [
-  'ZIP 파일을 내려받아 압축을 풉니다.',
-  'Chrome 주소창에 chrome://extensions를 입력합니다.',
-  "개발자 모드를 켜고 '압축해제된 확장 프로그램 로드'를 누릅니다.",
-  '압축을 푼 폴더를 선택합니다.',
+const installSteps = [
+  'Chrome Web Store의 Akra Quick Translate 페이지를 엽니다.',
+  '설치 버튼을 눌러 Chrome에 확장을 추가합니다.',
+  '툴바의 확장 프로그램 메뉴에서 Akra Quick Translate를 고정합니다.',
+  '번역할 페이지에서 확장 아이콘, 우클릭 메뉴, 단축키 중 편한 방식으로 실행합니다.',
 ];
 
 const limitations = [
@@ -98,8 +96,8 @@ const faqs = [
     answer: `${release.browserRequirement}이 필요합니다. 다른 Chromium 브라우저는 내장 Translator API 지원 상태에 따라 동작이 달라질 수 있습니다.`,
   },
   {
-    question: 'ZIP 다운로드는 임시인가요?',
-    answer: `${release.webStoreStatus}이라 테스트용 ZIP을 임시로 제공합니다. 등록 후에는 공식 Chrome Web Store 링크로 교체합니다.`,
+    question: '어디에서 설치하나요?',
+    answer: 'Akra Quick Translate는 공식 Chrome Web Store에서 설치할 수 있습니다. 별도 ZIP 다운로드는 제공하지 않습니다.',
   },
   {
     question: '단축키는 바꿀 수 있나요?',
@@ -177,12 +175,13 @@ export const QuickTranslatePage: React.FC = () => {
 
                 <div className="flex flex-col sm:flex-row gap-4">
                   <a
-                    href={primaryDownloadHref}
-                    download={!webStoreUrl}
+                    href={webStoreUrl}
+                    target="_blank"
+                    rel="noreferrer"
                     className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-white text-black rounded-lg font-bold hover:bg-zinc-200 transition-colors"
                   >
-                    <Download size={18} />
-                    {primaryDownloadText}
+                    <ExternalLink size={18} />
+                    Chrome Web Store에서 설치
                   </a>
                   <a
                     href={release.supportUrl}
@@ -194,8 +193,8 @@ export const QuickTranslatePage: React.FC = () => {
                 </div>
 
                 <p className="mt-5 max-w-xl text-sm leading-relaxed text-zinc-500">
-                  {release.webStoreStatus}입니다. 지금은 테스트용 ZIP을 임시로 제공하며,
-                  등록 후 공식 스토어 링크로 교체할 예정입니다.
+                  {release.webStoreStatus} 상태입니다. 설치는 Chrome Web Store에서 진행되며,
+                  별도 ZIP 다운로드는 제공하지 않습니다.
                 </p>
               </motion.div>
 
@@ -317,19 +316,21 @@ export const QuickTranslatePage: React.FC = () => {
           <div className="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-[1fr_auto] lg:items-center gap-8">
             <div>
               <p className="text-sm tracking-wider font-bold text-zinc-500 mb-3">{release.webStoreStatus}</p>
-              <h2 className="text-3xl md:text-5xl font-serif">정식 등록 전 임시로 제공 중입니다.</h2>
+              <h2 className="text-3xl md:text-5xl font-serif">공식 스토어에서 바로 설치합니다.</h2>
               <p className="mt-4 max-w-2xl text-zinc-700 leading-relaxed">
-                ZIP 파일은 테스트 설치를 위한 임시 경로입니다. 공식 스토어 등록 후에는 같은 자리에서
-                Chrome Web Store 설치 링크로 안내합니다.
+                배포 경로를 Chrome Web Store로 통일했습니다. 업데이트와 설치 관리는 Chrome의
+                표준 확장 프로그램 흐름을 따릅니다.
               </p>
             </div>
             <div className="flex flex-col sm:flex-row gap-3">
               <a
-                href={release.supportUrl}
+                href={webStoreUrl}
+                target="_blank"
+                rel="noreferrer"
                 className="inline-flex items-center justify-center gap-2 px-6 py-4 bg-black text-white rounded-lg font-bold hover:bg-zinc-800 transition-colors"
               >
-                설치·지원 확인
-                <ArrowRight size={18} />
+                Web Store에서 설치
+                <ExternalLink size={18} />
               </a>
               <a
                 href={release.privacyUrl}
@@ -423,18 +424,18 @@ export const QuickTranslateSupportPage: React.FC = () => (
     title="지원"
     eyebrow="도움말"
     heading="Akra Quick Translate 지원"
-    description="임시 ZIP 설치, 단축키, 번역 동작에서 막히는 부분이 있으면 아래 내용을 확인하거나 이메일로 알려 주세요."
+    description="Chrome Web Store 설치, 단축키, 번역 동작에서 막히는 부분이 있으면 아래 내용을 확인하거나 이메일로 알려 주세요."
   >
     <section className="rounded-lg border border-white/10 bg-white/[0.03] p-6 mb-8">
       <h2 className="flex items-center gap-2 text-xl font-serif text-white mb-4">
-        <Download size={20} />
-        임시 ZIP 설치
+        <ExternalLink size={20} />
+        Chrome Web Store 설치
       </h2>
       <p className="text-zinc-400 leading-relaxed mb-5">
-        Chrome Web Store 등록 전까지 제공하는 테스트 설치 경로입니다. 정식 등록 후에는 공식 스토어 링크로 안내합니다.
+        Akra Quick Translate는 Chrome Web Store에서 설치합니다. 별도 ZIP 다운로드나 개발자 모드 설치는 제공하지 않습니다.
       </p>
       <ol className="space-y-3">
-        {temporaryInstallSteps.map((step, index) => (
+        {installSteps.map((step, index) => (
           <li key={step} className="flex gap-3 text-zinc-300 leading-relaxed">
             <span className="w-7 h-7 shrink-0 rounded-md bg-white text-black flex items-center justify-center text-xs font-bold">
               {index + 1}
