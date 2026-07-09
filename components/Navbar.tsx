@@ -43,7 +43,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="mailto:contact@akradev.studio"
+            href="mailto:akradev001@gamil.com"
             className="group flex items-center gap-2 px-6 py-2 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors"
           >
             문의하기
@@ -73,7 +73,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="mailto:contact@akradev.studio"
+            href="mailto:akradev001@gamil.com"
             className="mt-2 w-full text-center py-3 bg-white text-black rounded-full text-sm font-bold uppercase tracking-wider"
           >
             문의하기

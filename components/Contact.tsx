@@ -35,7 +35,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div>
                                     <p className="text-xs text-zinc-500 uppercase tracking-wider mb-1">Email Us</p>
-                                    <p className="text-white font-serif text-lg">contact@akradev.studio</p>
+                                    <p className="text-white font-serif text-lg">akradev001@gamil.com</p>
                                 </div>
                             </div>
 
@@ -67,7 +67,7 @@ const Contact: React.FC = () => {
                                 </div>
                                 <div className="space-y-2">
                                     <label className="text-sm text-zinc-400 font-medium">이메일</label>
-                                    <input type="email" className="w-full bg-zinc-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500/50 focus:bg-zinc-900/80 transition-all font-light" placeholder="email@example.com" />
+                                    <input type="email" className="w-full bg-zinc-900/50 border border-white/10 rounded-xl px-4 py-3 text-white focus:outline-none focus:border-blue-500/50 focus:bg-zinc-900/80 transition-all font-light" placeholder="akradev001@gamil.com" />
                                 </div>
                             </div>
 

@@ -47,7 +47,7 @@ export const quickTranslateProduct: ReleasedProject = {
     webStoreStatus: 'Chrome Web Store 공개',
     supportUrl: '/quick-translate/support',
     privacyUrl: '/quick-translate/privacy',
-    contactEmail: 'contact@akradev.studio',
+    contactEmail: 'akradev001@gamil.com',
     browserRequirement: 'Chrome 138 이상',
     shortcutLabel: 'Alt+T',
     macShortcutLabel: 'Option+T',
