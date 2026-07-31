@@ -25,6 +25,11 @@ jobs:
       - name: Build React Web (root)
         run: npm run build -- --base="/"
 
+      - name: Verify app-ads declaration
+        run: |
+          test -s dist/app-ads.txt
+          grep -Fxq 'google.com, pub-4496960310554471, DIRECT, f08c47fec0942fa0' dist/app-ads.txt
+
       - name: Add .nojekyll
         run: echo "" > dist/.nojekyll
 
