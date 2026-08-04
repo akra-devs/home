@@ -1,0 +1,188 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-08-05T06:16:06+09:00",
+  "title": "Design System: Akra Dev",
+  "extensions": {
+    "colorMeta": {
+      "midnight-canvas": {
+        "role": "neutral",
+        "displayName": "Midnight Canvas",
+        "canonical": "#09090b",
+        "tonalRamp": ["#09090b", "#18181b", "#27272a", "#3f3f46", "#52525b", "#71717a", "#a1a1aa", "#f4f4f5"]
+      },
+      "primary-blue": {
+        "role": "primary",
+        "displayName": "Product Blue",
+        "canonical": "#3b82f6",
+        "tonalRamp": ["#172554", "#1e3a8a", "#1e40af", "#1d4ed8", "#2563eb", "#3b82f6", "#93c5fd", "#dbeafe"]
+      },
+      "waxball-violet": {
+        "role": "accent",
+        "displayName": "Waxball Violet",
+        "canonical": "#6d5dff",
+        "tonalRamp": ["#1d1749", "#332879", "#4d3db2", "#6d5dff", "#9a8eff", "#c9c2ff", "#efedff"]
+      },
+      "waxball-cyan": {
+        "role": "accent",
+        "displayName": "Waxball Cyan",
+        "canonical": "#75d9ff",
+        "tonalRamp": ["#0d3446", "#155671", "#287fa4", "#49afd9", "#75d9ff", "#b9edff", "#effbff"]
+      },
+      "waxball-lilac": {
+        "role": "accent",
+        "displayName": "Waxball Lilac",
+        "canonical": "#d9d1ff",
+        "tonalRamp": ["#2e2948", "#514976", "#7b70aa", "#aaa0dc", "#d9d1ff", "#ece8ff", "#faf9ff"]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Editorial Display",
+        "purpose": "Single dominant page declaration and major section turns"
+      },
+      "productDisplay": {
+        "displayName": "Waxball Wordmark",
+        "purpose": "Oversized WAXBALL first-viewport declaration"
+      },
+      "body": {
+        "displayName": "Korean Product Body",
+        "purpose": "Korean explanation, evidence labels, and product controls"
+      }
+    },
+    "shadows": [
+      {
+        "name": "ambient-product",
+        "value": "0 24px 80px rgba(0, 0, 0, 0.34)",
+        "purpose": "Primary product media separation"
+      },
+      {
+        "name": "focus-glow",
+        "value": "0 0 0 3px rgba(147, 197, 253, 0.42)",
+        "purpose": "Keyboard focus visibility"
+      }
+    ],
+    "motion": [
+      {
+        "name": "state",
+        "value": "180ms ease-out",
+        "purpose": "Hover, focus, and control state"
+      },
+      {
+        "name": "reveal",
+        "value": "600ms cubic-bezier(0.22, 1, 0.36, 1)",
+        "purpose": "Editorial content entry"
+      },
+      {
+        "name": "continuous-input",
+        "value": "transform-only",
+        "purpose": "Range, fracture rail, and pointer-reactive motion"
+      }
+    ],
+    "breakpoints": [
+      { "name": "compact", "value": "680px" },
+      { "name": "hero-collapse", "value": "900px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "content-max", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Highest-priority movement into the real product experience",
+      "html": "<a class=\"ds-btn-primary\" href=\"https://waxball.akra.kr/\">지금 플레이</a>",
+      "css": ".ds-btn-primary { display:inline-flex; min-height:48px; align-items:center; justify-content:center; gap:8px; padding:16px 32px; border-radius:9999px; background:#fff; color:#09090b; font:700 16px Pretendard,sans-serif; text-decoration:none; transition:transform 180ms ease-out, background 180ms ease-out; } .ds-btn-primary:hover { background:#e4e4e7; transform:translateY(-2px); } .ds-btn-primary:focus-visible { outline:3px solid rgba(147,197,253,.72); outline-offset:3px; }"
+    },
+    {
+      "name": "Product Card",
+      "kind": "card",
+      "refersTo": "product-card",
+      "description": "A real-product-led portfolio card with restrained interactive depth",
+      "html": "<article class=\"ds-product-card\"><div class=\"ds-card-media\"></div><h3>WAXBALL</h3><p>누르고, 깨뜨리고, 발견하세요.</p></article>",
+      "css": ".ds-product-card { overflow:hidden; border:1px solid rgba(255,255,255,.1); border-radius:16px; background:#18181b; color:#fff; font-family:Pretendard,sans-serif; } .ds-card-media { aspect-ratio:16/10; background:linear-gradient(135deg,#27272a,#6d5dff); } .ds-product-card h3,.ds-product-card p { margin-inline:24px; } .ds-product-card:focus-within { box-shadow:0 0 0 3px rgba(147,197,253,.42); }"
+    },
+    {
+      "name": "Floating Navigation",
+      "kind": "nav",
+      "description": "Persistent Akra navigation shared by home and product worlds",
+      "html": "<nav class=\"ds-nav\"><a href=\"/\">AKRA</a><a href=\"/#showcase\">제품과 작업</a></nav>",
+      "css": ".ds-nav { display:flex; min-height:56px; align-items:center; justify-content:space-between; gap:24px; padding:0 24px; border:1px solid rgba(255,255,255,.1); border-radius:9999px; background:rgba(9,9,11,.72); backdrop-filter:blur(12px); } .ds-nav a { color:#fff; text-decoration:none; font:600 14px Pretendard,sans-serif; } .ds-nav a:focus-visible { outline:3px solid rgba(147,197,253,.72); outline-offset:4px; }"
+    },
+    {
+      "name": "Waxball Split Comparison",
+      "kind": "media-control",
+      "refersTo": "split-comparison",
+      "description": "Accessible range-controlled comparison between real intact and cutaway renders",
+      "html": "<figure class=\"ds-split\"><img src=\"/waxball/hero-stage0.webp\" alt=\"온전한 왁스볼\"><div class=\"ds-split-cutaway\"><img src=\"/waxball/hero-cutaway.webp\" alt=\"코어가 드러난 왁스볼\"></div><input type=\"range\" min=\"0\" max=\"100\" aria-label=\"표면과 코어 비교\"></figure>",
+      "css": ".ds-split { position:relative; overflow:hidden; aspect-ratio:1; border-radius:50%; background:#101017; } .ds-split img { width:100%; height:100%; object-fit:cover; } .ds-split-cutaway { position:absolute; inset:0; clip-path:inset(0 0 0 52%); } .ds-split input { position:absolute; inset:0; width:100%; opacity:.01; cursor:ew-resize; }"
+    },
+    {
+      "name": "Fracture Stage Rail",
+      "kind": "segmented-control",
+      "description": "Three semantic shortcuts for Surface, Fracture, and Core",
+      "html": "<div class=\"ds-stage\" role=\"group\" aria-label=\"파손 단계 빠른 선택\"><button aria-pressed=\"true\">Surface</button><button aria-pressed=\"false\">Fracture</button><button aria-pressed=\"false\">Core</button></div>",
+      "css": ".ds-stage { display:grid; grid-template-columns:repeat(3,1fr); gap:12px; } .ds-stage button { min-height:44px; border:0; border-bottom:1px solid rgba(255,255,255,.18); background:transparent; color:#aaa8b7; font:700 12px Pretendard,sans-serif; } .ds-stage button[aria-pressed=true] { color:#f8f7ff; border-color:#d9d1ff; }"
+    },
+    {
+      "name": "Material Selector",
+      "kind": "selection-list",
+      "refersTo": "material-selector",
+      "description": "Data-driven Waxball material choices using real selection art and pressed semantics",
+      "html": "<button class=\"ds-material\" aria-pressed=\"true\"><img src=\"/waxball/material-chocolat.webp\" alt=\"\"><span>쇼콜라</span></button>",
+      "css": ".ds-material { display:grid; min-width:96px; min-height:112px; place-items:center; gap:8px; border:1px solid transparent; border-radius:16px; background:transparent; color:#aaa8b7; } .ds-material img { width:72px; aspect-ratio:1; object-fit:cover; border-radius:50%; } .ds-material[aria-pressed=true] { border-color:rgba(217,209,255,.6); color:#f8f7ff; transform:translateY(-4px); }"
+    },
+    {
+      "name": "Evidence Media",
+      "kind": "media",
+      "description": "Real screenshot or controlled walkthrough media with reserved dimensions",
+      "html": "<video class=\"ds-evidence\" controls preload=\"metadata\" poster=\"/waxball/feature-nebula.webp\"><source src=\"/waxball/waxball-play-preview-ko.mp4\" type=\"video/mp4\"></video>",
+      "css": ".ds-evidence { display:block; width:100%; max-height:760px; border:1px solid rgba(255,255,255,.12); border-radius:32px; background:#111; object-fit:contain; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Midnight Product Gallery",
+    "overview": "A nearly black exhibition space where authentic product media carries the story. Individual products may add a restrained light palette while preserving the shared Akra shell.",
+    "keyCharacteristics": [
+      "Real product media first",
+      "One editorial declaration per viewport",
+      "Restrained product-specific illumination",
+      "Flat-at-rest surfaces with explicit interaction states",
+      "Evidence-backed claims and real destinations"
+    ],
+    "rules": [
+      {
+        "name": "The Product Light Rule",
+        "body": "Product-specific color may illuminate media and key controls but does not replace global navigation or body hierarchy.",
+        "section": "color"
+      },
+      {
+        "name": "The One Declaration Rule",
+        "body": "Each viewport gets one dominant editorial declaration.",
+        "section": "typography"
+      },
+      {
+        "name": "The Flat-at-Rest Rule",
+        "body": "Depth increases only on focus, hover, scroll entry, or primary product media.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Evidence Rule",
+        "body": "Generated references may guide composition, but public product claims use actual captures, renders, and video.",
+        "section": "media"
+      }
+    ],
+    "dos": [
+      "Use real product media at the largest meaningful size.",
+      "Connect claims to visible evidence.",
+      "Keep Korean copy concise and test a clear mobile reading order.",
+      "Use transform-only motion for continuous input and honor reduced motion."
+    ],
+    "donts": [
+      "Do not invent store ratings, usage counts, or product behavior.",
+      "Do not substitute generated mockups for real product evidence.",
+      "Do not repeat eyebrow labels above every section.",
+      "Do not cover the interface in glow borders or require hover for comprehension."
+    ]
+  }
+}

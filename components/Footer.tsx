@@ -1,29 +1,42 @@
 import React from 'react';
-import { Github, Twitter, Linkedin, Mail } from 'lucide-react';
+import { Github, Mail } from 'lucide-react';
 
 const Footer: React.FC = () => {
+  const products = [
+    { label: 'WAXBALL', href: '/waxball' },
+    { label: 'Quick Translate', href: '/quick-translate' },
+  ];
+
+  const companyLinks = [
+    { label: '소개', href: '/#philosophy' },
+    { label: '제품과 작업', href: '/#showcase' },
+    { label: '서비스', href: '/#services' },
+    { label: '문의', href: 'mailto:akradev001@gmail.com' },
+  ];
+
   return (
     <footer className="bg-zinc-950 border-t border-zinc-900 py-16">
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
-          <div className="col-span-1 md:col-span-1">
-            <div className="flex items-center gap-2 mb-6">
-              {/* Logo - Increased size and removed opacity for clarity */}
+          <div className="col-span-1 md:col-span-2">
+            <a href="/" className="inline-flex items-center gap-2 mb-6" aria-label="Akra Dev 홈">
               <img src="/logo-01.png" alt="Akra Dev" className="h-10 w-auto" />
-            </div>
-            <p className="text-zinc-500 font-serif italic text-lg leading-relaxed">
-              Copyright © {new Date().getFullYear()} Akra Dev Studio.<br />
-              All rights reserved.
+            </a>
+            <p className="max-w-md text-zinc-500 text-sm leading-relaxed">
+              직접 만든 제품을 먼저 보여주고, 설계부터 출시까지 끝까지 책임지는 제품 개발팀입니다.
+            </p>
+            <p className="mt-5 text-zinc-600 text-xs">
+              Copyright © {new Date().getFullYear()} Akra Dev Studio. All rights reserved.
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Services</h4>
+            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Products</h4>
             <ul className="space-y-4">
-              {['Web Development', 'Mobile Apps', 'SaaS Solutions', 'Blockchain'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
-                    {item}
+              {products.map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
+                    {item.label}
                   </a>
                 </li>
               ))}
@@ -33,44 +46,43 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Company</h4>
             <ul className="space-y-4">
-              {['About Us', 'Portfolio', 'Careers', 'Contact'].map((item) => (
-                <li key={item}>
-                  <a href="#" className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
-                    {item}
+              {companyLinks.map((item) => (
+                <li key={item.label}>
+                  <a href={item.href} className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
+                    {item.label}
                   </a>
                 </li>
               ))}
             </ul>
           </div>
-
-          <div>
-            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Connect</h4>
-            <div className="flex gap-4 mb-6">
-              {[Github, Twitter, Linkedin, Mail].map((Icon, i) => (
-                <a
-                  key={i}
-                  href="#"
-                  className="w-10 h-10 rounded-full bg-zinc-900 flex items-center justify-center text-zinc-400 hover:bg-white hover:text-black transition-all"
-                >
-                  <Icon size={18} />
-                </a>
-              ))}
-            </div>
-            <a
-              href="mailto:akradev001@gamil.com"
-              className="text-zinc-400 hover:text-white transition-colors font-serif italic"
-            >
-              akradev001@gamil.com
-            </a>
-          </div>
         </div>
 
-        <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-zinc-600">
-          <div className="flex gap-6">
-            <a href="#" className="hover:text-zinc-400 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-zinc-400 transition-colors">Terms of Service</a>
+        <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-xs text-zinc-600">
+          <div className="flex flex-wrap gap-5">
+            <a href="https://waxball.akra.kr/privacy/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">Waxball 개인정보처리방침</a>
+            <a href="https://waxball.akra.kr/terms/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">Waxball 이용약관</a>
           </div>
-          <p>Designed & Built by Akra Dev Team</p>
+          <div className="flex items-center gap-3">
+            <a
+              href="https://github.com/akra-devs"
+              target="_blank"
+              rel="noreferrer"
+              aria-label="Akra Dev GitHub"
+              className="grid w-11 h-11 place-items-center rounded-full bg-zinc-900 text-zinc-400 hover:bg-white hover:text-black transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <Github size={18} />
+            </a>
+            <a
+              href="mailto:akradev001@gmail.com"
+              aria-label="Akra Dev 이메일"
+              className="grid w-11 h-11 place-items-center rounded-full bg-zinc-900 text-zinc-400 hover:bg-white hover:text-black transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+            >
+              <Mail size={18} />
+            </a>
+            <a href="mailto:akradev001@gmail.com" className="ml-1 text-zinc-400 hover:text-white transition-colors">
+              akradev001@gmail.com
+            </a>
+          </div>
         </div>
       </div>
     </footer>

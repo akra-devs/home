@@ -31,7 +31,7 @@ const Showcase: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h2 className="text-3xl md:text-5xl font-bold text-white mb-4 font-serif">제품과 작업</h2>
-            <p className="text-zinc-400">직접 만든 제품을 먼저 보여주고, 공개 가능한 작업만 깔끔하게 모았습니다.</p>
+            <p className="text-zinc-400">직접 설계하고 운영하는 제품을 가장 먼저, 실제 화면과 함께 보여드립니다.</p>
           </motion.div>
 
           <motion.div
@@ -40,11 +40,14 @@ const Showcase: React.FC = () => {
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
             className="flex gap-2 p-1 bg-zinc-900/50 backdrop-blur rounded-full border border-white/5"
+            role="group"
+            aria-label="제품 분류"
           >
             {tabs.map((tab) => (
               <button
                 key={tab.value}
                 onClick={() => setFilter(tab.value)}
+                aria-pressed={filter === tab.value}
                 className={`relative px-4 py-2 rounded-full text-sm font-medium transition-all ${filter === tab.value
                   ? 'text-black'
                   : 'text-zinc-400 hover:text-white'
