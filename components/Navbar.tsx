@@ -15,7 +15,8 @@ const Navbar: React.FC = () => {
 
   const navLinks = [
     { name: '소개', href: '/#philosophy' },
-    { name: '작업', href: '/#showcase' },
+    { name: '제품', href: '/#showcase' },
+    { name: 'WAXBALL', href: '/waxball' },
     { name: '서비스', href: '/#services' },
   ];
 
@@ -43,7 +44,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="mailto:akradev001@gamil.com"
+            href="mailto:akradev001@gmail.com"
             className="group flex items-center gap-2 px-6 py-2 bg-white text-black rounded-full text-xs font-bold uppercase tracking-wider hover:bg-zinc-200 transition-colors"
           >
             문의하기
@@ -52,8 +53,11 @@ const Navbar: React.FC = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden text-white"
+          className="md:hidden grid min-w-11 min-h-11 place-items-center rounded-full text-white hover:bg-white/10 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
           onClick={() => setIsOpen(!isOpen)}
+          aria-label={isOpen ? '메뉴 닫기' : '메뉴 열기'}
+          aria-expanded={isOpen}
+          aria-controls="mobile-navigation"
         >
           {isOpen ? <X /> : <Menu />}
         </button>
@@ -61,7 +65,7 @@ const Navbar: React.FC = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="absolute top-full left-0 mt-4 w-full bg-zinc-900/90 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:hidden flex flex-col gap-4 shadow-2xl overflow-hidden">
+        <div id="mobile-navigation" className="absolute top-full left-0 mt-4 w-full bg-zinc-900/95 backdrop-blur-xl border border-white/10 rounded-2xl p-6 md:hidden flex flex-col gap-4 shadow-2xl overflow-hidden">
           {navLinks.map((link) => (
             <a
               key={link.name}
@@ -73,7 +77,7 @@ const Navbar: React.FC = () => {
             </a>
           ))}
           <a
-            href="mailto:akradev001@gamil.com"
+            href="mailto:akradev001@gmail.com"
             className="mt-2 w-full text-center py-3 bg-white text-black rounded-full text-sm font-bold uppercase tracking-wider"
           >
             문의하기

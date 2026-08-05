@@ -22,6 +22,7 @@ export interface Project {
   imageUrl: string;
   href?: string;
   isPrivate?: boolean;
+  isFeatured?: boolean;
   highlightLabel?: string;
   release?: ProjectRelease;
 }
@@ -39,7 +40,7 @@ export const quickTranslateProduct: ReleasedProject = {
   tags: ['Chrome 확장', '번역', 'TypeScript'],
   imageUrl: '/quick-translate/promo-small-440x280.png',
   href: '/quick-translate',
-  highlightLabel: '최신 대표 제품',
+  highlightLabel: 'Chrome 확장',
   release: {
     version: '0.1.0',
     webStoreUrl:
@@ -47,7 +48,7 @@ export const quickTranslateProduct: ReleasedProject = {
     webStoreStatus: 'Chrome Web Store 공개',
     supportUrl: '/quick-translate/support',
     privacyUrl: '/quick-translate/privacy',
-    contactEmail: 'akradev001@gamil.com',
+    contactEmail: 'akradev001@gmail.com',
     browserRequirement: 'Chrome 138 이상',
     shortcutLabel: 'Alt+T',
     macShortcutLabel: 'Option+T',
@@ -55,7 +56,21 @@ export const quickTranslateProduct: ReleasedProject = {
   },
 };
 
+export const waxballProduct: Project = {
+  id: 'waxball',
+  category: 'Own Service',
+  title: 'WAXBALL',
+  description:
+    '단단한 왁스의 단계별 균열과 내부 말랑이의 변형을 한 터치 안에서 함께 즐기는 3D 감각 게임입니다.',
+  tags: ['Flutter', 'Realtime 3D', 'Sensory Game'],
+  imageUrl: '/waxball/feature-tactile.webp',
+  href: '/waxball',
+  isFeatured: true,
+  highlightLabel: '대표 제품',
+};
+
 export const projects: Project[] = [
+  waxballProduct,
   quickTranslateProduct,
   {
     id: 'habitree',

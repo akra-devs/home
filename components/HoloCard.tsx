@@ -1,5 +1,5 @@
 import React from 'react';
-import { motion, useMotionTemplate, useMotionValue, useSpring, useTransform } from 'framer-motion';
+import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
 import { ArrowUpRight, Lock } from 'lucide-react';
 import { Project } from '../data/products';
 
@@ -7,13 +7,13 @@ interface HoloCardProps {
     project: Project;
 }
 
-const CARD_FRAME_CLASS_NAME = 'relative w-full h-full min-h-[360px] rounded-2xl group perspective-1000';
-const CARD_IMAGE_CLASS_NAME = 'aspect-[16/10] overflow-hidden bg-zinc-800 relative';
 const CARD_SURFACE_CLASS_NAME = 'relative h-full w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-zinc-500/50 transition-colors';
 
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const isClickable = Boolean(project.href && !project.isPrivate);
+    const isFeatured = Boolean(project.isFeatured);
     const categoryLabel = project.category === 'Own Service' ? '자체 서비스' : '파트너십';
+    const prefersReducedMotion = useReducedMotion();
 
     // Motion values for mouse position
     const x = useMotionValue(0);
@@ -25,8 +25,8 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
     // Calculating rotation: Screen Top/Left -> Tilt Back/Right
     // Adjust these limits (e.g., 15deg) for more/less extreme tilt
-    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["15deg", "-15deg"]);
-    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-15deg", "15deg"]);
+    const rotateX = useTransform(mouseY, [-0.5, 0.5], ["6deg", "-6deg"]);
+    const rotateY = useTransform(mouseX, [-0.5, 0.5], ["-6deg", "6deg"]);
 
     // Highlight/Glare position (moves opposite to tilt for realism)
     const glareX = useTransform(mouseX, [-0.5, 0.5], ["0%", "100%"]);
@@ -36,6 +36,8 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const sheenOpacity = useTransform(mouseX, [-0.5, 0, 0.5], [0.3, 0, 0.3]);
 
     const handleMouseMove = (e: React.MouseEvent<HTMLElement>) => {
+        if (prefersReducedMotion || !window.matchMedia('(pointer: fine)').matches) return;
+
         const rect = e.currentTarget.getBoundingClientRect();
 
         const width = rect.width;
@@ -68,16 +70,17 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
             >
 
                 {/* --- Image Layer --- */}
-                <div className={CARD_IMAGE_CLASS_NAME}>
+                <div className={isFeatured ? 'absolute inset-0 overflow-hidden bg-zinc-800' : 'aspect-[16/10] overflow-hidden bg-zinc-800 relative'}>
                     <motion.img
                         src={project.imageUrl}
                         alt={project.title}
                         className="w-full h-full object-cover"
+                        loading={isFeatured ? 'eager' : 'lazy'}
                         style={{
                             scale: 1.1, // Zoom in slightly to avoid gaps on tilt
                         }}
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-zinc-900 via-transparent to-transparent opacity-90"></div>
+                    <div className={`absolute inset-0 bg-gradient-to-t from-zinc-950 via-zinc-950/20 to-transparent ${isFeatured ? 'opacity-95' : 'opacity-90'}`}></div>
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4 z-10">
@@ -98,7 +101,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 </div>
 
                 {/* --- Content Content --- */}
-                <div className="absolute bottom-0 left-0 w-full p-8 z-20 transform translate-z-[20px]">
+                <div className={`absolute bottom-0 left-0 w-full z-20 transform translate-z-[20px] ${isFeatured ? 'p-7 md:p-10' : 'p-8'}`}>
                     <div className="flex justify-between items-start mb-2">
                         <h3 className="text-2xl font-bold text-white group-hover:text-primary-300 transition-colors font-serif">
                             {project.title}
@@ -116,7 +119,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                         )}
                     </div>
 
-                    <p className="text-zinc-400 text-sm mb-6 line-clamp-2 leading-relaxed">
+                    <p className={`text-zinc-300 text-sm mb-6 leading-relaxed ${isFeatured ? 'max-w-2xl md:text-base' : 'line-clamp-2'}`}>
                         {project.description}
                     </p>
 
@@ -171,7 +174,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
         layout: true,
         onMouseMove: handleMouseMove,
         onMouseLeave: handleMouseLeave,
-        className: `${CARD_FRAME_CLASS_NAME} ${isClickable ? 'cursor-pointer' : 'cursor-default'}`,
+        className: `relative w-full h-full rounded-2xl group perspective-1000 ${isFeatured ? 'min-h-[440px] md:col-span-2' : 'min-h-[360px]'} ${isClickable ? 'cursor-pointer' : 'cursor-default'}`,
     };
 
     if (project.href && !project.isPrivate) {
