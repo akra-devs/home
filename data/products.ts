@@ -73,9 +73,24 @@ export const waxballProduct: Project = {
   highlightLabelKey: 'products.waxball.highlight',
 };
 
+export const whyShutdownProduct: Project = {
+  id: 'akra-whyshutdown',
+  category: 'ownService',
+  titleKey: 'products.whyShutdown.title',
+  descriptionKey: 'products.whyShutdown.description',
+  tagKeys: [
+    'products.whyShutdown.tagWindows',
+    'products.whyShutdown.tagHardware',
+    'products.whyShutdown.tagDiagnostics',
+  ],
+  imageUrl: '/whyshutdown/whyshutdown.png',
+  href: '/akra-shutdown-checker-pages/',
+};
+
 export const projects: Project[] = [
   waxballProduct,
   quickTranslateProduct,
+  whyShutdownProduct,
   {
     id: 'habitree',
     category: 'ownService',
