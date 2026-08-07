@@ -11,7 +11,7 @@ const Footer: React.FC = () => {
     { label: '소개', href: '/#philosophy' },
     { label: '제품과 작업', href: '/#showcase' },
     { label: '서비스', href: '/#services' },
-    { label: '문의', href: 'mailto:akradev001@gmail.com' },
+    { label: '문의', href: 'mailto:help@akra.kr' },
   ];
 
   return (
@@ -73,14 +73,14 @@ const Footer: React.FC = () => {
               <Github size={18} />
             </a>
             <a
-              href="mailto:akradev001@gmail.com"
+              href="mailto:help@akra.kr"
               aria-label="Akra Dev 이메일"
               className="grid w-11 h-11 place-items-center rounded-full bg-zinc-900 text-zinc-400 hover:bg-white hover:text-black transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <Mail size={18} />
             </a>
-            <a href="mailto:akradev001@gmail.com" className="ml-1 text-zinc-400 hover:text-white transition-colors">
-              akradev001@gmail.com
+            <a href="mailto:help@akra.kr" className="ml-1 text-zinc-400 hover:text-white transition-colors">
+              help@akra.kr
             </a>
           </div>
         </div>
