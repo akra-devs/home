@@ -25,11 +25,32 @@ interface TranslationContextValue {
 
 const TranslationContext = createContext<TranslationContextValue | null>(null);
 
+const isLocale = (value: string | null): value is Locale =>
+  localeOptions.some((option) => option.code === value);
+
+export const resolveBrowserLocale = (browserLanguages: readonly string[]): Locale => {
+  for (const browserLanguage of browserLanguages) {
+    const languageCode = browserLanguage.toLowerCase().split('-')[0];
+    if (isLocale(languageCode)) return languageCode;
+  }
+
+  return 'ko';
+};
+
+export const resolveInitialLocale = (
+  savedLocale: string | null,
+  browserLanguages: readonly string[],
+): Locale => (isLocale(savedLocale) ? savedLocale : resolveBrowserLocale(browserLanguages));
+
 const getInitialLocale = (): Locale => {
   if (typeof window === 'undefined') return 'ko';
 
   const saved = window.localStorage.getItem(LOCALE_STORAGE_KEY);
-  return localeOptions.some((option) => option.code === saved) ? (saved as Locale) : 'ko';
+  const browserLanguages = navigator.languages?.length
+    ? navigator.languages
+    : [navigator.language];
+
+  return resolveInitialLocale(saved, browserLanguages);
 };
 
 export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) => {

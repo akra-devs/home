@@ -9,6 +9,7 @@ const server = await createServer({
 
 try {
   const { messages, locales, translate, validateTranslationCatalogs } = await server.ssrLoadModule('/i18n/messages.ts');
+  const { resolveInitialLocale } = await server.ssrLoadModule('/i18n/index.tsx');
 
   validateTranslationCatalogs();
 
@@ -50,6 +51,19 @@ try {
     const term = messages.ko[key];
     if (!locales.every((locale) => messages[locale][key] === term)) {
       throw new Error(`Technical term must remain in English across locales: ${key}.`);
+    }
+  }
+
+  const browserLocaleCases = [
+    { saved: null, languages: ['en-US', 'ko-KR'], expected: 'en' },
+    { saved: null, languages: ['ja-JP', 'en-US'], expected: 'ja' },
+    { saved: null, languages: ['zh-Hant', 'en-US'], expected: 'zh' },
+    { saved: null, languages: ['fr-FR', 'de-DE'], expected: 'ko' },
+    { saved: 'en', languages: ['ko-KR'], expected: 'en' },
+  ];
+  for (const { saved, languages, expected } of browserLocaleCases) {
+    if (resolveInitialLocale(saved, languages) !== expected) {
+      throw new Error(`Browser locale resolution failed for ${languages.join(', ')}.`);
     }
   }
 
