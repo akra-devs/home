@@ -138,7 +138,7 @@ const entries = {
   'products.quickTranslate.tagExtension': ['Chrome 확장', 'Chrome Extension', 'Chrome 拡張機能', 'Chrome 扩展程序'],
   'products.quickTranslate.tagTranslation': ['번역', 'Translation', '翻訳', '翻译'],
   'products.quickTranslate.highlight': ['Chrome 확장', 'Chrome Extension', 'Chrome 拡張機能', 'Chrome 扩展程序'],
-  'products.whyShutdown.title': ['AKRA WhyShutdown?', 'AKRA WhyShutdown?', 'AKRA WhyShutdown?', 'AKRA WhyShutdown?'],
+  'products.whyShutdown.title': ['AKRA WhyShutdown? for Windows', 'AKRA WhyShutdown? for Windows', 'AKRA WhyShutdown? for Windows', 'AKRA WhyShutdown? for Windows'],
   'products.whyShutdown.description': ['예기치 않은 PC 종료 직전의 센서와 이벤트 기록을 보존해, 재부팅 후 원인 점검에 필요한 근거를 모으는 Windows 진단 도구입니다.', 'A Windows diagnostic tool that preserves sensor and event records from just before an unexpected PC shutdown, so you can investigate the cause after rebooting.', '予期しない PC 終了の直前にあるセンサーとイベントの記録を保持し、再起動後の原因確認に必要な情報を集める Windows 診断ツールです。', '一款 Windows 诊断工具，会保留 PC 意外关机前的传感器和事件记录，帮助你在重启后排查原因。'],
   'products.whyShutdown.tagWindows': ['Windows', 'Windows', 'Windows', 'Windows'],
   'products.whyShutdown.tagHardware': ['하드웨어 기록', 'Hardware logs', 'ハードウェア記録', '硬件记录'],
