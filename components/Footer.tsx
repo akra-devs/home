@@ -57,10 +57,10 @@ const Footer: React.FC = () => {
               ))}
             </div>
             <a
-              href="mailto:akradev001@gamil.com"
+              href="mailto:help@akra.kr"
               className="text-zinc-400 hover:text-white transition-colors font-serif italic"
             >
-              akradev001@gamil.com
+              help@akra.kr
             </a>
           </div>
         </div>
