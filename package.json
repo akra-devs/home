@@ -5,6 +5,8 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "check:i18n": "node scripts/check-i18n.mjs",
+    "typecheck": "tsc --noEmit",
     "build": "vite build",
     "postbuild": "node scripts/create-static-routes.mjs",
     "preview": "vite preview"

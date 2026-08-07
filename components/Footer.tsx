@@ -1,17 +1,18 @@
 import React from 'react';
 import { Github, Mail } from 'lucide-react';
+import { useTranslation } from '../i18n';
 
 const Footer: React.FC = () => {
+  const { t } = useTranslation();
   const products = [
-    { label: 'WAXBALL', href: '/waxball' },
-    { label: 'Quick Translate', href: '/quick-translate' },
+    { label: t('products.waxball.title'), href: '/waxball' },
+    { label: t('products.quickTranslate.title'), href: '/quick-translate' },
   ];
-
   const companyLinks = [
-    { label: '소개', href: '/#philosophy' },
-    { label: '제품과 작업', href: '/#showcase' },
-    { label: '서비스', href: '/#services' },
-    { label: '문의', href: 'mailto:help@akra.kr' },
+    { label: t('nav.about'), href: '/#philosophy' },
+    { label: t('footer.productsAndWork'), href: '/#showcase' },
+    { label: t('nav.services'), href: '/#services' },
+    { label: t('nav.contact'), href: 'mailto:help@akra.kr' },
   ];
 
   return (
@@ -19,22 +20,20 @@ const Footer: React.FC = () => {
       <div className="max-w-7xl mx-auto px-6">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
-            <a href="/" className="inline-flex items-center gap-2 mb-6" aria-label="Akra Dev 홈">
+            <a href="/" className="inline-flex items-center gap-2 mb-6" aria-label={t('footer.homeAria')}>
               <img src="/logo-01.png" alt="Akra Dev" className="h-10 w-auto" />
             </a>
-            <p className="max-w-md text-zinc-500 text-sm leading-relaxed">
-              직접 만든 제품을 먼저 보여주고, 설계부터 출시까지 끝까지 책임지는 제품 개발팀입니다.
-            </p>
+            <p className="max-w-md text-zinc-500 text-sm leading-relaxed">{t('footer.description')}</p>
             <p className="mt-5 text-zinc-600 text-xs">
-              Copyright © {new Date().getFullYear()} Akra Dev Studio. All rights reserved.
+              {t('footer.copyright', { year: new Date().getFullYear() })}
             </p>
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Products</h4>
+            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">{t('footer.productsHeading')}</h4>
             <ul className="space-y-4">
               {products.map((item) => (
-                <li key={item.label}>
+                <li key={item.href}>
                   <a href={item.href} className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
                     {item.label}
                   </a>
@@ -44,10 +43,10 @@ const Footer: React.FC = () => {
           </div>
 
           <div>
-            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">Company</h4>
+            <h4 className="text-white font-bold mb-6 font-serif tracking-wide">{t('footer.companyHeading')}</h4>
             <ul className="space-y-4">
               {companyLinks.map((item) => (
-                <li key={item.label}>
+                <li key={item.href}>
                   <a href={item.href} className="text-zinc-500 hover:text-white transition-colors text-sm hover:underline decoration-zinc-700 underline-offset-4">
                     {item.label}
                   </a>
@@ -59,22 +58,22 @@ const Footer: React.FC = () => {
 
         <div className="border-t border-zinc-900 pt-8 flex flex-col md:flex-row justify-between items-start md:items-center gap-6 text-xs text-zinc-600">
           <div className="flex flex-wrap gap-5">
-            <a href="https://waxball.akra.kr/privacy/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">Waxball 개인정보처리방침</a>
-            <a href="https://waxball.akra.kr/terms/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">Waxball 이용약관</a>
+            <a href="https://waxball.akra.kr/privacy/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">{t('footer.waxballPrivacy')}</a>
+            <a href="https://waxball.akra.kr/terms/" target="_blank" rel="noreferrer" className="hover:text-zinc-300 transition-colors">{t('footer.waxballTerms')}</a>
           </div>
           <div className="flex items-center gap-3">
             <a
               href="https://github.com/akra-devs"
               target="_blank"
               rel="noreferrer"
-              aria-label="Akra Dev GitHub"
+              aria-label={t('footer.githubAria')}
               className="grid w-11 h-11 place-items-center rounded-full bg-zinc-900 text-zinc-400 hover:bg-white hover:text-black transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <Github size={18} />
             </a>
             <a
               href="mailto:help@akra.kr"
-              aria-label="Akra Dev 이메일"
+              aria-label={t('footer.emailAria')}
               className="grid w-11 h-11 place-items-center rounded-full bg-zinc-900 text-zinc-400 hover:bg-white hover:text-black transition-all focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
             >
               <Mail size={18} />

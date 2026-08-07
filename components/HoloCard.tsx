@@ -2,6 +2,7 @@ import React from 'react';
 import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
 import { ArrowUpRight, Lock } from 'lucide-react';
 import { Project } from '../data/products';
+import { useTranslation } from '../i18n';
 
 interface HoloCardProps {
     project: Project;
@@ -10,9 +11,11 @@ interface HoloCardProps {
 const CARD_SURFACE_CLASS_NAME = 'relative h-full w-full bg-zinc-900 rounded-2xl overflow-hidden border border-zinc-800 group-hover:border-zinc-500/50 transition-colors';
 
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
+    const { t } = useTranslation();
     const isClickable = Boolean(project.href && !project.isPrivate);
     const isFeatured = Boolean(project.isFeatured);
-    const categoryLabel = project.category === 'Own Service' ? '자체 서비스' : '파트너십';
+    const categoryLabel = project.category === 'ownService' ? t('category.ownService') : t('category.partnership');
+    const title = t(project.titleKey);
     const prefersReducedMotion = useReducedMotion();
 
     // Motion values for mouse position
@@ -73,7 +76,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <div className={isFeatured ? 'absolute inset-0 overflow-hidden bg-zinc-800' : 'aspect-[16/10] overflow-hidden bg-zinc-800 relative'}>
                     <motion.img
                         src={project.imageUrl}
-                        alt={project.title}
+                        alt={title}
                         className="w-full h-full object-cover"
                         loading={isFeatured ? 'eager' : 'lazy'}
                         style={{
@@ -84,17 +87,17 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4 z-10">
-                        <span className={`px-3 py-1 rounded-md text-xs font-bold tracking-wider ${project.category === 'Own Service'
+                        <span className={`px-3 py-1 rounded-md text-xs font-bold tracking-wider ${project.category === 'ownService'
                                 ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/20'
                                 : 'bg-white text-black'
                             }`}>
                             {categoryLabel}
                         </span>
                     </div>
-                    {project.highlightLabel && (
+                        {project.highlightLabelKey && (
                         <div className="absolute top-4 right-4 z-10">
                             <span className="px-3 py-1 rounded-md bg-white/90 text-black text-xs font-bold tracking-wider shadow-lg shadow-black/20">
-                                {project.highlightLabel}
+                                {t(project.highlightLabelKey)}
                             </span>
                         </div>
                     )}
@@ -104,7 +107,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <div className={`absolute bottom-0 left-0 w-full z-20 transform translate-z-[20px] ${isFeatured ? 'p-7 md:p-10' : 'p-8'}`}>
                     <div className="flex justify-between items-start mb-2">
                         <h3 className="text-2xl font-bold text-white group-hover:text-primary-300 transition-colors font-serif">
-                            {project.title}
+                            {title}
                         </h3>
                         {project.isPrivate ? (
                             <Lock className="text-zinc-500 w-5 h-5" />
@@ -114,19 +117,19 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                             </div>
                         ) : (
                             <span className="px-3 py-1 rounded-full border border-white/10 bg-black/20 text-[11px] font-semibold text-zinc-400">
-                                샘플
+                                {t('card.sample')}
                             </span>
                         )}
                     </div>
 
                     <p className={`text-zinc-300 text-sm mb-6 leading-relaxed ${isFeatured ? 'max-w-2xl md:text-base' : 'line-clamp-2'}`}>
-                        {project.description}
+                        {t(project.descriptionKey)}
                     </p>
 
                     <div className="flex flex-wrap gap-2">
-                        {project.tags.map((tag) => (
-                            <span key={tag} className="text-xs font-medium text-zinc-500 bg-black/30 px-2 py-1 rounded border border-white/5">
-                                {tag}
+                        {project.tagKeys.map((tagKey) => (
+                            <span key={tagKey} className="text-xs font-medium text-zinc-500 bg-black/30 px-2 py-1 rounded border border-white/5">
+                                {t(tagKey)}
                             </span>
                         ))}
                     </div>
@@ -182,7 +185,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
             <motion.a
                 {...commonProps}
                 href={project.href}
-                aria-label={`${project.title} 상세 페이지로 이동`}
+                aria-label={t('card.detailAria', { title })}
             >
                 {cardContent}
             </motion.a>

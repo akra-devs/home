@@ -1,33 +1,30 @@
 import React from 'react';
 import { ArrowRight, Zap } from 'lucide-react';
 import { motion } from 'framer-motion';
+import { useTranslation } from '../i18n';
 
 const Hero: React.FC = () => {
+  const { t } = useTranslation();
+
   return (
     <section className="relative min-h-screen flex items-center justify-center pt-20 overflow-hidden">
-      {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
-        <img
-          src="/hero-bg.png"
-          alt="Atmospheric Background"
-          className="w-full h-full object-cover"
-        />
-        <div className="absolute inset-0 bg-black/40 mix-blend-multiply"></div>
-        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30"></div>
+        <img src="/hero-bg.png" alt={t('hero.backgroundAlt')} className="w-full h-full object-cover" />
+        <div className="absolute inset-0 bg-black/40 mix-blend-multiply" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-black/30" />
       </div>
 
-      {/* Floating Mockups */}
       <motion.div
         initial={{ opacity: 0, y: 100, rotate: -10 }}
         animate={{ opacity: 1, y: 0, rotate: -5 }}
-        transition={{ duration: 1.2, delay: 0.2, type: "spring" }}
+        transition={{ duration: 1.2, delay: 0.2, type: 'spring' }}
         className="absolute left-[5%] top-[20%] w-[300px] md:w-[400px] z-0 hidden lg:block pointer-events-none"
       >
         <motion.img
           animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 6, repeat: Infinity, ease: "easeInOut" }}
+          transition={{ duration: 6, repeat: Infinity, ease: 'easeInOut' }}
           src="/mockup-phone.png"
-          alt="App Interface"
+          alt={t('hero.phoneAlt')}
           className="w-full h-auto drop-shadow-2xl opacity-80"
         />
       </motion.div>
@@ -35,14 +32,14 @@ const Hero: React.FC = () => {
       <motion.div
         initial={{ opacity: 0, y: 100, rotate: 10 }}
         animate={{ opacity: 1, y: 0, rotate: 5 }}
-        transition={{ duration: 1.2, delay: 0.4, type: "spring" }}
+        transition={{ duration: 1.2, delay: 0.4, type: 'spring' }}
         className="absolute right-[5%] bottom-[20%] w-[250px] md:w-[350px] z-0 hidden lg:block pointer-events-none"
       >
         <motion.img
           animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 5, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+          transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut', delay: 1 }}
           src="/mockup-dashboard.png"
-          alt="Dashboard Widget"
+          alt={t('hero.dashboardAlt')}
           className="w-full h-auto drop-shadow-2xl opacity-80"
         />
       </motion.div>
@@ -55,7 +52,7 @@ const Hero: React.FC = () => {
           className="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 backdrop-blur-md border border-white/10 text-xs font-medium text-blue-200 mb-8 shadow-lg shadow-blue-500/10"
         >
           <Zap size={12} className="fill-current text-blue-400" />
-          <span className="tracking-wide uppercase">제품을 직접 운영해 본 개발팀</span>
+          <span className="tracking-wide uppercase">{t('hero.eyebrow')}</span>
         </motion.div>
 
         <motion.h1
@@ -64,9 +61,9 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="font-serif text-6xl md:text-8xl lg:text-9xl font-medium tracking-tight mb-8 leading-[1.1] text-white drop-shadow-2xl"
         >
-          <span className="block italic opacity-90">아이디어를</span>
+          <span className="block italic opacity-90">{t('hero.titleLead')}</span>
           <span className="block bg-gradient-to-r from-blue-100 via-white to-blue-200 bg-clip-text text-transparent">
-            작동하는 제품으로.
+            {t('hero.titleEnd')}
           </span>
         </motion.h1>
 
@@ -76,8 +73,8 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.4 }}
           className="max-w-2xl mx-auto text-lg md:text-xl text-zinc-300/90 mb-12 leading-relaxed font-light tracking-wide"
         >
-          우리 일의 대부분은 직접 제품을 만들고 운영하는 데 씁니다.<br />
-          <span className="text-white font-medium">현장에서 검증한 방식</span>으로 필요한 기능부터 단단하게 만듭니다.
+          {t('hero.descriptionBefore')}<br />
+          <span className="text-white font-medium">{t('hero.descriptionHighlight')}</span>{t('hero.descriptionAfter')}
         </motion.p>
 
         <motion.div
@@ -86,30 +83,23 @@ const Hero: React.FC = () => {
           transition={{ duration: 0.8, delay: 0.6 }}
           className="flex flex-col sm:flex-row items-center justify-center gap-6"
         >
-          <a
-            href="#showcase"
-            className="w-full sm:w-auto px-8 py-4 bg-white text-black font-serif text-lg rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]"
-          >
-            작업 보기
+          <a href="#showcase" className="w-full sm:w-auto px-8 py-4 bg-white text-black font-serif text-lg rounded-full hover:bg-zinc-200 transition-all flex items-center justify-center gap-2 group shadow-[0_0_20px_rgba(255,255,255,0.3)] hover:shadow-[0_0_30px_rgba(255,255,255,0.4)]">
+            {t('hero.showWork')}
             <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
-          <a
-            href="#philosophy"
-            className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-serif text-lg rounded-full hover:bg-white/20 transition-all"
-          >
-            우리가 일하는 방식
+          <a href="#philosophy" className="w-full sm:w-auto px-8 py-4 bg-white/10 backdrop-blur-md border border-white/20 text-white font-serif text-lg rounded-full hover:bg-white/20 transition-all">
+            {t('hero.ourApproach')}
           </a>
         </motion.div>
       </div>
 
-      {/* Scroll Indicator */}
       <motion.div
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, y: [0, 10, 0] }}
         transition={{ delay: 1, duration: 2, repeat: Infinity }}
         className="absolute bottom-10 left-1/2 -translate-x-1/2 text-white/50"
       >
-        <span className="text-xs tracking-widest uppercase mb-2 block text-center">아래로</span>
+        <span className="text-xs tracking-widest uppercase mb-2 block text-center">{t('hero.scroll')}</span>
         <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round" className="mx-auto">
           <path d="M7 13l5 5 5-5M7 6l5 5 5-5" />
         </svg>

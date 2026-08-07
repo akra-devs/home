@@ -13,6 +13,7 @@ import {
   QuickTranslateSupportPage,
 } from './components/QuickTranslatePages';
 import WaxballPage from './components/WaxballPage';
+import { setPageMetadata, useTranslation } from './i18n';
 
 const normalizePath = (path: string) => {
   if (path.length > 1 && path.endsWith('/')) {
@@ -23,6 +24,7 @@ const normalizePath = (path: string) => {
 };
 
 function App() {
+  const { t } = useTranslation();
   const path = normalizePath(window.location.pathname);
   const productRoutes: Record<string, React.ReactNode> = {
     '/waxball': <WaxballPage />,
@@ -32,6 +34,12 @@ function App() {
   };
 
   const isProductRoute = path in productRoutes;
+
+  useEffect(() => {
+    if (!isProductRoute) {
+      setPageMetadata(t('seo.home.title'), t('seo.home.description'));
+    }
+  }, [isProductRoute, t]);
 
   useEffect(() => {
     if (!window.location.hash) return;
