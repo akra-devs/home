@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion, useMotionTemplate, useMotionValue, useReducedMotion, useSpring, useTransform } from 'framer-motion';
 import { ArrowUpRight, Lock } from 'lucide-react';
-import { Project } from '../data/products';
+import { Project, ProjectCategory, ProjectLifecycle } from '../data/products';
 import { useTranslation } from '../i18n';
 
 interface HoloCardProps {
@@ -12,10 +12,12 @@ const CARD_SURFACE_CLASS_NAME = 'relative h-full w-full bg-zinc-900 rounded-2xl 
 
 const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
     const { t } = useTranslation();
-    const isClickable = Boolean(project.href && !project.isPrivate);
+    const isPrivate = project.lifecycle === ProjectLifecycle.Private;
+    const isClickable = Boolean(project.href && !isPrivate);
     const isFeatured = Boolean(project.isFeatured);
-    const categoryLabel = project.category === 'ownService' ? t('category.ownService') : t('category.partnership');
+    const categoryLabel = project.category === ProjectCategory.OwnService ? t('category.ownService') : t('category.partnership');
     const title = t(project.titleKey);
+    const imageAlt = t(project.imageAltKey ?? project.titleKey);
     const prefersReducedMotion = useReducedMotion();
 
     // Motion values for mouse position
@@ -76,7 +78,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                 <div className={isFeatured ? 'absolute inset-0 overflow-hidden bg-zinc-800' : 'aspect-[16/10] overflow-hidden bg-zinc-800 relative'}>
                     <motion.img
                         src={project.imageUrl}
-                        alt={title}
+                        alt={imageAlt}
                         className="w-full h-full object-cover"
                         loading={isFeatured ? 'eager' : 'lazy'}
                         style={{
@@ -87,7 +89,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
 
                     {/* Category Badge */}
                     <div className="absolute top-4 left-4 z-10">
-                        <span className={`px-3 py-1 rounded-md text-xs font-bold tracking-wider ${project.category === 'ownService'
+                        <span className={`px-3 py-1 rounded-md text-xs font-bold tracking-wider ${project.category === ProjectCategory.OwnService
                                 ? 'bg-primary-500 text-white shadow-lg shadow-primary-500/20'
                                 : 'bg-white text-black'
                             }`}>
@@ -109,7 +111,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
                         <h3 className="text-2xl font-bold text-white group-hover:text-primary-300 transition-colors font-serif">
                             {title}
                         </h3>
-                        {project.isPrivate ? (
+                        {isPrivate ? (
                             <Lock className="text-zinc-500 w-5 h-5" />
                         ) : isClickable ? (
                             <div className="p-2 bg-white/10 rounded-full backdrop-blur-sm group-hover:bg-white group-hover:text-black transition-all">
@@ -180,7 +182,7 @@ const HoloCard: React.FC<HoloCardProps> = ({ project }) => {
         className: `relative w-full h-full rounded-2xl group perspective-1000 ${isFeatured ? 'min-h-[440px] md:col-span-2' : 'min-h-[360px]'} ${isClickable ? 'cursor-pointer' : 'cursor-default'}`,
     };
 
-    if (project.href && !project.isPrivate) {
+    if (project.href && !isPrivate) {
         return (
             <motion.a
                 {...commonProps}

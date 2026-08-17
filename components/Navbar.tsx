@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from '../i18n';
 import BrandMark from './BrandMark';
+import { navigationProducts } from '../data/products';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -19,7 +20,7 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { name: t('nav.about'), href: '/#philosophy' },
     { name: t('nav.products'), href: '/#showcase' },
-    { name: 'WAXBALL', href: '/waxball' },
+    ...navigationProducts.map((product) => ({ name: t(product.titleKey), href: product.href })),
     { name: t('nav.services'), href: '/#services' },
   ];
 

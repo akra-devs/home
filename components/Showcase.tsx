@@ -1,21 +1,21 @@
 import React, { useState } from 'react';
 import { AnimatePresence, motion } from 'framer-motion';
 import HoloCard from './HoloCard';
-import { ProjectCategory, projects } from '../data/products';
+import { ProjectCategory, showcaseProjects } from '../data/products';
 import { useTranslation } from '../i18n';
 
 const Showcase: React.FC = () => {
   const { t } = useTranslation();
-  const categories = Array.from(new Set(projects.map((project) => project.category)));
+  const categories = Array.from(new Set(showcaseProjects.map((project) => project.category)));
   const tabs: { label: string; value: 'all' | ProjectCategory }[] = [
     { label: t('showcase.all'), value: 'all' },
     ...categories.map((category) => ({
-      label: category === 'ownService' ? t('category.ownService') : t('category.partnership'),
+      label: category === ProjectCategory.OwnService ? t('category.ownService') : t('category.partnership'),
       value: category,
     })),
   ];
   const [filter, setFilter] = useState<'all' | ProjectCategory>('all');
-  const filteredProjects = projects.filter((project) => filter === 'all' || project.category === filter);
+  const filteredProjects = showcaseProjects.filter((project) => filter === 'all' || project.category === filter);
 
   return (
     <section id="showcase" className="py-24 bg-zinc-950 perspective-2000">

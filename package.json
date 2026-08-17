@@ -7,9 +7,10 @@
     "dev": "vite",
     "generate:brand": "node scripts/generate-brand-assets.mjs",
     "check:brand": "node scripts/generate-brand-assets.mjs --check",
+    "check:products": "node scripts/check-products.mjs",
     "check:i18n": "node scripts/check-i18n.mjs",
     "typecheck": "tsc --noEmit",
-    "prebuild": "npm run check:brand",
+    "prebuild": "npm run check:brand && npm run check:products",
     "build": "vite build",
     "postbuild": "node scripts/create-static-routes.mjs && node scripts/check-built-brand-assets.mjs",
     "preview": "vite preview"

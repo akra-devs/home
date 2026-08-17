@@ -2,13 +2,14 @@ import React from 'react';
 import { Github, Mail } from 'lucide-react';
 import { useTranslation } from '../i18n';
 import BrandMark from './BrandMark';
+import { footerProducts } from '../data/products';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
-  const products = [
-    { label: t('products.waxball.title'), href: '/waxball' },
-    { label: t('products.quickTranslate.title'), href: '/quick-translate' },
-  ];
+  const products = footerProducts.map((product) => ({
+    label: t(product.titleKey),
+    href: product.href,
+  }));
   const companyLinks = [
     { label: t('nav.about'), href: '/#philosophy' },
     { label: t('footer.productsAndWork'), href: '/#showcase' },
