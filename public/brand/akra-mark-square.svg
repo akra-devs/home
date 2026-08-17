@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 768 768" fill="none" focusable="false" aria-hidden="true">
+  <g transform="translate(0 48)">
+
+  <path id="akra-left" d="M36 633 368 38 523 311C383 363 335 416 277 468L381 465 233 633Z" fill="#3B82F6"/>
+  <path id="akra-forward" d="M733 275C601 323 491 371 432 418L543 633H701L607 462Z" fill="#3B82F6"/>
+  <path id="akra-fold" d="m733 275-157 133 31 54Z" fill="#75D9FF"/>
+  </g>
+</svg>

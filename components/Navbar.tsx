@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Menu, X } from 'lucide-react';
 import { useTranslation } from '../i18n';
+import BrandMark from './BrandMark';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -46,12 +47,12 @@ const Navbar: React.FC = () => {
   return (
     <nav className={`fixed top-6 left-1/2 -translate-x-1/2 w-[90%] max-w-5xl z-50 transition-all duration-300 rounded-full border ${scrolled ? 'bg-black/40 backdrop-blur-md border-white/10 py-3 shadow-lg shadow-black/20' : 'bg-transparent border-transparent py-4'}`}>
       <div className="px-6 flex justify-between items-center">
-        <a href="/" className="flex items-center gap-2" aria-label="Akra Dev">
-          <img
-            src="/logo-01.png"
-            alt="Akra Dev"
-            className="h-8 md:h-9 w-auto object-contain"
-          />
+        <a
+          href="/"
+          className="grid min-h-11 min-w-11 shrink-0 place-items-center rounded-xl focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
+          aria-label="Akra Dev"
+        >
+          <BrandMark className="h-10 w-auto md:h-11" />
         </a>
 
         <div className="hidden md:flex items-center gap-4 lg:gap-8">

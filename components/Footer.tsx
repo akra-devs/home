@@ -1,6 +1,7 @@
 import React from 'react';
 import { Github, Mail } from 'lucide-react';
 import { useTranslation } from '../i18n';
+import BrandMark from './BrandMark';
 
 const Footer: React.FC = () => {
   const { t } = useTranslation();
@@ -21,7 +22,7 @@ const Footer: React.FC = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-16">
           <div className="col-span-1 md:col-span-2">
             <a href="/" className="inline-flex items-center gap-2 mb-6" aria-label={t('footer.homeAria')}>
-              <img src="/logo-01.png" alt="Akra Dev" className="h-10 w-auto" />
+              <BrandMark className="h-12 w-auto" />
             </a>
             <p className="max-w-md text-zinc-500 text-sm leading-relaxed">{t('footer.description')}</p>
             <p className="mt-5 text-zinc-600 text-xs">

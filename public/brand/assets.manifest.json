@@ -1,0 +1,142 @@
+{
+  "schemaVersion": 1,
+  "deliveryProfile": "runtime-strict",
+  "generatorRevision": "forward-cut-a@1",
+  "reference": {
+    "path": "assets/brand-concepts/akra-dev-icon-01-forward-cut-a.png",
+    "sha256": "558d4c0f7fd6213cd1a36d9266adf8efb24314d8c4ba805225ead307a0cb12bb"
+  },
+  "palette": {
+    "primaryBlue": "#3B82F6",
+    "lightFacet": "#75D9FF",
+    "midnight": "#09090B"
+  },
+  "budgets": {
+    "maxSvgBytes": 2048,
+    "maxRuntimePngBytes": 512000,
+    "maxDecodedBytes": 1048576
+  },
+  "assets": [
+    {
+      "assetId": "akra-mark-header",
+      "materialId": "akra-primary",
+      "sizeId": "scalable-tight",
+      "path": "brand/akra-mark.svg",
+      "sha256": "f21bc90f41b6614eb6ac5e8a67b1ac92aeacc3b86b1d8e29f3eba3a8052db8d1",
+      "byteSize": 436,
+      "viewBox": "0 0 768 672",
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "components/BrandMark.tsx -> Navbar",
+        "components/BrandMark.tsx -> Footer"
+      ]
+    },
+    {
+      "assetId": "akra-mark-square",
+      "materialId": "akra-primary",
+      "sizeId": "scalable-square",
+      "path": "brand/akra-mark-square.svg",
+      "sha256": "48871335bfd511c6536a0d132360314a03ff61f2c3876d093811c17a09c12a03",
+      "byteSize": 477,
+      "viewBox": "0 0 768 768",
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html svg favicon"
+      ]
+    },
+    {
+      "assetId": "akra-mark-16",
+      "materialId": "akra-primary",
+      "sizeId": "16x16",
+      "path": "brand/akra-mark-16.png",
+      "sha256": "377d6d81bb8261c09dc638b788e418095feb969039ed8e7116a0786d30062ab1",
+      "byteSize": 402,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html 16x16 favicon"
+      ]
+    },
+    {
+      "assetId": "akra-mark-32",
+      "materialId": "akra-primary",
+      "sizeId": "32x32",
+      "path": "brand/akra-mark-32.png",
+      "sha256": "b7bfe47d80c6a3a62a988bbecd21a5fb9db7774114529bea3c8b7f421127810a",
+      "byteSize": 757,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html 32x32 favicon"
+      ]
+    },
+    {
+      "assetId": "akra-mark-48",
+      "materialId": "akra-primary",
+      "sizeId": "48x48",
+      "path": "brand/akra-mark-48.png",
+      "sha256": "9083c783b00b34eb37513c93b3cea58cd59626add9a3162d4d3591676b66f3b6",
+      "byteSize": 1058,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html 48x48 favicon"
+      ]
+    },
+    {
+      "assetId": "akra-mark-192",
+      "materialId": "akra-primary",
+      "sizeId": "192x192",
+      "path": "brand/akra-mark-192.png",
+      "sha256": "766295947012ecc5fcb778622aa0964a300f874f2fe9d2e8b7f30f452af8d784",
+      "byteSize": 4204,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html 192x192 favicon"
+      ]
+    },
+    {
+      "assetId": "akra-mark-512",
+      "materialId": "akra-primary",
+      "sizeId": "512x512",
+      "path": "brand/akra-mark-512.png",
+      "sha256": "ed21f275c6c31074a40fb337c63c80fe2ff8b52722dbfbdd05e1cbd0379f77ac",
+      "byteSize": 13226,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html 512x512 favicon"
+      ]
+    },
+    {
+      "assetId": "akra-apple-touch-180",
+      "materialId": "akra-midnight-tile",
+      "sizeId": "180x180",
+      "path": "brand/apple-touch-icon-180.png",
+      "sha256": "9136e1e0be9ddbb2bfe1d7700fb0d432db6c9d75316e27479a9ff3fc03b68fdc",
+      "byteSize": 3704,
+      "viewBox": null,
+      "supportedStates": [
+        "default"
+      ],
+      "consumers": [
+        "index.html apple-touch-icon"
+      ]
+    }
+  ]
+}
