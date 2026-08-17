@@ -120,7 +120,7 @@ export const projectCatalog = {
       'products.hookers.tagLocalFirst',
       'products.hookers.tagContextMap',
     ],
-    imageUrl: '/akra-hookers/context-map-banner.webp',
+    imageUrl: '/product-cards/akra-hookers-context-map.webp',
     imageAltKey: 'products.hookers.imageAlt',
     href: '/akra-hookers/',
     highlightLabelKey: 'products.hookers.highlight',
