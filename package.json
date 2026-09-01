@@ -13,7 +13,8 @@
     "prebuild": "npm run check:brand && npm run check:products",
     "build": "vite build",
     "postbuild": "node scripts/create-static-routes.mjs && node scripts/check-built-brand-assets.mjs",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "doctor": "react-doctor"
   },
   "dependencies": {
     "framer-motion": "^12.0.0",
@@ -26,6 +27,9 @@
     "@vitejs/plugin-react": "^5.0.0",
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",
+    "react-doctor": "^0.9.12",
+    "react-grab": "^0.2.0",
+    "react-scan": "^0.5.7",
     "sharp": "0.35.3",
     "tailwindcss": "^3.4.17",
     "typescript": "~5.8.2",

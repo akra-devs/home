@@ -1,4 +1,4 @@
-import { access } from 'node:fs/promises';
+import { access, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
 import { createServer } from 'vite';
 
@@ -52,6 +52,17 @@ try {
 
   for (const project of [...footerProducts, ...navigationProducts]) {
     if (!project.href) throw new Error(`${project.id} is linked from navigation without an href.`);
+  }
+
+  const waxballPage = await readFile(
+    join(process.cwd(), 'components', 'WaxballPage.tsx'),
+    'utf8',
+  );
+  if (!waxballPage.includes('https://play.google.com/store/apps/details?id=kr.akra.waxball')) {
+    throw new Error('Waxball marketing page must link to the published Android app.');
+  }
+  if (!waxballPage.includes('https://waxball.akra.kr/')) {
+    throw new Error('Waxball marketing page must preserve the separate web demo link.');
   }
 
   console.log(

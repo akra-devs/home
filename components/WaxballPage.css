@@ -1101,6 +1101,13 @@
   gap: 40px;
 }
 
+.wb-final-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-end;
+  gap: 12px;
+}
+
 .wb-final-cta h2 {
   font-size: clamp(2.4rem, 5.5vw, 5.5rem);
 }
@@ -1557,6 +1564,10 @@
 
   .wb-final-cta-inner {
     align-items: stretch;
+    flex-direction: column;
+  }
+
+  .wb-final-actions {
     flex-direction: column;
   }
 

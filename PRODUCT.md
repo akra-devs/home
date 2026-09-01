@@ -24,7 +24,8 @@ Waxball은 단단한 왁스 표면의 단계별 균열과 내부 말랑이의 �
 
 - 방문자는 Akra 메인 페이지의 `제품과 작업` 목록에서 Waxball을 최우선 대표 제품으로 발견한다.
 - 상세 페이지에서 실제 플레이 장면, 12종 컬렉션, 재질별 파손, 네뷸라 알 부화, 파손 뒤 말랑이 조작을 확인한다.
-- 기본 행동은 `https://waxball.akra.kr/`에서 웹 버전을 체험하는 것이다.
+- 기본 설치 행동은 Google Play의 `kr.akra.waxball` 앱으로 연결하고, `https://waxball.akra.kr/`는 웹 체험판으로 분리한다.
+- 제품 소개와 검색·공유 기준 주소는 `https://akra.kr/waxball/`이다.
 - 개인정보처리방침과 이용약관은 각각 `https://waxball.akra.kr/privacy/`, `https://waxball.akra.kr/terms/`에 공개돼 있다.
 
 ## Capabilities and Constraints

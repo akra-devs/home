@@ -278,6 +278,7 @@ const entries = {
   'waxball.hero.statement': ['단단한 왁스, 그 안의 말랑이.', 'A hard wax shell, a soft core.', '硬いワックス、その中のやわらかいコア。', '坚硬蜡壳中的柔软核心。'],
   'waxball.hero.description': ['손끝으로 표면을 누르면 말랑하게 휘고, 그 위로 왁스 균열이 번집니다. 끝까지 깨뜨린 뒤에는 숨어 있던 코어를 직접 주물러 보세요.', 'Press the surface with your fingertip: it bends softly as wax fractures spread. Break through, then knead the hidden core yourself.', '指先で表面を押すとやわらかくたわみ、その上にワックスのひび割れが広がります。最後まで割ったら、隠れていたコアを直接もんでみてください。', '用指尖按压表面，柔软的球体会弯曲，蜡壳裂纹随之扩散。彻底打破后，亲手揉捏藏在里面的核心。'],
   'waxball.hero.playNow': ['웹에서 바로 체험', 'Play on the web', 'ウェブで体験する', '在网页上体验'],
+  'waxball.android.install': ['Google Play에서 받기', 'Get it on Google Play', 'Google Play で入手', '前往 Google Play 下载'],
   'waxball.hero.preview': ['26초 플레이 보기', 'Watch the 26-second playthrough', '26秒のプレイを見る', '观看 26 秒实机演示'],
   'waxball.hero.factsAria': ['WAXBALL 주요 정보', 'WAXBALL key facts', 'WAXBALL の主な情報', 'WAXBALL 主要信息'],
   'waxball.hero.orbAlt': ['균열 전의 단단하고 반투명한 오팔 왁스볼', 'A hard, translucent Opal waxball before fracturing', 'ひび割れる前の、硬く半透明なオパールのワックスボール', '开裂前坚硬半透明的欧泊蜡球'],

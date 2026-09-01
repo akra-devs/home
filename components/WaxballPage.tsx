@@ -4,7 +4,6 @@ import {
   ArrowUpRight,
   ChevronRight,
   Gauge,
-  Play,
   Sparkles,
   Volume2,
 } from 'lucide-react';
@@ -13,6 +12,8 @@ import { setPageMetadata, useTranslation } from '../i18n';
 import './WaxballPage.css';
 
 const WEB_APP_URL = 'https://waxball.akra.kr/';
+const GOOGLE_PLAY_URL =
+  'https://play.google.com/store/apps/details?id=kr.akra.waxball';
 
 const stages: Array<{ label: string; nameKey: TranslationKey; reveal: number }> = [
   { label: 'Surface', nameKey: 'waxball.stage.surface', reveal: 82 },
@@ -119,13 +120,23 @@ const WaxballPage: React.FC = () => {
             <p className="wb-hero-description">{t('waxball.hero.description')}</p>
 
             <div className="wb-hero-actions">
-              <a className="wb-button wb-button-primary" href={WEB_APP_URL} target="_blank" rel="noreferrer">
-                {t('waxball.hero.playNow')}
+              <a
+                className="wb-button wb-button-primary"
+                href={GOOGLE_PLAY_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t('waxball.android.install')}
                 <ArrowUpRight size={18} aria-hidden="true" />
               </a>
-              <a className="wb-button wb-button-secondary" href="#play-preview">
-                <Play size={17} fill="currentColor" aria-hidden="true" />
-                {t('waxball.hero.preview')}
+              <a
+                className="wb-button wb-button-secondary"
+                href={WEB_APP_URL}
+                target="_blank"
+                rel="noreferrer"
+              >
+                {t('waxball.hero.playNow')}
+                <ArrowUpRight size={18} aria-hidden="true" />
               </a>
             </div>
 
@@ -460,10 +471,26 @@ const WaxballPage: React.FC = () => {
           <div>
             <h2 id="final-cta-title">{t('waxball.final.title')}</h2>
           </div>
-          <a className="wb-button wb-button-primary" href={WEB_APP_URL} target="_blank" rel="noreferrer">
-            {t('waxball.final.cta')}
-            <ArrowUpRight size={19} aria-hidden="true" />
-          </a>
+          <div className="wb-final-actions">
+            <a
+              className="wb-button wb-button-primary"
+              href={GOOGLE_PLAY_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t('waxball.android.install')}
+              <ArrowUpRight size={19} aria-hidden="true" />
+            </a>
+            <a
+              className="wb-button wb-button-secondary"
+              href={WEB_APP_URL}
+              target="_blank"
+              rel="noreferrer"
+            >
+              {t('waxball.final.cta')}
+              <ArrowUpRight size={19} aria-hidden="true" />
+            </a>
+          </div>
         </div>
         <div className="wb-container wb-legal-links">
           <a href="https://waxball.akra.kr/privacy/" target="_blank" rel="noreferrer">
