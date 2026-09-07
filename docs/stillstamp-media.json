@@ -1,0 +1,60 @@
+{
+  "observedOn": "2026-09-07",
+  "productRepository": "akra-devs/akra-still-stamp",
+  "assets": [
+    {
+      "source": "artifacts/stillstamp-live-postcard-20260905.png",
+      "output": "public/stillstamp/postcard.webp",
+      "role": "Actual generated output, 2026-09-05",
+      "width": 1200,
+      "height": 900,
+      "sha256": "0a9b85b58394a245b0f414263f89d8ee9a6723fb000bc863fea668ad2f2df905",
+      "bytes": 170644
+    },
+    {
+      "source": "assets/stillstamp/tongyeong-source.png",
+      "output": "public/stillstamp/original.webp",
+      "role": "Product-owned reference photo",
+      "width": 1200,
+      "height": 900,
+      "sha256": "170eb8dabdec2c2147f4e75eacb81345dcea5cbe584f8098e2a42d256db69af8",
+      "bytes": 237272
+    },
+    {
+      "source": "assets/stillstamp/tongyeong-source.png",
+      "output": "public/stillstamp/original-small.webp",
+      "role": "Thumbnail of the same reference photo",
+      "width": 180,
+      "height": 135,
+      "sha256": "a4eb8f93b1cbaf6474d5ddbcee576f1d7245cf5d9b47dd1481fd5b3ce5391b19",
+      "bytes": 7582
+    },
+    {
+      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/layout.png",
+      "output": "public/stillstamp/screen-layout.webp",
+      "role": "Web SAMPLE capture; not mobile production evidence",
+      "width": 390,
+      "height": 844,
+      "sha256": "1f46f3b27c10c3657b7770deeffbf61b09120a2f4a466b09f0095c699b4529be",
+      "bytes": 44766
+    },
+    {
+      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/adjust.png",
+      "output": "public/stillstamp/screen-adjust.webp",
+      "role": "Web SAMPLE capture; not mobile production evidence",
+      "width": 390,
+      "height": 844,
+      "sha256": "04e399385ca12ae0139dabdd76fc3b639ade0d5d15f644b35c050b815b5be4dc",
+      "bytes": 49368
+    },
+    {
+      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/result.png",
+      "output": "public/stillstamp/screen-result.webp",
+      "role": "Web SAMPLE capture; SAMPLE marking preserved",
+      "width": 390,
+      "height": 844,
+      "sha256": "edd15a8b56d9947006289a98af5f3faf9d5ddeedb1706b5b1a6466baee6d3b81",
+      "bytes": 40786
+    }
+  ]
+}

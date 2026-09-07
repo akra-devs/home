@@ -1,6 +1,7 @@
 import type { TranslationKey } from '../i18n/messages';
 
 export enum ProjectId {
+  Stillstamp = 'stillstamp',
   Waxball = 'waxball',
   QuickTranslate = 'akra-quick-translate',
   Hookers = 'akra-hookers',
@@ -17,6 +18,7 @@ export enum ProjectCategory {
 }
 
 export enum ProjectLifecycle {
+  Preview = 'preview',
   Live = 'live',
   Concept = 'concept',
   Private = 'private',
@@ -66,6 +68,19 @@ export type LinkedProject = Project & {
 };
 
 export const projectCatalog = {
+  [ProjectId.Stillstamp]: {
+    id: ProjectId.Stillstamp,
+    category: ProjectCategory.OwnService,
+    lifecycle: ProjectLifecycle.Preview,
+    surfaces: [ProjectSurface.Showcase, ProjectSurface.Footer],
+    titleKey: 'products.stillstamp.title',
+    descriptionKey: 'products.stillstamp.description',
+    tagKeys: ['products.stillstamp.tagPhoto', 'products.stillstamp.tagStamp'],
+    imageUrl: '/stillstamp/postcard.webp',
+    imageAltKey: 'ss.heroAlt',
+    href: '/stillstamp/',
+    highlightLabelKey: 'products.stillstamp.highlight',
+  },
   [ProjectId.Waxball]: {
     id: ProjectId.Waxball,
     category: ProjectCategory.OwnService,

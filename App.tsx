@@ -13,6 +13,7 @@ import {
   QuickTranslateSupportPage,
 } from './components/QuickTranslatePages';
 import WaxballPage from './components/WaxballPage';
+import StillstampPage from './components/StillstampPage';
 import { setPageMetadata, useTranslation } from './i18n';
 
 const normalizePath = (path: string) => {
@@ -23,15 +24,17 @@ const normalizePath = (path: string) => {
   return path;
 };
 
+const productRoutes: Record<string, React.ReactNode> = {
+  '/stillstamp': <StillstampPage />,
+  '/waxball': <WaxballPage />,
+  '/quick-translate': <QuickTranslatePage />,
+  '/quick-translate/privacy': <QuickTranslatePrivacyPage />,
+  '/quick-translate/support': <QuickTranslateSupportPage />,
+};
+
 function App() {
   const { t } = useTranslation();
   const path = normalizePath(window.location.pathname);
-  const productRoutes: Record<string, React.ReactNode> = {
-    '/waxball': <WaxballPage />,
-    '/quick-translate': <QuickTranslatePage />,
-    '/quick-translate/privacy': <QuickTranslatePrivacyPage />,
-    '/quick-translate/support': <QuickTranslateSupportPage />,
-  };
 
   const isProductRoute = path in productRoutes;
 

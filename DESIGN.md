@@ -176,3 +176,43 @@ Screenshots use WebP and the product walkthrough uses H.264/AAC MP4 with control
 ## Deliberately Not Canonized
 
 One-off material accent colors remain data-driven. The removed decorative grid and repeated hero/final-CTA eyebrow labels are not design-system patterns and must not return through component reuse.
+
+## Stillstamp product page
+
+Reference observation: 2026-09-07, `https://akra.kr/waxball/` and
+`https://akra.kr/mp4-transition-pages/`. Reuse the Akra shell and the sequence
+of outcome, actual media, steps, availability and support. Runtime inspection
+at 1280px confirmed Pretendard 16px body, serif display, white pill actions
+with 24px horizontal padding, and the existing 1280px content limit.
+
+Stillstamp's signature is a real paper-and-ink postcard in a dark exhibition
+space, with the source photograph beside it. Its original/result selector
+compares supplied sample assets; it never pretends to generate an image.
+Keep the actual product evidence visible and legible without pointer hover.
+
+- Product colors: warm ink `#f6f0df`, muted `#b6b5ad`, paper `#eee3c9`,
+  sage `#bacdb7`, forest light `rgba(105,133,111,.16)` and warm light
+  `rgba(201,172,114,.09)`. Retain the global midnight background.
+- Display: Playfair Display/Noto Serif KR, `clamp(3.5rem,7.5vw,7rem)` for
+  the name, `clamp(2rem,3.4vw,3.2rem)` for the statement; section headings
+  `clamp(2rem,4vw,3.75rem)`. Body 16px/1.8; labels 12px; supporting 14px.
+- Spacing: 8, 12, 16, 24, 32, 48, 64px; section padding
+  `clamp(80px,10vw,128px)`, hero top 136px (120px on small screens),
+  back-link bottom gap 16px and hero bottom 48px (32px on small screens).
+- Reusable primitives: `ss-button` (primary and secondary, 48px minimum,
+  hover/focus/active); `ss-section-head`; `ss-media` (reserved 4:3 area,
+  whole image contained); `ss-step`; native disclosure FAQ. All selected
+  states use text plus `aria-pressed`; focus has a 2px sage outline.
+- Paper elevation: 8px corner radius, fine paper rim and
+  `0 32px 80px rgba(0,0,0,.35)` shadow. Source thumbnail has a 4px paper mat.
+- Responsive: 1fr/1.15fr hero above 900px, one column below; 24px desktop
+  gutters and 16px mobile; three sample screens above 640px, one below.
+  The document owns scrolling. No sideways carousel or hidden instructions.
+- Interaction: reuse simple native controls; feedback uses opacity/transform
+  over 180ms. No ambient animation. Reduced motion removes transitions.
+- Accessibility/personas: a new phone visitor can identify the result and
+  current availability; keyboard users can select both examples and expand
+  FAQs; each example has localized alt text. Android internal testing is
+  not described as a public store launch. Web SAMPLE captures remain labeled.
+- Existing-site debt: third-party fonts and the shared React shell predate
+  this page. Do not claim a measured performance score without an audit.

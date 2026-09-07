@@ -8,6 +8,13 @@ const indexPath = join(distDir, 'index.html');
 
 const routes = [
   {
+    path: 'stillstamp',
+    title: 'stillstamp | 사진 한 장, 오래 남을 안부 — Akra Dev',
+    description: '사진을 참고한 고무인장과 따뜻한 종이, 직접 쓴 문장으로 만드는 4:3 엽서. Stillstamp의 결과물과 편집 흐름을 만나보세요.',
+    canonical: 'https://akra.kr/stillstamp/',
+    image: 'https://akra.kr/stillstamp/postcard.webp',
+  },
+  {
     path: 'waxball',
     title: 'WAXBALL | 단단한 왁스, 그 안의 말랑이 — Akra Dev',
     description: '단단한 왁스의 균열과 말랑한 코어의 변형을 동시에 즐기는 Akra의 3D 감각 게임, WAXBALL을 만나보세요.',

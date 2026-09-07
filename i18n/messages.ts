@@ -1,3 +1,5 @@
+import { stillstampEntries } from './stillstamp';
+
 export const locales = ['ko', 'en', 'ja', 'zh'] as const;
 
 export type Locale = (typeof locales)[number];
@@ -14,6 +16,7 @@ type TranslationEntry = readonly [ko: string, en: string, ja: string, zh: string
 // Brand names, product names, technical platforms, and product-material names stay in English
 // when that is the product's intended display name.
 const entries = {
+  ...stillstampEntries,
   'language.select': ['언어 선택', 'Select language', '言語を選択', '选择语言'],
 
   'seo.home.title': ['Akra Dev | 제품을 만드는 개발팀', 'Akra Dev | Product builders', 'Akra Dev | プロダクトをつくる開発チーム', 'Akra Dev | 打造产品的开发团队'],

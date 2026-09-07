@@ -1,0 +1,70 @@
+.stillstamp-page {
+  --ss-ink: #f6f0df;
+  --ss-muted: #b6b5ad;
+  --ss-paper: #eee3c9;
+  --ss-sage: #bacdb7;
+  --ss-line: rgba(255,255,255,.1);
+  color: var(--ss-ink);
+  background: radial-gradient(ellipse at 82% 10%,rgba(105,133,111,.16),transparent 28%), radial-gradient(ellipse at 12% 22%,rgba(201,172,114,.09),transparent 30%),#09090b;
+}
+.ss-container { width: min(1280px,calc(100% - 48px)); margin-inline:auto; }
+.ss-hero { padding-top:136px; padding-bottom:48px; }
+.ss-back { display:inline-flex; align-items:center; gap:8px; color:var(--ss-muted); font-size:14px; min-height:44px; margin-bottom:16px; }
+.ss-hero-grid { display:grid; grid-template-columns:1fr 1.15fr; align-items:center; gap:48px; }
+.ss-brand { font:500 clamp(3.5rem,7.5vw,7rem)/1 'Playfair Display','Noto Serif KR',serif; letter-spacing:-.065em; margin-bottom:32px; }
+.ss-brand span { color:var(--ss-sage); }
+.stillstamp-page h1 { font:500 clamp(2rem,3.4vw,3.2rem)/1.4 'Noto Serif KR',serif; letter-spacing:-.04em; white-space:pre-line; }
+.ss-intro { max-width:440px; margin-top:24px; }
+.stillstamp-page p { color:var(--ss-muted); font-size:16px; line-height:1.8; word-break:keep-all; overflow-wrap:anywhere; }
+.stillstamp-page p.ss-brand { color:var(--ss-ink); font-size:clamp(3.5rem,7.5vw,7rem); line-height:1; }
+.ss-actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:32px; }
+.ss-button { display:inline-flex; justify-content:center; align-items:center; gap:8px; min-height:48px; padding:12px 24px; border-radius:9999px; font-size:14px; font-weight:700; transition:opacity 180ms ease-out,transform 180ms ease-out; }
+.ss-primary { background:var(--ss-paper); color:#09090b; }
+.ss-secondary { border:1px solid var(--ss-line); color:var(--ss-ink); }
+.ss-button:hover { opacity:.85; }.ss-button:active { transform:translateY(1px); }
+.stillstamp-page :is(a,button,summary):focus-visible { outline:2px solid var(--ss-sage); outline-offset:4px; }
+.ss-status { display:flex; align-items:center; gap:8px; margin-top:24px; }
+.stillstamp-page .ss-status { font-size:12px; }.ss-status span { width:6px;height:6px;border-radius:50%;background:var(--ss-sage); }
+.ss-hero-art { padding-top:24px; min-width:0; }
+.ss-hero-postcard { width:100%; height:auto; border-radius:8px; border:1px solid rgba(238,227,201,.35); box-shadow:0 32px 80px rgba(0,0,0,.35); transform:rotate(-3deg); }
+.ss-source-note { display:flex; align-items:center; justify-content:flex-end; gap:16px; margin-top:32px; color:var(--ss-ink); font:400 14px/1.8 'Noto Serif KR',serif; }
+.ss-source-note img { width:96px;height:72px;object-fit:cover;border:4px solid var(--ss-paper);transform:rotate(4deg); }
+.ss-source-note small { font:400 12px/1.8 Pretendard,sans-serif;color:var(--ss-muted);letter-spacing:.08em; }
+.stillstamp-page figcaption { color:var(--ss-muted);font-size:12px;line-height:1.7; margin-top:16px; }
+.ss-hero-art figcaption { text-align:right; }
+.ss-section { padding-block:clamp(80px,10vw,128px);scroll-margin-top:112px; }
+.stillstamp-page h2 { font:500 clamp(2rem,4vw,3.75rem)/1.35 'Noto Serif KR',serif;letter-spacing:-.045em;white-space:pre-line;word-break:keep-all;overflow-wrap:anywhere; }
+.ss-section-head { display:grid;grid-template-columns:1fr 1fr;align-items:end;gap:48px;margin-bottom:48px; }
+.ss-section-head p { max-width:480px; }
+.ss-comparison { max-width:900px;margin:auto; }
+.ss-selector { display:flex;justify-content:center;gap:8px;margin-bottom:24px; }
+.ss-selector button { padding:12px 24px;border-radius:9999px;min-height:48px;font-size:14px;color:var(--ss-muted);border:1px solid var(--ss-line); }
+.ss-selector button[aria-pressed=true] { background:var(--ss-paper);color:#09090b;border-color:var(--ss-paper); }
+.ss-selector button:hover { text-decoration:underline;text-underline-offset:4px; }
+.ss-media { aspect-ratio:4/3; background:#18181b;border-radius:8px;overflow:hidden; }
+.ss-media img { width:100%;height:100%;object-fit:contain; }
+.ss-comparison figcaption { text-align:center; }
+.ss-features { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:48px;margin-top:64px; }
+.ss-number { font:400 14px/1.8 'Playfair Display',serif; color:var(--ss-sage); }
+.stillstamp-page h3 { font-size:20px;line-height:1.5;font-weight:600;letter-spacing:-.03em;margin:12px 0;word-break:keep-all; }
+.ss-process { border-block:1px solid var(--ss-line);background:rgba(255,255,255,.015); }
+.ss-process-grid { display:grid;grid-template-columns:1fr 1fr;gap:64px; }
+.ss-stacked { display:block;margin-bottom:0; }.ss-stacked p { margin-top:24px; }
+.ss-step { display:grid;grid-template-columns:32px 1fr;gap:24px;padding:24px 0;border-bottom:1px solid var(--ss-line); }.ss-step:first-child { padding-top:0; }.ss-step:last-child { border:0;padding-bottom:0; }.ss-step h3 { margin-top:0; }
+.ss-screens { display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:32px;max-width:1050px;margin:auto; }
+.ss-screens img { width:100%;height:auto;border-radius:24px;border:1px solid var(--ss-line); }.ss-screens figcaption { font-size:14px;text-align:center; }
+.ss-faq { border-top:1px solid var(--ss-line);display:grid;grid-template-columns:1fr 1.3fr;gap:64px; }
+.ss-faq details { border-bottom:1px solid var(--ss-line); }.ss-faq summary { cursor:pointer;padding:24px 8px;font-size:16px;line-height:1.6; }.ss-faq details p { padding:0 8px 24px; }
+.ss-final { text-align:center;border-top:1px solid var(--ss-line); }.ss-final>p { max-width:540px;margin:24px auto; }.ss-final .ss-status { justify-content:center; }
+@media(max-width:900px) {
+  .ss-hero-grid,.ss-section-head,.ss-process-grid,.ss-faq { grid-template-columns:1fr;gap:32px; }
+  .ss-hero-copy { max-width:640px; }.ss-hero-art { max-width:700px;width:100%;margin:auto; }
+  .ss-features { gap:24px; }.ss-screens { gap:16px; }
+}
+@media(max-width:640px) {
+  .ss-container { width:calc(100% - 32px); }.ss-hero { padding-top:120px;padding-bottom:32px; }
+  .ss-features { grid-template-columns:1fr;gap:32px; }.ss-screens { grid-template-columns:1fr;gap:48px;max-width:320px; }
+  .ss-hero-postcard { transform:rotate(-2deg); }.ss-source-note { margin-top:24px; }
+  .ss-selector button { padding-inline:16px; }.ss-steps { margin-top:16px; }
+}
+@media(prefers-reduced-motion:reduce) { .stillstamp-page * { transition:none!important;scroll-behavior:auto!important; } }
