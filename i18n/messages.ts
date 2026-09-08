@@ -41,6 +41,7 @@ const entries = {
   'footer.copyright': ['Copyright © {year} Akra Dev Studio. All rights reserved.', 'Copyright © {year} Akra Dev Studio. All rights reserved.', 'Copyright © {year} Akra Dev Studio. All rights reserved.', 'Copyright © {year} Akra Dev Studio. All rights reserved.'],
   'footer.productsHeading': ['제품', 'Products', 'プロダクト', '产品'],
   'footer.companyHeading': ['회사', 'Company', '会社', '公司'],
+  'footer.mcp': ['내부 데이터 도구 안내', 'Internal data tools', '内部データツール', '内部数据工具'],
   'footer.productsAndWork': ['제품과 작업', 'Products & work', 'プロダクトと実績', '产品与作品'],
   'footer.waxballPrivacy': ['WAXBALL 개인정보처리방침', 'WAXBALL Privacy Policy', 'WAXBALL プライバシーポリシー', 'WAXBALL 隐私政策'],
   'footer.waxballTerms': ['WAXBALL 이용약관', 'WAXBALL Terms of Use', 'WAXBALL 利用規約', 'WAXBALL 使用条款'],

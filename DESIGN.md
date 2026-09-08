@@ -86,6 +86,20 @@ components:
 
 # Design System: Akra Dev
 
+## Internal-tool documentation
+
+The `/mcp/`, `/mcp/privacy/` and `/mcp/terms/` documents use the shared midnight,
+white, body and muted text colors. The reusable document shell is a 65ch reading
+column with 24px gutters (16px on phones), 32px header padding and 64px section
+spacing. The document owns scrolling. Use 16px/1.8 body text, the existing serif
+headline scale, underlined links and 44px navigation targets with visible focus.
+These are static informational documents, without a login form or application
+dashboard. English and Korean sections have explicit language attributes and
+anchor navigation. The existing system fonts provide fallbacks without a new
+font download. No script, tracking, animation, form or third-party embed is
+needed. Content, keyboard navigation and phone reading are the quality criteria;
+the pages make no claim that public visitors can use the internal connector.
+
 ## Overview
 
 **Creative North Star: “The Midnight Product Gallery.”**
