@@ -9,10 +9,10 @@ const indexPath = join(distDir, 'index.html');
 const routes = [
   {
     path: 'stillstamp',
-    title: 'stillstamp | 사진 한 장, 오래 남을 안부 — Akra Dev',
-    description: '사진을 참고한 고무인장과 따뜻한 종이, 직접 쓴 문장으로 만드는 4:3 엽서. Stillstamp의 결과물과 편집 흐름을 만나보세요.',
+    title: 'stillstamp | 사진 한 장, 마음 한 줄 — Akra Dev',
+    description: '소중한 사람, 여행의 노을, 함께 사는 고양이. 사진을 고무인장 엽서로 만들고 내 문장을 더하는 Stillstamp를 만나보세요.',
     canonical: 'https://akra.kr/stillstamp/',
-    image: 'https://akra.kr/stillstamp/postcard.webp',
+    image: 'https://akra.kr/stillstamp/flowers-note.webp',
   },
   {
     path: 'waxball',
@@ -68,3 +68,5 @@ for (const route of routes) {
 }
 
 console.log(`Created static route entries for ${routes.length} routes.`);
+
+

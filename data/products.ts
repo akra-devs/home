@@ -76,7 +76,7 @@ export const projectCatalog = {
     titleKey: 'products.stillstamp.title',
     descriptionKey: 'products.stillstamp.description',
     tagKeys: ['products.stillstamp.tagPhoto', 'products.stillstamp.tagStamp'],
-    imageUrl: '/stillstamp/postcard.webp',
+    imageUrl: '/stillstamp/flowers-note-960.webp',
     imageAltKey: 'ss.heroAlt',
     href: '/stillstamp/',
     highlightLabelKey: 'products.stillstamp.highlight',
@@ -212,3 +212,4 @@ export const quickTranslateProduct: ProjectWithRelease = projectCatalog[ProjectI
 export const waxballProduct = projectCatalog[ProjectId.Waxball];
 export const hookersProduct = projectCatalog[ProjectId.Hookers];
 export const whyShutdownProduct = projectCatalog[ProjectId.WhyShutdown];
+
