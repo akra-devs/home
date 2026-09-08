@@ -216,3 +216,29 @@ Keep the actual product evidence visible and legible without pointer hover.
   not described as a public store launch. Web SAMPLE captures remain labeled.
 - Existing-site debt: third-party fonts and the shared React shell predate
   this page. Do not claim a measured performance score without an audit.
+
+### Stillstamp three-story sequence (2026-09-08)
+
+Use the approved flower portrait, sunset and cat as three different editorial
+moments: portrait hero, sunset layout comparison, quiet cat postcard, real app
+editing screens, then availability/support. Keep the midnight Akra shell.
+The benefit is the dominant 38–64px serif declaration; the brand is an 18px
+signature. Mobile order: title, explanation, example CTA, whole 4:3 artwork.
+
+Native 48px mode buttons expose aria-pressed, update a reserved 4:3 panel and
+its caption. Consulted beui.dev/r/tabs/raw: adapt controlled selection and
+180ms opacity feedback, without adding spring motion or a dependency. Reduced
+motion removes transitions. No scroll animation, autoplay or horizontal rail.
+
+The cat source is an intentional photo window; its main postcard is a whole
+native-compositor render. Generated reference art has a visible localized
+style-example caption. Actual Flutter captures retain SAMPLE. Neither is
+claimed as a production AI request. Export previews use real compositor code
+with externally authored fixture art, with that provenance documented.
+
+Use 640/960/1448 responsive artwork and lazy-load below the hero. Four host
+locales get translated copy/alt/controls. App UI captures are Korean/English;
+Japanese/Chinese deliberately use English captures with a localized disclosure.
+Korean personal notes are translated alongside the hero. Current public
+availability remains Android internal testing. Each source, transformation,
+revision and optimized digest is recorded in the media inventory.

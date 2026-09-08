@@ -1,45 +1,36 @@
-# Stillstamp introduction page
+# Stillstamp introduction verification — 2026-09-08
 
-Verified locally on 2026-09-07 at `/stillstamp/` against the production Vite
-build. Live reference pages inspected: `https://akra.kr/waxball/` and
-`https://akra.kr/mp4-transition-pages/`.
+Page: https://akra.kr/stillstamp/ · Source: akra-devs/home.
+Delivery: existing main workflow builds Vite and publishes dist to
+akra-devs/akra-devs.github.io/docs, preserving CNAME. No delivery changes.
 
-## Evidence and current availability
+The page uses the user-selected flower portrait, sunset and cat as an editorial
+sequence: complete portrait postcard, interactive sunset layouts, cat-only
+postcard, actual editing screens, FAQ and current availability. The catalog card
+and social image use the portrait. Footer discovery remains linked.
 
-- Product source: `akra-devs/akra-still-stamp`, local `akra-photo-letter` checkout.
-- Android: `kr.akra.stillstamp`, internal testing only, based on
-  `docs/store-evidence/play-kr-internal-rollout-2026-09-07.json`. No public
-  install link or iOS availability is claimed.
-- Output provenance: `docs/quality/pixel4-device-evidence.md` identifies the
-  actual exported image `artifacts/stillstamp-live-postcard-20260905.png`.
-- `stillstamp-media.json` inventories six optimized copies (550,418 bytes),
-  keeping original/sample distinctions. All three editing captures retain
-  their visible SAMPLE markings. No generated advertising video is presented
-  as app behavior.
-- The preview lifecycle keeps the new gallery card clickable while preserving
-  private-card behavior for other products. Footer discovery is also included.
+Assets are optimized derivatives listed with original and final SHA-256 in
+stillstamp-media.json. User-supplied AI art and native-compositor illustrations
+are labeled separately from actual Flutter UI. SAMPLE remains on all UI captures.
+Korean/English art previews and UI captures are explicit; Japanese/Chinese host
+copy explains its English UI captures. The Korean hero note is translated in the
+adjacent caption. The app remains in invited Android internal testing.
 
-## Checks performed
+Validation performed:
+- TypeScript, 365-key / four-locale translation parity, brand/catalog checks and
+  production/static-route build passed.
+- React Doctor changed-source audit: 100, no new diagnostics. This is not a
+  Lighthouse performance score; Lighthouse was not measured.
+- Codex in-app browser: Korean, English, Japanese and Chinese at actual CSS
+  widths 375, 767 and 1280. No horizontal overflow; controls are 48px (rounding
+  reports 47.99). Evidence: qa/responsive.json.
+- Both layout choices changed the image and pressed states. Tab + Enter selected
+  postcard-only. All three FAQ disclosures expanded with accurate content.
+- Reduced-motion emulation removed preview animation and button transitions.
+- Hero and selected-mode assets decoded; native art and store source PNGs were
+  visually inspected. Browser full-page screenshot capture had compositor
+  scaling artifacts; it is not retained as visual acceptance evidence.
+- Shared browser emulation is cleared after inspection.
 
-- TypeScript, all 366 translation keys in four languages, product catalog,
-  brand assets, production build and static route output passed.
-- React Doctor reported no diagnostics for the new page or its translations.
-  Existing unrelated site warnings are not a clean-site attestation.
-- Browser: Korean, English, Japanese and Chinese language selection changed
-  the heading, text and document title; the site's Korean sample captures
-  remain explicitly labeled rather than pretending to be localized app builds.
-- CSS viewports 375, 768 and 1280px: no horizontal document overflow. The
-  device-metrics override was used because the IAB host's existing 80% zoom
-  otherwise changes the effective CSS viewport width.
-- Original/result selection changes the image and pressed state; keyboard
-  Enter toggles it in the 375px viewport. FAQ expansion shows actual availability
-  information and keyboard focus has a visible outline.
-- Reduced-motion emulation sets action transitions to 0s. All sample images
-  load. Tablet screenshot review confirms the three-screen reading order.
-- The homepage's `stillstamp 상세 페이지로 이동` link opens the actual introduction.
-- Generated `dist/stillstamp/index.html` contains the product-specific title,
-  description, canonical and Open Graph image before client execution.
-
-Browser screenshot evidence is in the implementation task. No Lighthouse or
-runtime react-scan score is claimed; those measurements were not run through
-the available browser connection. Local checks alone do not prove publication.
+Availability: no public install badge or unverified release claim. This change
+updates marketing only, not an Android/iOS binary or server generation behavior.

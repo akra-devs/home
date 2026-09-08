@@ -1,0 +1,191 @@
+[
+  {
+    "controlMin": 47.98828125,
+    "headings": [
+      {
+        "text": "写真一枚、\n心を一行。",
+        "visible": "visible",
+        "width": 324.23828125
+      },
+      {
+        "text": "風景と一緒に。\n言葉だけを、軽やかに。",
+        "visible": "visible",
+        "width": 324.23828125
+      },
+      {
+        "text": "何気ない日も、\n見返したくなる一枚に。",
+        "visible": "visible",
+        "width": 324.23828125
+      },
+      {
+        "text": "選んで、整えて、\n言葉をひとつ。",
+        "visible": "visible",
+        "width": 324.23828125
+      },
+      {
+        "text": "よくある質問",
+        "visible": "visible",
+        "width": 324.23828125
+      },
+      {
+        "text": "見返したくなる瞬間に、\nstillstamp。",
+        "visible": "visible",
+        "width": 324.23828125
+      }
+    ],
+    "height": 812,
+    "locale": "ja",
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "controlMin": 47.98828125,
+    "headings": [
+      {
+        "text": "写真一枚、\n心を一行。",
+        "visible": "visible",
+        "width": 580
+      },
+      {
+        "text": "風景と一緒に。\n言葉だけを、軽やかに。",
+        "visible": "visible",
+        "width": 700.7421875
+      },
+      {
+        "text": "何気ない日も、\n見返したくなる一枚に。",
+        "visible": "visible",
+        "width": 338.37890625
+      },
+      {
+        "text": "選んで、整えて、\n言葉をひとつ。",
+        "visible": "visible",
+        "width": 700.7421875
+      },
+      {
+        "text": "よくある質問",
+        "visible": "visible",
+        "width": 700.7421875
+      },
+      {
+        "text": "見返したくなる瞬間に、\nstillstamp。",
+        "visible": "visible",
+        "width": 700.7421875
+      }
+    ],
+    "height": 900,
+    "locale": "ja",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "controlMin": 47.98828125,
+    "headings": [
+      {
+        "text": "写真一枚、\n心を一行。",
+        "visible": "visible",
+        "width": 396.171875
+      },
+      {
+        "text": "風景と一緒に。\n言葉だけを、軽やかに。",
+        "visible": "visible",
+        "width": 610.37109375
+      },
+      {
+        "text": "何気ない日も、\n見返したくなる一枚に。",
+        "visible": "visible",
+        "width": 390.7421875
+      },
+      {
+        "text": "選んで、整えて、\n言葉をひとつ。",
+        "visible": "visible",
+        "width": 610.37109375
+      },
+      {
+        "text": "よくある質問",
+        "visible": "visible",
+        "width": 459.6875
+      },
+      {
+        "text": "見返したくなる瞬間に、\nstillstamp。",
+        "visible": "visible",
+        "width": 1213.2421875
+      }
+    ],
+    "height": 900,
+    "locale": "ja",
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 812,
+    "locale": "zh-CN",
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "zh-CN",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "zh-CN",
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 812,
+    "locale": "en",
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "en",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "en",
+    "overflow": false,
+    "width": 1280
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 812,
+    "locale": "ko",
+    "overflow": false,
+    "width": 375
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "ko",
+    "overflow": false,
+    "width": 767
+  },
+  {
+    "clippedControls": 0,
+    "controlMin": 47.98828125,
+    "height": 900,
+    "locale": "ko",
+    "overflow": false,
+    "width": 1280
+  }
+]

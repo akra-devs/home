@@ -1,60 +1,338 @@
 {
-  "observedOn": "2026-09-07",
+  "observedOn": "2026-09-08",
   "productRepository": "akra-devs/akra-still-stamp",
+  "productSourceRevision": "8660b7d4fc9c6f2cd0bf7d3fe62a81c345ab23ab",
   "assets": [
     {
-      "source": "artifacts/stillstamp-live-postcard-20260905.png",
-      "output": "public/stillstamp/postcard.webp",
-      "role": "Actual generated output, 2026-09-05",
-      "width": 1200,
-      "height": 900,
-      "sha256": "0a9b85b58394a245b0f414263f89d8ee9a6723fb000bc863fea668ad2f2df905",
-      "bytes": 170644
+      "source": "design/marketing/three-stories/flowers-note.png",
+      "sourceSha256": "301c56a4faab2d4744f87500a27588cc41c04597a8492e4180a2ff0ac7802aec",
+      "output": "public/stillstamp/flowers-note-640.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 640,
+      "height": 480,
+      "sha256": "c0cb02206becf1e15e66a653ff1a3f8ba2f1f7b9d31589f8905e13d435bf8d74",
+      "bytes": 42940
     },
     {
-      "source": "assets/stillstamp/tongyeong-source.png",
-      "output": "public/stillstamp/original.webp",
-      "role": "Product-owned reference photo",
-      "width": 1200,
-      "height": 900,
-      "sha256": "170eb8dabdec2c2147f4e75eacb81345dcea5cbe584f8098e2a42d256db69af8",
-      "bytes": 237272
+      "source": "design/marketing/three-stories/flowers-note.png",
+      "sourceSha256": "301c56a4faab2d4744f87500a27588cc41c04597a8492e4180a2ff0ac7802aec",
+      "output": "public/stillstamp/flowers-note-960.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 960,
+      "height": 720,
+      "sha256": "1d57887d6927c0a25c6e31cb287305885aa626c8249fb1d5e0f212609e12ff15",
+      "bytes": 82396
     },
     {
-      "source": "assets/stillstamp/tongyeong-source.png",
-      "output": "public/stillstamp/original-small.webp",
-      "role": "Thumbnail of the same reference photo",
-      "width": 180,
-      "height": 135,
-      "sha256": "a4eb8f93b1cbaf6474d5ddbcee576f1d7245cf5d9b47dd1481fd5b3ce5391b19",
-      "bytes": 7582
+      "source": "design/marketing/three-stories/flowers-note.png",
+      "sourceSha256": "301c56a4faab2d4744f87500a27588cc41c04597a8492e4180a2ff0ac7802aec",
+      "output": "public/stillstamp/flowers-note.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "c972806592449f839c81f220505f04c09d4eaddfa5c48b80f737031233cd94c5",
+      "bytes": 148992
     },
     {
-      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/layout.png",
-      "output": "public/stillstamp/screen-layout.webp",
-      "role": "Web SAMPLE capture; not mobile production evidence",
-      "width": 390,
-      "height": 844,
-      "sha256": "1f46f3b27c10c3657b7770deeffbf61b09120a2f4a466b09f0095c699b4529be",
-      "bytes": 44766
+      "source": "design/marketing/three-stories/sunset-note.png",
+      "sourceSha256": "750af1d39e91bd25b3279c98f5061bc84b86035faee2b2c4b912bf35526dcc3d",
+      "output": "public/stillstamp/sunset-note-640.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 640,
+      "height": 480,
+      "sha256": "d1dd12230ed21878e184336bfb8409dbe0a8384b8bf5fcd7449f99c0f4a4973c",
+      "bytes": 43404
     },
     {
-      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/adjust.png",
-      "output": "public/stillstamp/screen-adjust.webp",
-      "role": "Web SAMPLE capture; not mobile production evidence",
-      "width": 390,
-      "height": 844,
-      "sha256": "04e399385ca12ae0139dabdd76fc3b639ade0d5d15f644b35c050b815b5be4dc",
-      "bytes": 49368
+      "source": "design/marketing/three-stories/sunset-note.png",
+      "sourceSha256": "750af1d39e91bd25b3279c98f5061bc84b86035faee2b2c4b912bf35526dcc3d",
+      "output": "public/stillstamp/sunset-note-960.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 960,
+      "height": 720,
+      "sha256": "651d8e2d61ecbbcb8e5719715044b21e9b124c6ea7b0adb4db360c53a4067a0b",
+      "bytes": 88222
     },
     {
-      "source": "artifacts/visual-reference/current-html/390x844-runtime-v4/result.png",
-      "output": "public/stillstamp/screen-result.webp",
-      "role": "Web SAMPLE capture; SAMPLE marking preserved",
-      "width": 390,
-      "height": 844,
-      "sha256": "edd15a8b56d9947006289a98af5f3faf9d5ddeedb1706b5b1a6466baee6d3b81",
-      "bytes": 40786
+      "source": "design/marketing/three-stories/sunset-note.png",
+      "sourceSha256": "750af1d39e91bd25b3279c98f5061bc84b86035faee2b2c4b912bf35526dcc3d",
+      "output": "public/stillstamp/sunset-note.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "6b0606da8f4c0dd80815e4393dada11ef17c0f290a23ad08c75867bbfd2181a8",
+      "bytes": 162914
+    },
+    {
+      "source": "design/marketing/three-stories/cat-note.png",
+      "sourceSha256": "e9c74f21f6095b78812cdc5311afe8c8bf2d0811da395aaba65db739da6ed77e",
+      "output": "public/stillstamp/cat-note-640.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 640,
+      "height": 480,
+      "sha256": "7f6388af0f1ffc695af034857532d08e0a659f465acf49ea32c9029dfdc3316b",
+      "bytes": 46604
+    },
+    {
+      "source": "design/marketing/three-stories/cat-note.png",
+      "sourceSha256": "e9c74f21f6095b78812cdc5311afe8c8bf2d0811da395aaba65db739da6ed77e",
+      "output": "public/stillstamp/cat-note-960.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 960,
+      "height": 720,
+      "sha256": "1b77731643b9fdd78fcac325ed319baac5172211eb8065b45712d71a1bf874f7",
+      "bytes": 86886
+    },
+    {
+      "source": "design/marketing/three-stories/cat-note.png",
+      "sourceSha256": "e9c74f21f6095b78812cdc5311afe8c8bf2d0811da395aaba65db739da6ed77e",
+      "output": "public/stillstamp/cat-note.webp",
+      "role": "User-approved AI style illustration, caption edited with built-in ImageGen; not a live app generation",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2fd53eceeef67368ec8d4db16c9d344f248e55f910682a732c1f1532777babf2",
+      "bytes": 159002
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-ko.png",
+      "sourceSha256": "9196fd2ab098580ef01708c15eb3d38f6cbf2463d4dc36fa341f90c8c9dd2981",
+      "output": "public/stillstamp/sunset-composite-ko-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "c52c7cc04d77634e291a3ca7265220fa5c1c8a4de483111ead88d9b7a7f50ef6",
+      "bytes": 44992
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-ko.png",
+      "sourceSha256": "9196fd2ab098580ef01708c15eb3d38f6cbf2463d4dc36fa341f90c8c9dd2981",
+      "output": "public/stillstamp/sunset-composite-ko-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "a30ceb27392408a2ea782192876d8e6f47912ecdec37ab61c95e42b7baca478e",
+      "bytes": 88930
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-ko.png",
+      "sourceSha256": "9196fd2ab098580ef01708c15eb3d38f6cbf2463d4dc36fa341f90c8c9dd2981",
+      "output": "public/stillstamp/sunset-composite-ko.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "486ac965288ce574b0dae167096cc5e55b4709ecef6068599b55edf7188043a7",
+      "bytes": 169166
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-ko.png",
+      "sourceSha256": "3fa87e7b7a86f8844277fc85e42c215a5e9c5f93ad5c3750cc7b13692fd19884",
+      "output": "public/stillstamp/sunset-postcard-ko-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "bc01a76cba95b8138717b947c280254a9df7152344a9fd30791ff425b1358d36",
+      "bytes": 33860
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-ko.png",
+      "sourceSha256": "3fa87e7b7a86f8844277fc85e42c215a5e9c5f93ad5c3750cc7b13692fd19884",
+      "output": "public/stillstamp/sunset-postcard-ko-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "0be0b9658c0fa3525bed49bd6f88b3f07dd65abb46e2cdf7e3e1f7df6a484f92",
+      "bytes": 79158
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-ko.png",
+      "sourceSha256": "3fa87e7b7a86f8844277fc85e42c215a5e9c5f93ad5c3750cc7b13692fd19884",
+      "output": "public/stillstamp/sunset-postcard-ko.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "56d6b0f35dae03eac4291d11dc27fe0d127d8f1371b4f7068b2e0bd6531d8964",
+      "bytes": 156952
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-ko.png",
+      "sourceSha256": "8f477de4f823e3e92d08b7729529d13518cccd5b6f3119c26cff032627707b1b",
+      "output": "public/stillstamp/cat-postcard-ko-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "0b6e9be017a6c3c1a1773b87b91deb12a6c6a1806d8a25487e19daad7824edc9",
+      "bytes": 30586
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-ko.png",
+      "sourceSha256": "8f477de4f823e3e92d08b7729529d13518cccd5b6f3119c26cff032627707b1b",
+      "output": "public/stillstamp/cat-postcard-ko-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "4d8d01bfc0acd12edc23005aecbc70cda6e51b24642da5d43d41e2e0992809b5",
+      "bytes": 72458
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-ko.png",
+      "sourceSha256": "8f477de4f823e3e92d08b7729529d13518cccd5b6f3119c26cff032627707b1b",
+      "output": "public/stillstamp/cat-postcard-ko.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "36fff75364ecae66e2694a74d021bd78f6bd421a6bcfb027f0f07bda6f7fdf7b",
+      "bytes": 146826
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-en.png",
+      "sourceSha256": "27538fb23ab6b5f779d7213f139e17f769730d0ddd1da4a771cfcd6fcde6fb25",
+      "output": "public/stillstamp/sunset-composite-en-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "7d26902659fb15d285c95674b00fcb5d8bec5b6bbe103373eb642697cb0a8aa4",
+      "bytes": 45676
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-en.png",
+      "sourceSha256": "27538fb23ab6b5f779d7213f139e17f769730d0ddd1da4a771cfcd6fcde6fb25",
+      "output": "public/stillstamp/sunset-composite-en-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "a4c02ddf5b8cde132abc4a55b300e3d553c6f47d8e6f204373a445b2dc5b7244",
+      "bytes": 89934
+    },
+    {
+      "source": "store-assets/stories/sunset-composite-en.png",
+      "sourceSha256": "27538fb23ab6b5f779d7213f139e17f769730d0ddd1da4a771cfcd6fcde6fb25",
+      "output": "public/stillstamp/sunset-composite-en.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2dbaee62307c1163cce76af44676d3fcab9e591e2b7eff2eff2fe4830a0b823c",
+      "bytes": 170942
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-en.png",
+      "sourceSha256": "6e98d33b107677cb7c738c72afc83956fde03ad2be56b936d5d99e30de5bfb79",
+      "output": "public/stillstamp/sunset-postcard-en-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "6864779a86c067eb56e9a0bfa30af8c0ba59abf0857a8b2ebaacbd67db72541e",
+      "bytes": 34402
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-en.png",
+      "sourceSha256": "6e98d33b107677cb7c738c72afc83956fde03ad2be56b936d5d99e30de5bfb79",
+      "output": "public/stillstamp/sunset-postcard-en-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "9dc87318f24c0317e07c9f1342b3b43ca0081aae5c14ab0e96adfd2fc1f6d04c",
+      "bytes": 80078
+    },
+    {
+      "source": "store-assets/stories/sunset-postcard-en.png",
+      "sourceSha256": "6e98d33b107677cb7c738c72afc83956fde03ad2be56b936d5d99e30de5bfb79",
+      "output": "public/stillstamp/sunset-postcard-en.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "2dff27580326221fc422f5891c88b8c5391779fcaa531547594779761c29ee51",
+      "bytes": 158892
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-en.png",
+      "sourceSha256": "c0445d1f5b5e17d99286ca48938e696b5b61899b990d9a43b03b715b76b04fff",
+      "output": "public/stillstamp/cat-postcard-en-640.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 640,
+      "height": 480,
+      "sha256": "f689080598a6cf4e5817782107b900f2d681a47c5a4d204c960b1a38eebb8a83",
+      "bytes": 30920
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-en.png",
+      "sourceSha256": "c0445d1f5b5e17d99286ca48938e696b5b61899b990d9a43b03b715b76b04fff",
+      "output": "public/stillstamp/cat-postcard-en-960.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 960,
+      "height": 720,
+      "sha256": "2076b7e0d4899ecad7d3a4c4258713f7bc81408e84d9acd184acacaf3b575ad3",
+      "bytes": 72880
+    },
+    {
+      "source": "store-assets/stories/cat-postcard-en.png",
+      "sourceSha256": "c0445d1f5b5e17d99286ca48938e696b5b61899b990d9a43b03b715b76b04fff",
+      "output": "public/stillstamp/cat-postcard-en.webp",
+      "role": "Actual PostcardPreview compositor with externally authored art; art-only style illustration, not an app screenshot",
+      "width": 1448,
+      "height": 1086,
+      "sha256": "7ccadd5891ac9489fd5520e29f30dcfcd4fcfef525d13bf7aa3c65fc65b966d6",
+      "bytes": 147856
+    },
+    {
+      "source": "store-assets/stories/raw/ko/03-layout.png",
+      "sourceSha256": "eef38a5d1e5ec3f0f83f7fcc1162de533f9a3ff7b198c1909ce58bbc0f28370d",
+      "output": "public/stillstamp/screen-layout-ko.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "5c1188211a41b4f4d67b302cbd20ea8915c616c5301ac82d3e6b1c61d6fc8c0a",
+      "bytes": 79702
+    },
+    {
+      "source": "store-assets/stories/raw/ko/05-message.png",
+      "sourceSha256": "f9fc5c5678573a03ef08a834bde0cf70a4de56ce6fc00fc8b50582596fca620a",
+      "output": "public/stillstamp/screen-message-ko.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "797892ee7e059e940a58bc3e26b9511b57fac10d054bb8a707ab53cec29be064",
+      "bytes": 73616
+    },
+    {
+      "source": "store-assets/stories/raw/ko/04-postcard.png",
+      "sourceSha256": "2473a84018bf3c4c7c32cf6109c00b1595166708d4d712acd3b45e7c0bfdd1f7",
+      "output": "public/stillstamp/screen-result-ko.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "e160b6153888e079ea6ff504a30564468e2b40e2231dcb70a206b7d541149497",
+      "bytes": 68944
+    },
+    {
+      "source": "store-assets/stories/raw/en/03-layout.png",
+      "sourceSha256": "c5cd59e754395590ce5c168f9035c462532d794393cc26d200ae6ae163e26456",
+      "output": "public/stillstamp/screen-layout-en.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "6580b9e58d9fb822cdb2a05177870b67d4752adbdf5c7b32d1284ed08f735271",
+      "bytes": 85336
+    },
+    {
+      "source": "store-assets/stories/raw/en/05-message.png",
+      "sourceSha256": "7552e2335af4ebf67d59315ab43713ac965ecea82b75d141665fbb08384ebe2f",
+      "output": "public/stillstamp/screen-message-en.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "b629e0afaaf69b5f40001a7fe342435db55c918ee0dc8f4f3425e48fe4fcadb5",
+      "bytes": 77748
+    },
+    {
+      "source": "store-assets/stories/raw/en/04-postcard.png",
+      "sourceSha256": "5c4dd0658407cbc545d4ff55657d85b181f2e92c69af4464a004757478cd5103",
+      "output": "public/stillstamp/screen-result-en.webp",
+      "role": "Uncropped actual Flutter UI with prepared SAMPLE artwork; no production generation claim",
+      "width": 540,
+      "height": 960,
+      "sha256": "1220918171abfac251396825f854d00ec64401c609f04617a5cbd25f603adc73",
+      "bytes": 69424
     }
   ]
 }
+
