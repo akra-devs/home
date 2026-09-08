@@ -1,0 +1,22 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-08T13:15:08.364398+00:00",
+  "scope": "Stillstamp web publication and saved Play listing media; no binary release or review submission",
+  "evidence": [
+    {
+      "path": "docs/qa/live-hero-ko.png",
+      "sha256": "4d648373ab78074c7cc4b57f480c0d5e8fcabce9e7289bcc3a8a3d4f6c6f7c92",
+      "bytes": 84069
+    },
+    {
+      "path": "docs/qa/live-publication.json",
+      "sha256": "0fa2934253143da681f26e0e5d213bc7aa88a7f7b253a1f1dfb76783fc03f173",
+      "bytes": 8453
+    },
+    {
+      "path": "docs/qa/play-listing-saved.json",
+      "sha256": "d691e70e2891f2f76983e9f566d4883eced06d7ee85f7e1ae2686edb3f1bc893",
+      "bytes": 13566
+    }
+  ]
+}
