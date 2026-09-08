@@ -34,3 +34,35 @@ Validation performed:
 
 Availability: no public install badge or unverified release claim. This change
 updates marketing only, not an Android/iOS binary or server generation behavior.
+
+## Published and saved-state verification
+
+Verified on 2026-09-08 at 13:13 UTC. Public source revision:
+322e9540d943bcc580c78d9220bbffa1f5734faa; GitHub Pages artifact revision:
+65f24792ad13caea5c2de1f653cebabf7cebb09a.
+
+- [Source deployment](https://github.com/akra-devs/home/actions/runs/34228851266)
+  and [Pages deployment](https://github.com/akra-devs/akra-devs.github.io/actions/runs/34228894017)
+  completed successfully. All 33 public image responses returned HTTP 200 with
+  SHA-256 matching the prepared derivatives (2,970,638 bytes in total).
+- In the Codex in-app browser, the homepage Stillstamp card opened the public
+  route. Both layout controls worked; all seven selected Korean images decoded
+  after scrolling through the page. A normal viewport capture of the hero was
+  visually inspected and is retained as qa/live-hero-ko.png. Earlier full-page
+  compositor artifacts are not used as acceptance evidence.
+- Play Console was opened under the verified Stillstamp developer principal.
+  Korean and English now each contain the existing vase icon, a new portrait
+  feature graphic, and six screenshots in keepsake/photo/layout/postcard/message/
+  adjust order. The three text fields exactly match the merged app manifest.
+- The Console save completed. Reloading the route confirmed both language copies
+  and eight displayed assets per language. All 15 unique visual assets (the icon
+  is shared) have their AI-generation label checked after reopening the dialog.
+  Current state is **saved and ready to send for review**. No review submission,
+  binary upload or production-rollout action was performed.
+- Evidence: qa/live-publication.json and qa/play-listing-saved.json. Their exact
+  file digests, together with the hero screenshot digest, are recorded in
+  qa/publication-evidence.json. The Console evidence includes its official route
+  and capture timestamps; the operator principal is represented by SHA-256.
+- The new [Google AI-asset declaration guidance](https://support.google.com/googleplay/android-developer/answer/17262077?hl=en)
+  was checked against the live form. The record describes authored marketing
+  media and actual SAMPLE UI captures; it is not production generation proof.

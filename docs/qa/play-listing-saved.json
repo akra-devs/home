@@ -1,0 +1,302 @@
+{
+  "schemaVersion": 1,
+  "capturedAt": "2026-09-08T13:13:47.599Z",
+  "appId": "stillstamp",
+  "packageId": "kr.akra.stillstamp",
+  "sourceRepository": "akra-devs/akra-still-stamp",
+  "mergedMediaRevision": "cff1625e8eb71c266eb6c5c0a9c6917d12ee5890",
+  "captureSourceRevision": "8660b7d4fc9c6f2cd0bf7d3fe62a81c345ab23ab",
+  "sourceUrl": "https://play.google.com/console/u/2/developers/8119411647460345748/app/4972863556874765262/store-listings/default/edit",
+  "operator": {
+    "verifiedBeforeWrites": true,
+    "principalSha256": "14a51108aec3608b0939e79be5f8f9c57bf70e4efb600a41000372ea0862a6a2",
+    "developerName": "AkraDev Studio",
+    "performedBy": "Codex acting under the user’s request"
+  },
+  "status": "saved-ready-for-review",
+  "visibleStatus": "검토를 위해 전송 준비 완료",
+  "reviewSubmitted": false,
+  "binaryUploaded": false,
+  "aiPolicySource": "https://support.google.com/googleplay/android-developer/answer/17262077?hl=en",
+  "aiLabels": {
+    "capturedAt": "2026-09-08T13:13:47.548Z",
+    "readBackAfterReload": true,
+    "items": [
+      {
+        "checked": "true",
+        "label": "앱 아이콘 - icon.png"
+      },
+      {
+        "checked": "true",
+        "label": "그래픽 이미지 - feature.png"
+      },
+      {
+        "checked": "true",
+        "label": "그래픽 이미지 - feature.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 01-keepsake.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 02-photo.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 03-layout.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 04-postcard.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 05-message.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 06-adjust.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 01-keepsake.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 02-photo.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 03-layout.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 04-postcard.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 05-message.png"
+      },
+      {
+        "checked": "true",
+        "label": "휴대전화 스크린샷 - 06-adjust.png"
+      }
+    ]
+  },
+  "locales": [
+    {
+      "locale": "ko-KR",
+      "capturedAt": "2026-09-08T13:12:44.594Z",
+      "copy": {
+        "fullDescription": "사진 한 장, 마음 한 줄. 스틸스탬프.\n\n소중한 사람, 여행의 노을, 함께 사는 고양이의 사진에 내 문장을 더해 종이 질감의 엽서를 만들어 보세요.\n\n사진으로 시작하기\n기기에 있는 사진을 고르고 구도를 조정합니다. 사진을 바탕으로 인장 느낌의 엽서 이미지를 생성할 수 있습니다.\n\n나에게 맞는 엽서 만들기\n엽서만 담거나 원본 사진과 엽서를 나란히 배치하세요. 사진과 인장의 크기·위치를 조절하고 날짜와 짧은 안부를 더할 수 있습니다.\n\n저장하고 나누기\n완성한 엽서를 이미지로 저장하거나 공유하세요. 만든 엽서는 엽서함에서 다시 볼 수 있습니다.\n\n이용 안내\n이미지 생성에는 인터넷 연결과 크레딧이 필요합니다. 선택한 사진은 생성을 위해 외부 서버로 전송됩니다. 생성 결과는 사진과 요청에 따라 달라질 수 있습니다. SAMPLE이 표시된 화면은 견본이며 실제 생성 결과와 구분됩니다.\n앱에는 광고와 인앱 구매가 포함되어 있습니다. 크레딧과 계정 관리는 내 정보에서 확인할 수 있습니다.\n\n문의: help@akra.kr\n개인정보처리방침: https://stillstamp.akra.kr/privacy",
+        "name": "스틸스탬프 Stillstamp",
+        "shortDescription": "사진 한 장과 짧은 안부를 종이 질감의 엽서로 만들고 저장해 보세요"
+      },
+      "copyMatchesManifest": true,
+      "imagesInObservedOrder": [
+        {
+          "alt": "앱 아이콘",
+          "url": "https://lh3.googleusercontent.com/LZ-SMFmafoJcr7y75R3Y5PvFE_RxHMGktbMu14jYM9H-GicLg1ntSdNTpxOlSIcXhaXiMychMRN9MzYzo5zRwiA"
+        },
+        {
+          "alt": "그래픽 이미지",
+          "url": "https://lh3.googleusercontent.com/k8Pior5y-pEyAicvciYx0kjUHPzMi-8ozPkDqLqhAlWj1RPkrIvxbWkW0P0ibSxzhZUbZack6-oi0UPb0z6GAss"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/uMCMTD-qCZtDM3Aq2ulhsNCNLTjxOaA0tx8G6-fLw1_WbBfQkBV-vdIBcIDHQ3Vlf82YOcRH8mS3shFYGANn"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/1JL9KUV62zrrXTijBKBKa4CciV9Vroq62FTR_JxFMtoZC7fHAsmXjqbv0b7V_T91Q-HIZ1WCqxCL1_EPR0mO"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/F5jroFZD5HynlRN5d6Z1y-LMMWl7a9KSu_zWmtliDd2J8oxvHuBTSp9bIn-PvVUN2Eg1tuieOvsXzxFBiI-thg"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/PfgGr5kv2P3wWbVvaG0T7C6KxeLl-yXu_NIBmTcOJC3gIsj6mnu6uQIMkkt3DKqwvEWkv6ukHF5VMchbwxtvcg"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/Po0C7XTPpc_kog2X_-xP1_mMX-M4q8Syd5uS76cYtNWeOmdofPJgAWmL35XAyopFfK3LBm_pjz3StcJ_ObSfdg"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/G_FZpJcChpLM0aGptIfgmIbRNbkI02sAM1c1o1yk6YufZDqn0_ay0e9V6JjsSpB8j67au9P94CBOd5dWokOTiwI"
+        }
+      ],
+      "status": "saved; ready to send for review",
+      "readBackAfterReload": true
+    },
+    {
+      "locale": "en-US",
+      "capturedAt": "2026-09-08T13:12:58.292Z",
+      "copy": {
+        "fullDescription": "A photo. A little note. Stillstamp.\n\nA person you love, a sunset, a cat at home. Turn a favorite photo into a textured postcard with your own words.\n\nStart with a photo\nChoose a photo from your device and adjust its composition. Generate a stamp-inspired postcard image based on your photo.\n\nMake it your own\nChoose a postcard-only layout or place the original photo beside it. Adjust the size and position of the photo and stamp, then add a date and a short message.\n\nSave and share\nSave your finished postcard as an image or share it. Find the postcards you have made in your library.\n\nBefore you begin\nImage generation requires an internet connection and credits. Your selected photo is sent to an external server for generation. Results can vary with the photo and request. Screens marked SAMPLE are examples, separate from generated results.\nThe app contains ads and in-app purchases. Manage your credits and account in Profile.\n\nSupport: help@akra.kr\nPrivacy policy: https://stillstamp.akra.kr/privacy",
+        "name": "Stillstamp",
+        "shortDescription": "Turn a photo and a short note into a textured postcard to save and share"
+      },
+      "copyMatchesManifest": true,
+      "imagesInObservedOrder": [
+        {
+          "alt": "앱 아이콘",
+          "url": "https://lh3.googleusercontent.com/LZ-SMFmafoJcr7y75R3Y5PvFE_RxHMGktbMu14jYM9H-GicLg1ntSdNTpxOlSIcXhaXiMychMRN9MzYzo5zRwiA"
+        },
+        {
+          "alt": "그래픽 이미지",
+          "url": "https://lh3.googleusercontent.com/Pqhekz0ocwtGUmnPf40Q_q5nKrbjOALsTspo4NaXE2HV8KYt5QbVNHWdFcfll4EI6Ri1I5SZsBX5IuNgwBsSCg"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/-0hSAq3N_uRlWy2pjsncTNryLTIIcw_NkCoH3z0cXf797FNGOyhR0Tm74WbmW5ii6zge70t-WiQdN4ONxD_DeA"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/dKg8gD3430llpNZQvaHDiuqXajjiNdrhslftjFx5G4pYtU5EnUEx5oY1qp-N2kbagc5Q5yHOVh0f4ygMFsYyDEk"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/0wXSXYz4p9rko0taqBBpVYvrvNNHzfvbWKKJ_YTUJ1Iy4uogA0g0vBLadoR7vfULK227HI2lKrM0g44leEjm6bs"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/xoEiI8V6zndMSe1NDFz-JDbzhWKuHeCP0VCrP5fvps7w3fX3I-hg6rtYmd2MTXtinRsJUuAc7O8I1Fz3Hvh8tA"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/pN61WXlHcRzr8-boYQb8C-amNJT_0ZsyC86apC-qM0imU5OTGRoueSg8wwx4-IFpmdbtkZFkRhpVsY78kc2w"
+        },
+        {
+          "alt": "휴대전화 스크린샷",
+          "url": "https://lh3.googleusercontent.com/nyGuhctQe0htvBYox7RO6uJLaTLgHFEbrMrZvB5vVhlZd8QvE0jRn9ODEneuZT4hAod-0cn28x5oSq9CNmvtLA"
+        }
+      ],
+      "status": "saved; ready to send for review",
+      "readBackAfterReload": true
+    }
+  ],
+  "manifestSha256": "e583c1cfa6c81f787488ee6a26b0cec32f4b71928c23d8b7f52d0b49232f3282",
+  "preparedAssets": [
+    {
+      "locale": "ko-KR",
+      "kind": "icon",
+      "order": 1,
+      "path": "store-assets/google-play/ko-KR/icon.png",
+      "sha256": "1088b4a7e07db47fd6109c4d1c4466369e9b43d80be34a2319c0458a185a77b4"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "feature-graphic",
+      "order": 1,
+      "path": "store-assets/google-play/ko-KR/feature.png",
+      "sha256": "4b4a5f22b30b7297b6510b63031ece85a228293a2a119ac8a9a8cbb5091351d0"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 1,
+      "path": "store-assets/google-play/ko-KR/01-keepsake.png",
+      "sha256": "2592b38193fb450e535781383b097bced6e5ab1fee3b6b2d4eff3553571935dd"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 2,
+      "path": "store-assets/google-play/ko-KR/02-photo.png",
+      "sha256": "7f87eeeb43b5d79bb6d2799fcb60639e34590d3246b5e3f276c983544ebc9b47"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 3,
+      "path": "store-assets/google-play/ko-KR/03-layout.png",
+      "sha256": "a471442f11dc36496023b85e4003a11e9b0047704847b622f43ec1b01de5c942"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 4,
+      "path": "store-assets/google-play/ko-KR/04-postcard.png",
+      "sha256": "5f63293a387d31a75da4b6c06ba86ee9622cb2da90a4b9bb2953a6df66544cc7"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 5,
+      "path": "store-assets/google-play/ko-KR/05-message.png",
+      "sha256": "329a76560f9420bd4c19219ba59a02cc19f47a8d5528988c3f7ebe84329ea579"
+    },
+    {
+      "locale": "ko-KR",
+      "kind": "phone-screenshot",
+      "order": 6,
+      "path": "store-assets/google-play/ko-KR/06-adjust.png",
+      "sha256": "51012db5c62a7b1edd3214d6bbdb4ede115aa5dcac429a27569d6d0436637e7b"
+    },
+    {
+      "locale": "en-US",
+      "kind": "icon",
+      "order": 1,
+      "path": "store-assets/google-play/en-US/icon.png",
+      "sha256": "1088b4a7e07db47fd6109c4d1c4466369e9b43d80be34a2319c0458a185a77b4"
+    },
+    {
+      "locale": "en-US",
+      "kind": "feature-graphic",
+      "order": 1,
+      "path": "store-assets/google-play/en-US/feature.png",
+      "sha256": "60faf7239c79cf80ae7c9e852e4aa8ae74005f56dd9baa46c96170530f0d89a0"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 1,
+      "path": "store-assets/google-play/en-US/01-keepsake.png",
+      "sha256": "6b9146155d2f03708137a458652a1e33cb631945fe4243af3ce1022ed840270f"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 2,
+      "path": "store-assets/google-play/en-US/02-photo.png",
+      "sha256": "7a65d8432c65c6656b7f8e622b6d3627b929293dc004681fd51d0aa73d0c4a7c"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 3,
+      "path": "store-assets/google-play/en-US/03-layout.png",
+      "sha256": "bc9e4a6d8d8296653b1a603716decbbd3b83bd7b1b896896afb7754c5d33aed2"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 4,
+      "path": "store-assets/google-play/en-US/04-postcard.png",
+      "sha256": "be265084f5162007a2674969ec0a0de416aeb3bd194bf8ac8b29ff6e9c4915c9"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 5,
+      "path": "store-assets/google-play/en-US/05-message.png",
+      "sha256": "7c6ef2a8ea533da79d0abb4a01ced8300ab48307c569a2651413e1cace85eda6"
+    },
+    {
+      "locale": "en-US",
+      "kind": "phone-screenshot",
+      "order": 6,
+      "path": "store-assets/google-play/en-US/06-adjust.png",
+      "sha256": "704e48f6bb39fa7190de6555723b745e5d7cd209dab6e3590e2d20fa2c4cea72"
+    }
+  ],
+  "notes": [
+    "Each locale has one existing vase icon, one new feature graphic, and six new phone screenshots.",
+    "Phone image order was observed as 01-keepsake, 02-photo, 03-layout, 04-postcard, 05-message, 06-adjust before save; the same asset URLs were read back after reload.",
+    "Console image URLs identify saved displayed assets; prepared SHA-256 values are local source digests, not a claim that Google preserves uploaded PNG bytes.",
+    "Read-only scope after save. No payments, declarations outside AI media labels, track or production-rollout changes."
+  ]
+}

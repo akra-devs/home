@@ -1,0 +1,242 @@
+{
+  "capturedAt": "2026-09-08T13:07:01.758016+00:00",
+  "sourceRepository": "akra-devs/home",
+  "sourceRevision": "322e9540d943bcc580c78d9220bbffa1f5734faa",
+  "artifactRevision": "65f24792ad13caea5c2de1f653cebabf7cebb09a",
+  "page": "https://akra.kr/stillstamp/",
+  "deploymentWorkflow": "https://github.com/akra-devs/home/actions/runs/34228851266",
+  "pagesWorkflow": "https://github.com/akra-devs/akra-devs.github.io/actions/runs/34228894017",
+  "assets": [
+    {
+      "url": "https://akra.kr/stillstamp/flowers-note-640.webp",
+      "status": 200,
+      "bytes": 42940,
+      "sha256": "c0cb02206becf1e15e66a653ff1a3f8ba2f1f7b9d31589f8905e13d435bf8d74",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/flowers-note-960.webp",
+      "status": 200,
+      "bytes": 82396,
+      "sha256": "1d57887d6927c0a25c6e31cb287305885aa626c8249fb1d5e0f212609e12ff15",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/flowers-note.webp",
+      "status": 200,
+      "bytes": 148992,
+      "sha256": "c972806592449f839c81f220505f04c09d4eaddfa5c48b80f737031233cd94c5",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-note-640.webp",
+      "status": 200,
+      "bytes": 43404,
+      "sha256": "d1dd12230ed21878e184336bfb8409dbe0a8384b8bf5fcd7449f99c0f4a4973c",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-note-960.webp",
+      "status": 200,
+      "bytes": 88222,
+      "sha256": "651d8e2d61ecbbcb8e5719715044b21e9b124c6ea7b0adb4db360c53a4067a0b",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-note.webp",
+      "status": 200,
+      "bytes": 162914,
+      "sha256": "6b0606da8f4c0dd80815e4393dada11ef17c0f290a23ad08c75867bbfd2181a8",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-note-640.webp",
+      "status": 200,
+      "bytes": 46604,
+      "sha256": "7f6388af0f1ffc695af034857532d08e0a659f465acf49ea32c9029dfdc3316b",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-note-960.webp",
+      "status": 200,
+      "bytes": 86886,
+      "sha256": "1b77731643b9fdd78fcac325ed319baac5172211eb8065b45712d71a1bf874f7",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-note.webp",
+      "status": 200,
+      "bytes": 159002,
+      "sha256": "2fd53eceeef67368ec8d4db16c9d344f248e55f910682a732c1f1532777babf2",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-ko-640.webp",
+      "status": 200,
+      "bytes": 44992,
+      "sha256": "c52c7cc04d77634e291a3ca7265220fa5c1c8a4de483111ead88d9b7a7f50ef6",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-ko-960.webp",
+      "status": 200,
+      "bytes": 88930,
+      "sha256": "a30ceb27392408a2ea782192876d8e6f47912ecdec37ab61c95e42b7baca478e",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-ko.webp",
+      "status": 200,
+      "bytes": 169166,
+      "sha256": "486ac965288ce574b0dae167096cc5e55b4709ecef6068599b55edf7188043a7",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-ko-640.webp",
+      "status": 200,
+      "bytes": 33860,
+      "sha256": "bc01a76cba95b8138717b947c280254a9df7152344a9fd30791ff425b1358d36",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-ko-960.webp",
+      "status": 200,
+      "bytes": 79158,
+      "sha256": "0be0b9658c0fa3525bed49bd6f88b3f07dd65abb46e2cdf7e3e1f7df6a484f92",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-ko.webp",
+      "status": 200,
+      "bytes": 156952,
+      "sha256": "56d6b0f35dae03eac4291d11dc27fe0d127d8f1371b4f7068b2e0bd6531d8964",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-ko-640.webp",
+      "status": 200,
+      "bytes": 30586,
+      "sha256": "0b6e9be017a6c3c1a1773b87b91deb12a6c6a1806d8a25487e19daad7824edc9",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-ko-960.webp",
+      "status": 200,
+      "bytes": 72458,
+      "sha256": "4d8d01bfc0acd12edc23005aecbc70cda6e51b24642da5d43d41e2e0992809b5",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-ko.webp",
+      "status": 200,
+      "bytes": 146826,
+      "sha256": "36fff75364ecae66e2694a74d021bd78f6bd421a6bcfb027f0f07bda6f7fdf7b",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-en-640.webp",
+      "status": 200,
+      "bytes": 45676,
+      "sha256": "7d26902659fb15d285c95674b00fcb5d8bec5b6bbe103373eb642697cb0a8aa4",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-en-960.webp",
+      "status": 200,
+      "bytes": 89934,
+      "sha256": "a4c02ddf5b8cde132abc4a55b300e3d553c6f47d8e6f204373a445b2dc5b7244",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-composite-en.webp",
+      "status": 200,
+      "bytes": 170942,
+      "sha256": "2dbaee62307c1163cce76af44676d3fcab9e591e2b7eff2eff2fe4830a0b823c",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-en-640.webp",
+      "status": 200,
+      "bytes": 34402,
+      "sha256": "6864779a86c067eb56e9a0bfa30af8c0ba59abf0857a8b2ebaacbd67db72541e",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-en-960.webp",
+      "status": 200,
+      "bytes": 80078,
+      "sha256": "9dc87318f24c0317e07c9f1342b3b43ca0081aae5c14ab0e96adfd2fc1f6d04c",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/sunset-postcard-en.webp",
+      "status": 200,
+      "bytes": 158892,
+      "sha256": "2dff27580326221fc422f5891c88b8c5391779fcaa531547594779761c29ee51",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-en-640.webp",
+      "status": 200,
+      "bytes": 30920,
+      "sha256": "f689080598a6cf4e5817782107b900f2d681a47c5a4d204c960b1a38eebb8a83",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-en-960.webp",
+      "status": 200,
+      "bytes": 72880,
+      "sha256": "2076b7e0d4899ecad7d3a4c4258713f7bc81408e84d9acd184acacaf3b575ad3",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/cat-postcard-en.webp",
+      "status": 200,
+      "bytes": 147856,
+      "sha256": "7ccadd5891ac9489fd5520e29f30dcfcd4fcfef525d13bf7aa3c65fc65b966d6",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-layout-ko.webp",
+      "status": 200,
+      "bytes": 79702,
+      "sha256": "5c1188211a41b4f4d67b302cbd20ea8915c616c5301ac82d3e6b1c61d6fc8c0a",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-message-ko.webp",
+      "status": 200,
+      "bytes": 73616,
+      "sha256": "797892ee7e059e940a58bc3e26b9511b57fac10d054bb8a707ab53cec29be064",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-result-ko.webp",
+      "status": 200,
+      "bytes": 68944,
+      "sha256": "e160b6153888e079ea6ff504a30564468e2b40e2231dcb70a206b7d541149497",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-layout-en.webp",
+      "status": 200,
+      "bytes": 85336,
+      "sha256": "6580b9e58d9fb822cdb2a05177870b67d4752adbdf5c7b32d1284ed08f735271",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-message-en.webp",
+      "status": 200,
+      "bytes": 77748,
+      "sha256": "b629e0afaaf69b5f40001a7fe342435db55c918ee0dc8f4f3425e48fe4fcadb5",
+      "matchesSource": true
+    },
+    {
+      "url": "https://akra.kr/stillstamp/screen-result-en.webp",
+      "status": 200,
+      "bytes": 69424,
+      "sha256": "1220918171abfac251396825f854d00ec64401c609f04617a5cbd25f603adc73",
+      "matchesSource": true
+    }
+  ]
+}
