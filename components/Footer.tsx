@@ -14,6 +14,7 @@ const Footer: React.FC = () => {
     { label: t('nav.about'), href: '/#philosophy' },
     { label: t('footer.productsAndWork'), href: '/#showcase' },
     { label: t('nav.services'), href: '/#services' },
+    { label: t('footer.mcp'), href: '/mcp/' },
     { label: t('nav.contact'), href: 'mailto:help@akra.kr' },
   ];
 
