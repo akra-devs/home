@@ -1,2 +1,7 @@
 /public/brand/*.svg -text
 /public/brand/assets.manifest.json -text
+
+# Preserve reproducible publication evidence across Windows and CI.
+/docs/qa/live-publication.json text eol=lf
+/docs/qa/play-listing-saved.json text eol=lf
+/docs/qa/publication-evidence.json text eol=lf

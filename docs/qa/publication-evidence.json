@@ -10,8 +10,8 @@
     },
     {
       "path": "docs/qa/live-publication.json",
-      "sha256": "0fa2934253143da681f26e0e5d213bc7aa88a7f7b253a1f1dfb76783fc03f173",
-      "bytes": 8453
+      "sha256": "f2d572fd41902cac6b0c4fc104530ce4cedb7b57be915c592f68df57d910c70f",
+      "bytes": 8211
     },
     {
       "path": "docs/qa/play-listing-saved.json",
