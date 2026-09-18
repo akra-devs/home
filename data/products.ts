@@ -1,6 +1,7 @@
 import type { TranslationKey } from '../i18n/messages';
 
 export enum ProjectId {
+  CallFilm = 'callfilm',
   Stillstamp = 'stillstamp',
   Waxball = 'waxball',
   QuickTranslate = 'akra-quick-translate',
@@ -68,6 +69,19 @@ export type LinkedProject = Project & {
 };
 
 export const projectCatalog = {
+  [ProjectId.CallFilm]: {
+    id: ProjectId.CallFilm,
+    category: ProjectCategory.OwnService,
+    lifecycle: ProjectLifecycle.Live,
+    surfaces: [ProjectSurface.Showcase, ProjectSurface.Footer],
+    titleKey: 'products.callfilm.title',
+    descriptionKey: 'products.callfilm.description',
+    tagKeys: ['products.callfilm.tagAndroid', 'products.callfilm.tagCaptions', 'products.callfilm.tagVideo'],
+    imageUrl: '/callfilm/feature.webp',
+    imageAltKey: 'products.callfilm.imageAlt',
+    href: '/mp4-transition-pages/',
+    highlightLabelKey: 'products.callfilm.highlight',
+  },
   [ProjectId.Stillstamp]: {
     id: ProjectId.Stillstamp,
     category: ProjectCategory.OwnService,

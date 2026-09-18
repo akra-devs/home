@@ -17,6 +17,13 @@ type TranslationEntry = readonly [ko: string, en: string, ja: string, zh: string
 // when that is the product's intended display name.
 const entries = {
   ...stillstampEntries,
+  'products.callfilm.title': ['통화필름', 'CallFilm', 'CallFilm', 'CallFilm'],
+  'products.callfilm.description': ['녹음을 기기 안에서 AI 자막 영상으로 만들고, 원하는 말을 검색해 그 순간을 다시 찾아보세요.', 'Turn recordings into AI-captioned videos on your device. Search for a phrase and jump back to that moment.', '録音を端末内でAI字幕付き動画に。言葉を検索して、その瞬間をもう一度見つけられます。', '在设备上将录音制作为带 AI 字幕的视频，搜索话语即可回到对应时刻。'],
+  'products.callfilm.tagAndroid': ['Android', 'Android', 'Android', 'Android'],
+  'products.callfilm.tagCaptions': ['AI 자막', 'AI captions', 'AI字幕', 'AI 字幕'],
+  'products.callfilm.tagVideo': ['녹음 → 영상', 'Audio → video', '録音 → 動画', '录音 → 视频'],
+  'products.callfilm.highlight': ['기기 내 처리', 'On-device', '端末内処理', '设备端处理'],
+  'products.callfilm.imageAlt': ['음성 파형을 표현한 통화필름 공식 앱 아이콘', 'Official CallFilm app icon depicting an audio waveform', '音声波形を表したCallFilmの公式アプリアイコン', '呈现音频波形的 CallFilm 官方应用图标'],
   'language.select': ['언어 선택', 'Select language', '言語を選択', '选择语言'],
 
   'seo.home.title': ['Akra Dev | 제품을 만드는 개발팀', 'Akra Dev | Product builders', 'Akra Dev | プロダクトをつくる開発チーム', 'Akra Dev | 打造产品的开发团队'],
