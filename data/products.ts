@@ -1,6 +1,7 @@
 import type { TranslationKey } from '../i18n/messages';
 
 export enum ProjectId {
+  KeyDdal = 'key-ddal',
   CallFilm = 'callfilm',
   Stillstamp = 'stillstamp',
   Waxball = 'waxball',
@@ -69,6 +70,19 @@ export type LinkedProject = Project & {
 };
 
 export const projectCatalog = {
+  [ProjectId.KeyDdal]: {
+    id: ProjectId.KeyDdal,
+    category: ProjectCategory.OwnService,
+    lifecycle: ProjectLifecycle.Preview,
+    surfaces: [ProjectSurface.Showcase, ProjectSurface.Footer],
+    titleKey: 'products.keyDdal.title',
+    descriptionKey: 'products.keyDdal.description',
+    tagKeys: ['kd.android', 'kd.tag', 'kd.custom'],
+    imageUrl: '/key-ddal/card.webp',
+    imageAltKey: 'kd.heroAlt',
+    href: '/key-ddal/',
+    highlightLabelKey: 'kd.preview',
+  },
   [ProjectId.CallFilm]: {
     id: ProjectId.CallFilm,
     category: ProjectCategory.OwnService,

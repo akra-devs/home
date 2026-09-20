@@ -191,6 +191,35 @@ Screenshots use WebP and the product walkthrough uses H.264/AAC MP4 with control
 
 One-off material accent colors remain data-driven. The removed decorative grid and repeated hero/final-CTA eyebrow labels are not design-system patterns and must not return through component reuse.
 
+## Key Ddal product page
+
+Reuse the midnight gallery shell, serif product typography, catalog HoloCard,
+pill actions and native screenshot selection used by the existing pages.
+The focal object is the product-owned porcelain key artwork, shown over a
+restrained cabinet-green light. It is labeled artwork; Web captures are
+separately labeled and never represented as Play-installed device captures.
+
+- Colors: pearl `#f4f0e5`, muted pearl `#b6b5ad`, moon gold `#d8ba82`, cabinet
+  `#17201d`, cabinet light `#405149`; hairline `rgba(244,240,229,.16)`.
+- Typography: existing Playfair Display/Noto Serif KR and Pretendard. Product
+  wordmark `clamp(3.5rem,8vw,7rem)`, headline `clamp(2rem,4vw,3.5rem)`, body
+  16px/1.8, supporting text 14px, captions 12px. All CJK copy may wrap.
+- Layout: 1280px max width; 24px gutters, 16px on mobile. Hero 1:1 columns,
+  one column below 900px. Sections 96px apart (64px mobile); 8/16/24/32/48px
+  spacing. Screenshot selector is a two-column editorial layout, stacking
+  below 900px. Screens remain whole with a 432:768 reserved ratio.
+- Primitives: `kd-button` primary/secondary links, 48px minimum; screenshot
+  buttons with `aria-pressed` and a visible selected border; `kd-step` numbered
+  text rows; native FAQ disclosures with 48px summaries. No new ambient motion.
+- Focus uses a 2px gold outline and 4px offset; controls retain text labels.
+  No sound autoplays or fabricated app simulator. Selection swaps real images.
+- Personas: phone visitors can understand the loop and current availability;
+  keyboard users can select both screens and read release/support details;
+  four-locale visitors see translated copy and alt text. Screen content remains
+  the original Korean capture, explicitly disclosed in each locale.
+- Existing shared-shell font/network and homepage animation debt is unchanged;
+  do not claim a Lighthouse score without measuring it.
+
 ## Stillstamp product page
 
 Reference observation: 2026-09-07, `https://akra.kr/waxball/` and

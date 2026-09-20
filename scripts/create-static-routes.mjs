@@ -8,6 +8,13 @@ const indexPath = join(distDir, 'index.html');
 
 const routes = [
   {
+    path: 'key-ddal',
+    title: 'Key Ddal | 손끝에서 시작하는 나만의 키보드 — Akra Dev',
+    description: '키캡을 누르고, 새로운 부품을 만나고, 내 키보드로 타이핑하세요. Key Ddal의 ASMR 키보드와 실제 화면을 소개합니다.',
+    canonical: 'https://akra.kr/key-ddal/',
+    image: 'https://akra.kr/key-ddal/feature.webp',
+  },
+  {
     path: 'stillstamp',
     title: 'stillstamp | 사진 한 장, 마음 한 줄 — Akra Dev',
     description: '소중한 사람, 여행의 노을, 함께 사는 고양이. 사진을 고무인장 엽서로 만들고 내 문장을 더하는 Stillstamp를 만나보세요.',
