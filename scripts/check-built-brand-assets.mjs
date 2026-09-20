@@ -43,6 +43,7 @@ if (!builtLegacySecondary.equals(archivedLegacySecondary)) {
 }
 
 const htmlPaths = [
+  join(distDir, 'key-ddal', 'index.html'),
   join(distDir, 'index.html'),
   join(distDir, 'waxball', 'index.html'),
   join(distDir, 'quick-translate', 'index.html'),

@@ -1,0 +1,55 @@
+{
+  "repository": "akra-devs/key-ddal",
+  "sourceRevision": "224103812a2c5ecb9ac8b13877fd7d1ad92cd775",
+  "capturedUiRevision": "60df30cc268eecf7df05665bc78aacef579e3280",
+  "captureTarget": "Actual shared Flutter Web UI, Korean, 432x768; not a Play-installed device capture",
+  "captureDate": "2026-09-18",
+  "transform": "Proportional resize, WebP quality 88; no retouching",
+  "records": [
+    {
+      "source": "assets/art/launch/porcelain-touch.png",
+      "output": "public/key-ddal/hero.webp",
+      "width": 900,
+      "height": 900,
+      "bytes": 52854,
+      "sourceSha256": "860995f55c868404371b8556f1d327bbbd3a87a9843f4808ac047ff79aa53e45",
+      "sha256": "63d50a61c4b2d2ac5dcb5e70cf013e37ee6378aeb52fa778a90cc12ca1ef1a0f"
+    },
+    {
+      "source": "store-assets/google-play/01-ko-tap-lab.png",
+      "output": "public/key-ddal/tap-lab.webp",
+      "width": 432,
+      "height": 768,
+      "bytes": 17002,
+      "sourceSha256": "0fee730bbc6b4e3063e9062dff1e63ce954fdda1541707066df117b1f46e282e",
+      "sha256": "5d98290674b07c6122e4d8037042d998ceb3f56ea72dbd84f01579716a614436"
+    },
+    {
+      "source": "store-assets/google-play/02-ko-typing.png",
+      "output": "public/key-ddal/typing.webp",
+      "width": 432,
+      "height": 768,
+      "bytes": 22086,
+      "sourceSha256": "9c3b01339e4f293118bea28f7cb8cec22462fd863e872557954c3de111640d54",
+      "sha256": "960f383b725720eefa1067f51d1d1145ca02e6da1cd1195085cdc781b4913da6"
+    },
+    {
+      "source": "store-assets/google-play/feature-graphic.png",
+      "output": "public/key-ddal/feature.webp",
+      "width": 1024,
+      "height": 500,
+      "bytes": 46408,
+      "sourceSha256": "c6a67c5a67614778d6b3449198846945d56605b7745d70509850a19a2058d695",
+      "sha256": "8904f9e4c072b8b1b0bd0b2931e3dbffd9111e28787a0fc4770a02e20bc3d86a"
+    },
+    {
+      "source": "assets/art/launch/porcelain-touch.png",
+      "output": "public/key-ddal/card.webp",
+      "width": 800,
+      "height": 500,
+      "bytes": 7288,
+      "sha256": "f697c0b3fe4caee38506c60829ccc9e5035bfab2f74a04f9c950b847e0f11cbf",
+      "transform": "Hero derivative resized to 480x480, placed at 160,-32 on 800x500 cabinet-color canvas; no content retouching"
+    }
+  ]
+}

@@ -1,4 +1,5 @@
 import { stillstampEntries } from './stillstamp';
+import { keyDdalEntries } from './keyDdal';
 
 export const locales = ['ko', 'en', 'ja', 'zh'] as const;
 
@@ -17,6 +18,7 @@ type TranslationEntry = readonly [ko: string, en: string, ja: string, zh: string
 // when that is the product's intended display name.
 const entries = {
   ...stillstampEntries,
+  ...keyDdalEntries,
   'products.callfilm.title': ['통화필름', 'CallFilm', 'CallFilm', 'CallFilm'],
   'products.callfilm.description': ['녹음을 기기 안에서 AI 자막 영상으로 만들고, 원하는 말을 검색해 그 순간을 다시 찾아보세요.', 'Turn recordings into AI-captioned videos on your device. Search for a phrase and jump back to that moment.', '録音を端末内でAI字幕付き動画に。言葉を検索して、その瞬間をもう一度見つけられます。', '在设备上将录音制作为带 AI 字幕的视频，搜索话语即可回到对应时刻。'],
   'products.callfilm.tagAndroid': ['Android', 'Android', 'Android', 'Android'],

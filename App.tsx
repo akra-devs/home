@@ -14,6 +14,7 @@ import {
 } from './components/QuickTranslatePages';
 import WaxballPage from './components/WaxballPage';
 import StillstampPage from './components/StillstampPage';
+import KeyDdalPage from './components/KeyDdalPage';
 import { setPageMetadata, useTranslation } from './i18n';
 
 const normalizePath = (path: string) => {
@@ -25,6 +26,7 @@ const normalizePath = (path: string) => {
 };
 
 const productRoutes: Record<string, React.ReactNode> = {
+  '/key-ddal': <KeyDdalPage />,
   '/stillstamp': <StillstampPage />,
   '/waxball': <WaxballPage />,
   '/quick-translate': <QuickTranslatePage />,
