@@ -1,0 +1,37 @@
+{
+  "app": "Charm Lab",
+  "policyVersion": "1.1.0",
+  "source": "akra-devs/akra-charm-lab",
+  "documents": [
+    {
+      "document": "privacy.ko.md",
+      "sha256": "1d8649fb08294585258c2dcfb2939b646d96420e553ff7b6e9de15b9b9bc0f59",
+      "publicPath": "charm-lab/privacy/index.html"
+    },
+    {
+      "document": "privacy.en.md",
+      "sha256": "761b301c39092d329a66611150944b557e6bc1b55f6938470b79c236ac5a0932",
+      "publicPath": "charm-lab/privacy/en/index.html"
+    },
+    {
+      "document": "terms.ko.md",
+      "sha256": "0ff8146ec0a406d3ae0da3012316a3f62b6d9235af251a0eb0384960a5326e40",
+      "publicPath": "charm-lab/terms/index.html"
+    },
+    {
+      "document": "terms.en.md",
+      "sha256": "af8f269732c4a321b1d24df2762a0e6170199befaffe516f6a5aad604a9de518",
+      "publicPath": "charm-lab/terms/en/index.html"
+    },
+    {
+      "document": "support.ko.md",
+      "sha256": "5f0789850801748a4f2b7f11dfa7cbd1ef6e74dcce1d54cbd07caa03f620903c",
+      "publicPath": "charm-lab/support/index.html"
+    },
+    {
+      "document": "support.en.md",
+      "sha256": "c2181e2fb29813de0752fb82e2bf00f792e6a88516fcebca05a0d8b8267ea87a",
+      "publicPath": "charm-lab/support/en/index.html"
+    }
+  ]
+}

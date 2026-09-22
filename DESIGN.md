@@ -285,3 +285,8 @@ Japanese/Chinese deliberately use English captures with a localized disclosure.
 Korean personal notes are translated alongside the hero. Current public
 availability remains Android internal testing. Each source, transformation,
 revision and optimized digest is recorded in the media inventory.
+
+
+## Charm Lab policy documents
+
+Static bilingual reading pages under `/charm-lab/privacy/`, `/charm-lab/terms/` and `/charm-lab/support/`. Reuse the midnight canvas, white headings, zinc body text, 1px hairline and 8px control radius. Body width is at most 720px, with 24px phone gutters, 17px system text, 1.8 line height and wrapping URLs. Use semantic headings, a skip link, visible keyboard focus and 48px language/contact links. All policy text is in initial HTML; no JavaScript, font network requests, tracking or animation. The active language and document title are explicit. These policy routes do not add a marketing product card or assert store availability.
