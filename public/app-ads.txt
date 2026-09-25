@@ -4,3 +4,4 @@ unity.com, 135108201, DIRECT, 96cabb5fbdde37a7
 ironsrc.com, 684615, DIRECT
 vungle.com, 6aac2dd78770bfafcf0d84ae, DIRECT, c107d686becd2d77
 inmobi.com, 1838b4c0d101493bbefc3ba5bd789ef0, DIRECT, 83e75a7ae333ca9d
+facebook.com, 2148839785841721, DIRECT, c3e20eee3f780d68
