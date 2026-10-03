@@ -106,9 +106,12 @@ export default function StillstampPage() {
         <p className="ss-brand">stillstamp.</p>
         <h2 id="ss-final-title">{t('ss.finalTitle')}</h2>
         <p>{t('ss.finalBody')}</p>
+        <p>{t('ss.accountUse')}</p>
         <div className="ss-actions">
           <a className="ss-button ss-primary" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">{t('ss.install')}<ArrowUpRight size={18} aria-hidden="true" /></a>
           <a className="ss-button ss-secondary" href={`/stillstamp/support/${locale === 'ko' ? '' : '#en'}`}>{t('ss.support')}</a>
+          <a className="ss-button ss-secondary" href="https://stillstamp.akra.kr/privacy">{t('ss.privacy')}</a>
+          <a className="ss-button ss-secondary" href="https://stillstamp.akra.kr/terms">{t('ss.terms')}</a>
         </div>
         <p className="ss-status">{t('ss.status')}</p>
       </section>

@@ -50,8 +50,11 @@ export const stillstampEntries = {
   'ss.faq3Q': ['지금 설치할 수 있나요?', 'Can I install it now?', '今すぐインストールできますか？', '现在可以安装吗？'],
   'ss.faq3A': ['네. Google Play에서 Android 앱을 설치할 수 있습니다. iOS 버전은 아직 공개되지 않았습니다.', 'Yes. The Android app is available on Google Play. An iOS release is not available yet.', 'はい。Android版をGoogle Playでインストールできます。iOS版はまだ公開していません。', '可以。Android 应用已在 Google Play 上架。iOS 版本暂未公开。'],
   'ss.finalTitle': ['꺼내 보고 싶은 순간에,\nstillstamp.', 'For a moment\nyou want to keep.', '見返したくなる瞬間に、\nstillstamp。', '为想再次回看的瞬间，\nstillstamp。'],
-  'ss.finalBody': ['첫 엽서를 함께 만들 날을 준비하고 있습니다. 지금은 세 장의 이야기로 먼저 만나보세요.', 'We’re preparing for your first postcard. Until then, explore three little stories.', '最初の一枚を一緒につくる日を準備しています。まずは三つの作例をご覧ください。', '我们正为你的第一张明信片做准备。先来看看这三个小故事吧。'],
+  'ss.finalBody': ['사진을 골라 내 문장을 더하고, 완성한 엽서를 PNG로 저장해 나눠 보세요.', 'Choose a photo, add your own words, and save your finished postcard as a PNG to share.', '写真を選んで自分の言葉を添え、完成したポストカードをPNGで保存して共有しましょう。', '选择照片，写下自己的话，将完成的明信片保存为 PNG 并分享。'],
   'ss.contact': ['Stillstamp 문의하기', 'Contact Stillstamp', 'Stillstampへのお問い合わせ', '联系Stillstamp'],
   'ss.support': ['Stillstamp 고객지원', 'Stillstamp support', 'Stillstampサポート', 'Stillstamp 支持'],
+  'ss.accountUse': ['Google 계정은 크레딧과 구매 혜택을 연결하는 데 사용합니다. 엽서는 기기에 보관하며, 선택한 사진은 엽서 생성 때 서버로 전송됩니다.', 'Google sign-in links your credits and purchase benefits. Postcards stay on your device; a selected photo is sent to the server when you generate a postcard.', 'Googleアカウントはクレジットと購入特典の連携に使用します。ポストカードは端末に保存され、選択した写真はポストカードの生成時にサーバーへ送信されます。', 'Google 登录用于关联积分和购买权益。明信片保存在设备上；所选照片会在生成明信片时发送到服务器。'],
+  'ss.privacy': ['Stillstamp 개인정보처리방침', 'Stillstamp privacy policy', 'Stillstamp プライバシーポリシー', 'Stillstamp 隐私政策'],
+  'ss.terms': ['Stillstamp 이용약관', 'Stillstamp terms', 'Stillstamp 利用規約', 'Stillstamp 使用条款'],
   'ss.install': ['Google Play에서 설치', 'Get it on Google Play', 'Google Playで入手', '在 Google Play 安装'],
 } as const;
