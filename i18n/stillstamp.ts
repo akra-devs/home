@@ -52,5 +52,6 @@ export const stillstampEntries = {
   'ss.finalTitle': ['꺼내 보고 싶은 순간에,\nstillstamp.', 'For a moment\nyou want to keep.', '見返したくなる瞬間に、\nstillstamp。', '为想再次回看的瞬间，\nstillstamp。'],
   'ss.finalBody': ['첫 엽서를 함께 만들 날을 준비하고 있습니다. 지금은 세 장의 이야기로 먼저 만나보세요.', 'We’re preparing for your first postcard. Until then, explore three little stories.', '最初の一枚を一緒につくる日を準備しています。まずは三つの作例をご覧ください。', '我们正为你的第一张明信片做准备。先来看看这三个小故事吧。'],
   'ss.contact': ['Stillstamp 문의하기', 'Contact Stillstamp', 'Stillstampへのお問い合わせ', '联系Stillstamp'],
+  'ss.support': ['Stillstamp 고객지원', 'Stillstamp support', 'Stillstampサポート', 'Stillstamp 支持'],
   'ss.install': ['Google Play에서 설치', 'Get it on Google Play', 'Google Playで入手', '在 Google Play 安装'],
 } as const;

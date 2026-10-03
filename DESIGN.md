@@ -348,3 +348,19 @@ revision and optimized digest is recorded in the media inventory.
 ## Charm Lab policy documents
 
 Static bilingual reading pages under `/charm-lab/privacy/`, `/charm-lab/terms/` and `/charm-lab/support/`. Reuse the midnight canvas, white headings, zinc body text, 1px hairline and 8px control radius. Body width is at most 720px, with 24px phone gutters, 17px system text, 1.8 line height and wrapping URLs. Use semantic headings, a skip link, visible keyboard focus and 48px language/contact links. All policy text is in initial HTML; no JavaScript, font network requests, tracking or animation. The active language and document title are explicit. These policy routes do not add a marketing product card or assert store availability.
+
+## Stillstamp support document
+
+`/stillstamp/support/` reuses the static documentation shell: a 65ch reading
+column, 24px desktop gutters and 16px phone gutters, 16px/1.8 system body text,
+32px header/footer padding and 64px main padding (48px on phones). Reuse
+Stillstamp warm ink, muted ink and sage over the midnight canvas. Headings use
+the existing serif scale; section headings use the shared 24px size. Underlined
+links have visible sage focus, and navigation/contact targets are at least 48px.
+The document owns scrolling. Korean and English sections have explicit language
+attributes and anchor navigation. Support topics and email are present in the
+initial HTML, without scripts, font downloads, forms or animation. Keep existing
+published privacy, terms and account-deletion destinations. Phone visitors can
+find purchase recovery and PNG preservation instructions; keyboard visitors can
+reach support and policy links. The marketing page uses its existing secondary
+button to reach this document, choosing the English anchor for non-Korean locales.
