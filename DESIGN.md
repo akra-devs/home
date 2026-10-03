@@ -10,6 +10,16 @@ colors:
   body-text: "#d4d4d8"
   muted-text: "#a1a1aa"
   hairline: "rgba(255, 255, 255, 0.10)"
+  home-quiet-section: "#111113"
+  home-artwork: "#131315"
+  home-card: "#151517"
+  home-media: "#101012"
+  home-hover: "#1c1c20"
+  home-card-rule: "#303034"
+  home-control-rule: "#3f3f46"
+  home-primary-ink: "#f4f4f5"
+  home-body-ink: "#e4e4e7"
+  home-focus: "#93c5fd"
   waxball-ink: "#f8f7ff"
   waxball-muted: "#aaa8b7"
   waxball-violet: "#6d5dff"
@@ -17,10 +27,10 @@ colors:
   waxball-lilac: "#d9d1ff"
 typography:
   display:
-    fontFamily: "Playfair Display, Noto Serif KR, serif"
-    fontSize: "clamp(3.75rem, 8vw, 9rem)"
-    fontWeight: 500
-    lineHeight: 1.05
+    fontFamily: "Pretendard, sans-serif"
+    fontSize: "clamp(2.5rem, 5vw, 4.5rem)"
+    fontWeight: 700
+    lineHeight: 1.2
     letterSpacing: "-0.03em"
   productDisplay:
     fontFamily: "Playfair Display, Noto Serif KR, serif"
@@ -29,11 +39,11 @@ typography:
     lineHeight: 0.82
     letterSpacing: "-0.065em"
   headline:
-    fontFamily: "Playfair Display, Noto Serif KR, serif"
-    fontSize: "clamp(2.35rem, 5vw, 4.9rem)"
-    fontWeight: 600
-    lineHeight: 1.04
-    letterSpacing: "-0.035em"
+    fontFamily: "Pretendard, sans-serif"
+    fontSize: "clamp(2rem, 3.5vw, 3rem)"
+    fontWeight: 650
+    lineHeight: 1.25
+    letterSpacing: "-0.025em"
   body:
     fontFamily: "Pretendard, sans-serif"
     fontSize: "1rem"
@@ -47,6 +57,7 @@ typography:
     letterSpacing: "0.08em"
 rounded:
   control: "8px"
+  home-card: "12px"
   card: "16px"
   panel: "24px"
   media: "32px"
@@ -104,7 +115,10 @@ the pages make no claim that public visitors can use the internal connector.
 
 **Creative North Star: “The Midnight Product Gallery.”**
 
-Akra places real products in a nearly black exhibition space and uses light, scale, and editorial type to establish hierarchy. The dark canvas is not decoration: it lets authentic product media carry the story. Playfair Display or Noto Serif KR provides the declarative voice; Pretendard keeps controls and explanatory copy direct.
+Akra places real products in a nearly black exhibition space. Quiet tonal surfaces,
+generous spacing and a clear sans-serif hierarchy let authentic product media carry
+the story. Homepage Korean headlines, navigation and controls use Pretendard,
+without italics. Existing product-page display typography remains product-owned.
 
 Product pages retain the same navigation, typography, and base contrast, then extend the system with a product-specific light palette. Waxball uses lilac, violet, and cyan as restrained illumination around real in-game media. Those colors do not replace the global navigation, body copy, or interaction semantics.
 
@@ -124,9 +138,11 @@ Product pages retain the same navigation, typography, and base contrast, then ex
 
 ## Typography
 
-- **Display:** Playfair Display with Noto Serif KR fallback. Use only for the primary declaration and major section turns.
+- **Homepage display:** Pretendard, 700 weight, fluid 40–72px. Keep the deliberate
+  “아이디어를 / 작동하는 제품으로.” slogan; semantic words stay intact on phones.
+  Use balanced wrapping, not a forced syllable break.
 - **Product display:** Waxball’s desktop wordmark uses `clamp(5.5rem, 9.4vw, 9.3rem)`, a compact line height, and tight tracking. Mobile scales down rather than wrapping into a second line.
-- **Headline:** `clamp(2.35rem, 5vw, 4.9rem)` for editorial section openings.
+- **Homepage headline:** `clamp(2rem, 3.5vw, 3rem)` with a comfortable Korean line height.
 - **Body:** Pretendard, 16px by default, at least 1.6 line height, and a readable maximum measure near 65 characters.
 - **Labels:** 12px semibold or bold with deliberate tracking for stages, categories, and status. Labels support the story; they never become a repeated eyebrow above every section.
 
@@ -149,13 +165,55 @@ Product pages retain the same navigation, typography, and base contrast, then ex
 
 ## Signature Components
 
-### Floating Navigation
+### Shared Navigation
 
-The global Akra navigation remains legible above every product world. It has a minimum 44px mobile target, visible focus treatment, real destinations, and a translucent black surface only when contrast requires it.
+The global Akra navigation remains legible above every product world. A quiet
+dark header carries the blue mark, 44px controls, visible focus and real
+destinations. Below 1024px use the compact menu, including at 768px. Escape and
+every link close it; its panel scrolls within the viewport. A skip link enters main.
 
-### Holographic Product Card
+### Uniform Product Card
 
-The homepage’s featured Waxball card spans additional grid width. Pointer tilt is restrained, disabled for coarse pointers and reduced-motion users, and never blocks the product link or copy.
+Every catalog entry occupies exactly one grid cell, including Waxball. The shared
+structure is reserved 16:10 genuine media above readable content, category/status,
+title, description, tags and a truthful action. Cards stretch to the same row
+height; descriptions are not clipped. No image-overlaid text, tilt, foil or glow.
+Concept/private entries remain visible and nonclickable, with localized status
+and typographic title studies instead of random photos or fabricated app screens.
+Preview cards link to their real product pages and explicitly say preview.
+
+### Homepage Composition
+
+The left-aligned hero pairs the deliberate slogan with a whole existing
+Stillstamp product artwork and real Key Ddal media, each with a product caption
+and real destination. No stock background, floating simulator or ambient motion.
+The gallery follows the hero before the studio approach. Philosophy uses the
+established 80/20 split as restrained editorial columns; services are unboxed
+capability rows and process is an ordered sequence. Contact preserves consultation
+and location information with an actual `mailto:help@akra.kr` inquiry action,
+never a pretend submission form or sent-message claim.
+Phone content uses 20px gutters, stacked compositions and natural phrase wrapping.
+The shared shell alone changes on product routes; product bodies/styles stay intact.
+
+Homepage tokens extend the product-owned palette without changing its pages:
+canvas `#09090b`, quiet section `#111113`, artwork `#131315`, card `#151517`,
+raised control `#18181b`, hover/study `#1c1c20`, media `#101012`, divider `#27272a`,
+card rule `#303034`, control rule `#3f3f46`, primary ink `#f4f4f5`, body ink
+`#e4e4e7`, secondary ink `#d4d4d8`, muted ink `#a1a1aa`, focus/link `#93c5fd`.
+These roles are centralized in `index.css`, not repeated per component.
+Homepage cards/artwork use 12px corners; actions and thumbnails use 8px.
+The content and shell width is 1200px with 32px desktop and 20px phone gutters.
+Desktop card gap is 28px (24px phone); card content padding is 28px (24px phone).
+Display/section copy uses 18/17px desktop and 16px phone; card copy is 15px,
+card titles 25px (23px phone), metadata 12px and actions 13px.
+The complete homepage type ramp is 12, 13, 14, 15, 16, 17, 18, 20, 21, 23,
+24, 25, 28, 32, 38, 40, 48, 56 and 72px. Service/process titles use 21px
+(20px phone), ratio suffixes 24px, concept studies 28–48px, and the mobile
+hero uses `clamp(38px, 10.5vw, 56px)`.
+Korean headings and product paragraphs keep words together, including the shared shell.
+Japanese and Chinese homepage headings use native normal word breaking and strict
+line breaking so closing punctuation cannot become a standalone line. Preserve
+each product's existing typeface, media, controls and layout.
 
 ### Waxball Split Comparison
 
