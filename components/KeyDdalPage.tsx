@@ -3,6 +3,8 @@ import { ArrowDown, ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { setPageMetadata, useTranslation } from '../i18n';
 import './KeyDdalPage.css';
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=kr.akra.keyddal';
+
 export default function KeyDdalPage() {
   const { t, locale } = useTranslation();
   const [screen, setScreen] = useState<'tap' | 'type'>('tap');
@@ -23,8 +25,8 @@ export default function KeyDdalPage() {
             <h1 id="kd-title">{t('kd.statement')}</h1>
             <p className="kd-intro">{t('kd.intro')}</p>
             <div className="kd-actions">
-              <a className="kd-button kd-primary" href="#kd-screens">{t('kd.explore')}<ArrowDown size={18} aria-hidden="true" /></a>
-              <a className="kd-button" href="#kd-release">{t('kd.releaseLink')}</a>
+              <a className="kd-button kd-primary" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">{t('kd.install')}<ArrowUpRight size={18} aria-hidden="true" /></a>
+              <a className="kd-button" href="#kd-screens">{t('kd.explore')}<ArrowDown size={18} aria-hidden="true" /></a>
             </div>
             <p className="kd-status">{t('kd.status')}</p>
           </div>
@@ -68,11 +70,12 @@ export default function KeyDdalPage() {
 
       <section className="kd-section kd-container kd-release" id="kd-release" aria-labelledby="kd-release-title">
         <div>
-          <p className="kd-status">{t('kd.preview')}</p>
+          <p className="kd-status">{t('kd.released')}</p>
           <h2 id="kd-release-title">{t('kd.releaseTitle')}</h2>
           <p>{t('kd.releaseBody')}</p>
           <div className="kd-actions">
-            <a className="kd-button kd-primary" href={policy('support')}>{t('kd.support')}<ArrowUpRight size={18} aria-hidden="true" /></a>
+            <a className="kd-button kd-primary" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">{t('kd.install')}<ArrowUpRight size={18} aria-hidden="true" /></a>
+            <a className="kd-button" href={policy('support')}>{t('kd.support')}<ArrowUpRight size={18} aria-hidden="true" /></a>
           </div>
           <div className="kd-policy-links">
             <a href={policy('privacy')}>{t('kd.privacy')}</a>

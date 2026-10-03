@@ -3,6 +3,8 @@ import { ArrowDown, ArrowLeft, ArrowUpRight } from 'lucide-react';
 import { setPageMetadata, useTranslation } from '../i18n';
 import './StillstampPage.css';
 
+const PLAY_STORE_URL = 'https://play.google.com/store/apps/details?id=kr.akra.stillstamp';
+
 const asset = (name: string) => `/stillstamp/${name}.webp`;
 const responsive = (name: string) => `${asset(`${name}-640`)} 640w, ${asset(`${name}-960`)} 960w, ${asset(name)} 1448w`;
 const screens = ['layout', 'message', 'result'] as const;
@@ -26,7 +28,10 @@ export default function StillstampPage() {
             <p className="ss-brand">stillstamp.</p>
             <h1 id="stillstamp-title">{t('ss.statement')}</h1>
             <p className="ss-intro">{t('ss.intro')}</p>
-            <a className="ss-button ss-primary" href="#postcards">{t('ss.explore')}<ArrowDown size={18} aria-hidden="true" /></a>
+            <div className="ss-actions">
+              <a className="ss-button ss-primary" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">{t('ss.install')}<ArrowUpRight size={18} aria-hidden="true" /></a>
+              <a className="ss-button ss-secondary" href="#postcards">{t('ss.explore')}<ArrowDown size={18} aria-hidden="true" /></a>
+            </div>
             <p className="ss-status">{t('ss.status')}</p>
           </div>
           <figure className="ss-hero-art">
@@ -102,7 +107,7 @@ export default function StillstampPage() {
         <h2 id="ss-final-title">{t('ss.finalTitle')}</h2>
         <p>{t('ss.finalBody')}</p>
         <div className="ss-actions">
-          <a className="ss-button ss-primary" href="#postcards">{t('ss.explore')}<ArrowUpRight size={18} aria-hidden="true" /></a>
+          <a className="ss-button ss-primary" href={PLAY_STORE_URL} target="_blank" rel="noopener noreferrer">{t('ss.install')}<ArrowUpRight size={18} aria-hidden="true" /></a>
           <a className="ss-button ss-secondary" href="mailto:help@akra.kr?subject=Stillstamp">{t('ss.contact')}</a>
         </div>
         <p className="ss-status">{t('ss.status')}</p>

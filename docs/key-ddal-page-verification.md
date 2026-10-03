@@ -9,8 +9,11 @@
 - Product evidence: `akra-devs/key-ddal` revision
   `224103812a2c5ecb9ac8b13877fd7d1ad92cd775`, README, AGENTS navigation scope,
   DESIGN, release blockers dated 2026-09-19 and store capture evidence.
-- Android is described as preparing for launch. No store link or public
-  install claim is invented. iOS is explicitly not yet publicly released.
+- Android is publicly available, confirmed by the user on 2026-10-03.
+  Its published package `kr.akra.keyddal` is linked at
+  https://play.google.com/store/apps/details?id=kr.akra.keyddal.
+  iOS is explicitly not yet publicly released. The confirmation date is not
+  asserted as the original release date.
 - Tap Lab, Capsule and Keyboard are in scope. Suspended Collection, Build
   and Shop are not promoted. This change does not alter the app.
 
