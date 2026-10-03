@@ -67,12 +67,12 @@ function App() {
     <div className="min-h-screen bg-zinc-950 text-white selection:bg-primary-500 selection:text-white">
       <Navbar />
       {isProductRoute ? (
-        <main>{productRoutes[path]}</main>
+        <main id="main-content" tabIndex={-1}>{productRoutes[path]}</main>
       ) : (
-        <main>
+        <main id="main-content" className="home-page" tabIndex={-1}>
           <Hero />
-          <Philosophy />
           <Showcase />
+          <Philosophy />
           <Services />
           <Process />
           <Contact />
