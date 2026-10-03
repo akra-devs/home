@@ -73,7 +73,7 @@ export const projectCatalog = {
   [ProjectId.KeyDdal]: {
     id: ProjectId.KeyDdal,
     category: ProjectCategory.OwnService,
-    lifecycle: ProjectLifecycle.Preview,
+    lifecycle: ProjectLifecycle.Live,
     surfaces: [ProjectSurface.Showcase, ProjectSurface.Footer],
     titleKey: 'products.keyDdal.title',
     descriptionKey: 'products.keyDdal.description',
@@ -81,7 +81,7 @@ export const projectCatalog = {
     imageUrl: '/key-ddal/card.webp',
     imageAltKey: 'kd.heroAlt',
     href: '/key-ddal/',
-    highlightLabelKey: 'kd.preview',
+    highlightLabelKey: 'kd.released',
   },
   [ProjectId.CallFilm]: {
     id: ProjectId.CallFilm,
@@ -99,7 +99,7 @@ export const projectCatalog = {
   [ProjectId.Stillstamp]: {
     id: ProjectId.Stillstamp,
     category: ProjectCategory.OwnService,
-    lifecycle: ProjectLifecycle.Preview,
+    lifecycle: ProjectLifecycle.Live,
     surfaces: [ProjectSurface.Showcase, ProjectSurface.Footer],
     titleKey: 'products.stillstamp.title',
     descriptionKey: 'products.stillstamp.description',

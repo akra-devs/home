@@ -1,5 +1,7 @@
 import { access, readFile } from 'node:fs/promises';
 import { join } from 'node:path';
+import React from 'react';
+import { renderToStaticMarkup } from 'react-dom/server';
 import { createServer } from 'vite';
 
 const server = await createServer({
@@ -52,6 +54,24 @@ try {
 
   for (const project of [...footerProducts, ...navigationProducts]) {
     if (!project.href) throw new Error(`${project.id} is linked from navigation without an href.`);
+  }
+
+  const { I18nProvider } = await server.ssrLoadModule('/i18n/index.tsx');
+  for (const [id, pagePath, storeUrl] of [
+    [ProjectId.KeyDdal, '/components/KeyDdalPage.tsx', 'https://play.google.com/store/apps/details?id=kr.akra.keyddal'],
+    [ProjectId.Stillstamp, '/components/StillstampPage.tsx', 'https://play.google.com/store/apps/details?id=kr.akra.stillstamp'],
+  ]) {
+    if (projects.find((project) => project.id === id).lifecycle !== ProjectLifecycle.Live) {
+      throw new Error(`${id} must be live after its Android release.`);
+    }
+    const { default: ProductPage } = await server.ssrLoadModule(pagePath);
+    const markup = renderToStaticMarkup(
+      React.createElement(I18nProvider, null, React.createElement(ProductPage)),
+    );
+    const anchors = [...markup.matchAll(/<a\b([^>]*)>/g)];
+    if (!anchors.some(([, attributes]) => attributes.match(/\bhref="([^"]+)"/)?.[1] === storeUrl)) {
+      throw new Error(`${id} must render an installation link to its published Android app.`);
+    }
   }
 
   const waxballPage = await readFile(

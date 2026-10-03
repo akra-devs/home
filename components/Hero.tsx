@@ -31,13 +31,13 @@ const Hero: React.FC = () => {
           <a className="hero-artwork" href={stillstamp.href} aria-label={t('card.detailAria', { title: t(stillstamp.titleKey) })}>
             <img src={stillstamp.imageUrl} alt={t(stillstamp.imageAltKey)} width={960} height={720} fetchPriority="high" decoding="async" />
             <div className="hero-caption">
-              <span>{t(stillstamp.titleKey)}<small>{t('card.preview')}</small></span>
+              <span>{t(stillstamp.titleKey)}<small>{t(stillstamp.highlightLabelKey)}</small></span>
               <ArrowUpRight size={20} aria-hidden="true" />
             </div>
           </a>
           <a className="hero-secondary-product" href={keyDdal.href} aria-label={t('card.detailAria', { title: t(keyDdal.titleKey) })}>
             <img src={keyDdal.imageUrl} alt={t(keyDdal.imageAltKey)} width={160} height={100} decoding="async" />
-            <span>{t(keyDdal.titleKey)}<small>{t('card.preview')}</small></span>
+            <span>{t(keyDdal.titleKey)}<small>{t(keyDdal.highlightLabelKey)}</small></span>
             <ArrowUpRight size={18} aria-hidden="true" />
           </a>
         </div>

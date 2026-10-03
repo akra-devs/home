@@ -4,6 +4,14 @@ Page: https://akra.kr/stillstamp/ · Source: akra-devs/home.
 Delivery: existing main workflow builds Vite and publishes dist to
 akra-devs/akra-devs.github.io/docs, preserving CNAME. No delivery changes.
 
+## Current Android availability
+
+The user confirmed public Android availability on 2026-10-03. The product page
+links to https://play.google.com/store/apps/details?id=kr.akra.stillstamp.
+An iOS release is not available yet. The confirmation date is not asserted as the
+original release date. September's saved-listing and screenshot evidence below
+remains historical and is not rewritten as a new Play Console publication event.
+
 The page uses the user-selected flower portrait, sunset and cat as an editorial
 sequence: complete portrait postcard, interactive sunset layouts, cat-only
 postcard, actual editing screens, FAQ and current availability. The catalog card
@@ -14,7 +22,8 @@ stillstamp-media.json. User-supplied AI art and native-compositor illustrations
 are labeled separately from actual Flutter UI. SAMPLE remains on all UI captures.
 Korean/English art previews and UI captures are explicit; Japanese/Chinese host
 copy explains its English UI captures. The Korean hero note is translated in the
-adjacent caption. The app remains in invited Android internal testing.
+adjacent caption. At the original September verification the app was in invited
+Android internal testing; the current availability is described above.
 
 Validation performed:
 - TypeScript, 365-key / four-locale translation parity, brand/catalog checks and
@@ -32,8 +41,9 @@ Validation performed:
   scaling artifacts; it is not retained as visual acceptance evidence.
 - Shared browser emulation is cleared after inspection.
 
-Availability: no public install badge or unverified release claim. This change
-updates marketing only, not an Android/iOS binary or server generation behavior.
+At the original September verification, no public install badge was shown.
+The current Android installation link is verified as described above. Website
+updates do not change an Android/iOS binary or server generation behavior.
 
 ## Published and saved-state verification
 
@@ -57,7 +67,7 @@ Verified on 2026-09-08 at 13:13 UTC. Public source revision:
 - The Console save completed. Reloading the route confirmed both language copies
   and eight displayed assets per language. All 15 unique visual assets (the icon
   is shared) have their AI-generation label checked after reopening the dialog.
-  Current state is **saved and ready to send for review**. No review submission,
+  The state at that capture was **saved and ready to send for review**. No review submission,
   binary upload or production-rollout action was performed.
 - Evidence: qa/live-publication.json and qa/play-listing-saved.json. Their exact
   file digests, together with the hero screenshot digest, are recorded in
