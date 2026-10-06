@@ -4,6 +4,8 @@ google.com, pub-4496960310554471, DIRECT, f08c47fec0942fa0
 # Equativ Google Open Bidding sellers, verified 2026-10-06.
 smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
 smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+sharethrough.com, 4194-OB, RESELLER, 060d053dcf45cbf3
+sharethrough.com, 4194, RESELLER, 060d053dcf45cbf3
 
 # OneTag Exchange account seller records, issued 2026-10-06.
 onetag.com, 981b6064264fefa, DIRECT
