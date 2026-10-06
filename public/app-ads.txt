@@ -4,6 +4,15 @@ google.com, pub-4496960310554471, DIRECT, f08c47fec0942fa0
 # Equativ Google Open Bidding sellers, verified 2026-10-06.
 smartadserver.com, 4194-OB, RESELLER, 060d053dcf45cbf3
 smartadserver.com, 4194, RESELLER, 060d053dcf45cbf3
+
+# OneTag Exchange account seller records, issued 2026-10-06.
+onetag.com, 981b6064264fefa, DIRECT
+onetag.com, 981b6064264fefa-OB, DIRECT
+appnexus.com, 13099, RESELLER
+pubmatic.com, 161593, RESELLER, 5d62403b186f2ace
+rubiconproject.com, 11006, RESELLER, 0bfd66d529a55807
+video.unrulymedia.com, 586616193, RESELLER
+smartadserver.com, 4111, RESELLER
 unity.com, 135108201, DIRECT, 96cabb5fbdde37a7
 ironsrc.com, 684615, DIRECT
 vungle.com, 6aac2dd78770bfafcf0d84ae, DIRECT, c107d686becd2d77
