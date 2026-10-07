@@ -1,17 +1,20 @@
 import type { Locale } from '../i18n/messages';
 
-// Public identity: Google Play developer contact, checked 2026-10-07.
-// Registration fields must be confirmed by the owner before publication.
+// Business certificate details supplied by the owner on 2026-10-07.
+// Korean business name and product links also match the public Play listings.
 export const company = {
   brand: 'Akra Dev',
   legalName: '아크라데브스튜디오',
   englishName: 'AkraDev Studio',
-  representative: '',
-  representativeEnglish: '',
-  registrationNumber: '',
-  openingDate: '',
-  address: '서울특별시 마포구 서강로 121, 2층 205호 81호실 (노고산동, 맹그로브신촌), 04057',
-  addressEnglish: 'Room 81, Unit 205, 2F, 121 Seogang-ro, Mapo-gu, Seoul 04057, Republic of Korea',
+  representative: 'LEE SEUNG JOO',
+  representativeEnglish: 'LEE SEUNG JOO',
+  registrationNumber: '633-28-02044',
+  openingDate: '2025-10-17',
+  registrationDate: '2025-10-21',
+  businessType: 'Information and communication',
+  businessItem: 'Application software publishing',
+  address: '대한민국 서울특별시 마포구 서강로 121',
+  addressEnglish: '121 Seogang-ro, Mapo-gu, Seoul, Republic of Korea',
   email: 'help@akra.kr',
   url: 'https://akra.kr',
   github: 'https://github.com/akra-devs',
@@ -41,16 +44,17 @@ export const organizationSchema = () => ({
   '@context': 'https://schema.org',
   '@type': 'Organization',
   '@id': `${company.url}/#organization`,
-  name: company.brand,
-  legalName: company.legalName,
-  alternateName: company.englishName,
+  name: company.englishName,
+  legalName: company.englishName,
+  alternateName: [company.legalName, company.brand],
   url: company.url,
   logo: `${company.url}/brand/akra-mark-square.svg`,
   email: company.email,
+  taxID: company.registrationNumber,
   ...(company.openingDate ? { foundingDate: company.openingDate } : {}),
   ...(company.registrationNumber ? { identifier: { '@type': 'PropertyValue', propertyID: 'KR Business Registration Number', value: company.registrationNumber } } : {}),
   // Representative does not imply founder, employee count, or corporate status.
   ...(company.representative ? { contactPoint: { '@type': 'ContactPoint', name: company.representativeEnglish || company.representative, contactType: 'Business inquiries', email: company.email, availableLanguage: ['Korean', 'English'] } } : {}),
-  address: { '@type': 'PostalAddress', streetAddress: 'Room 81, Unit 205, 2F, 121 Seogang-ro', addressLocality: 'Mapo-gu', addressRegion: 'Seoul', postalCode: '04057', addressCountry: 'KR' },
+  address: { '@type': 'PostalAddress', streetAddress: '121 Seogang-ro', addressLocality: 'Mapo-gu', addressRegion: 'Seoul', addressCountry: 'KR' },
   sameAs: [company.github, company.developerUrl],
 });

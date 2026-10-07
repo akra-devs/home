@@ -37,6 +37,7 @@ const Footer: React.FC = () => {
         <div className="footer-business">
           <p>{locale === 'ko' ? company.legalName : `${company.englishName} (${company.legalName})`}{company.representative && ` · ${t('company.representative')}: ${locale === 'ko' ? company.representative : company.representativeEnglish || company.representative}`}</p>
           {company.registrationNumber && <p>{t('company.registration')}: {company.registrationNumber} · {t('company.opening')}: {company.openingDate}</p>}
+          <p>{t('company.registrationDate')}: {company.registrationDate}</p>
           <p>{locale === 'ko' ? company.address : company.addressEnglish}</p>
           <a href={companyPath(locale)}>{t('company.more')}</a>
           <nav className="company-language-links" aria-label={t('language.select')}>

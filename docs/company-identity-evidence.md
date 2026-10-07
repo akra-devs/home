@@ -11,15 +11,28 @@ The public Google Play listing for `kr.akra.keyddal` was read in a browser:
 - Business address: 서울특별시 마포구 서강로 121, 2층 205호 81호실
   (노고산동, 맹그로브신촌), 04057.
 - Support email: help@akra.kr.
-- English address is a translation of that public address.
+- The detailed Play contact address is a separate corroborating public record.
 
 Source: https://play.google.com/store/apps/details?id=kr.akra.keyddal&hl=en
 
-Representative, preferred English representative spelling, business registration
-number and business opening date are awaiting the owner's reply. Those facts
-must not be inferred from a GitHub username, commit date, domain registration,
-or an app release. The production output check deliberately rejects missing
-identity fields. Do not merge or deploy until these values are supplied.
+On 2026-10-07 the owner supplied the following transcription from their English
+business certificate, issued 2026-08-08. The PDF itself was not independently
+inspected in this task. The website uses these owner-confirmed public facts:
+
+- Business name: AkraDev Studio.
+- Business Taxpayer ID: 633-28-02044.
+- Representative: LEE SEUNG JOO. No Korean spelling is inferred.
+- Date of Business Start: 2025-10-17.
+- Date of Business Registration: 2025-10-21.
+- Address: 121 Seogang-ro, Mapo-gu, Seoul, Republic of Korea.
+- Business Type: Information and communication.
+- Business Item: Application software publishing.
+
+The business start and registration dates are distinct in every locale, the
+visible timeline and llms.txt. Organization foundingDate uses the business start;
+it does not substitute the later registration date or imply incorporation.
+The certificate file and issuance identifier are not published. Displaying this
+identity does not assert government verification or program acceptance.
 
 ## Product and history records
 
@@ -43,21 +56,22 @@ app launch dates:
 These dates are retained from repository history. The company page explicitly
 distinguishes them from the opening date and original app release dates.
 
-## Verification so far
+## Local verification
 
-- TypeScript, 462 translation keys in four locales, product catalog and brand
-  checks pass. Vite production compilation and eight-page prerendering succeed.
-- Full `npm run build` intentionally fails its final business identity check
-  while owner-confirmed registration fields are missing.
+- TypeScript, 468 translation keys in four locales, product catalog and brand
+  checks pass. Full `npm run build`, eight-page prerendering and the final
+  identity/output check pass with the owner-confirmed fields.
 - Codex in-app browser: company pages render in Korean/English, language links
   navigate to distinct URLs, mobile menu opens and Escape closes it.
 - Browser scripting was temporarily disabled to verify initial HTML contains
   company information, products, links and history; scripting was restored.
-- No horizontal overflow at the measured CSS widths 375px and 960px. Further
-  final-layout checks are required once registration fields are filled.
+- Final company pages in all four locales were checked at actual CSS widths
+  375, 768 and 1280px: representative, taxpayer ID and both dates are present;
+  no horizontal overflow was measured in all 12 combinations.
 - React Doctor reports existing product-page/context warnings. The touched
   malformed hash decode was guarded; no performance score is asserted.
-- No merge, deployment, Anthropic application or eligibility outcome is implied.
+- Deployment is verified separately against the merged source revision and public
+  URLs. No Anthropic application or eligibility outcome is implied.
 
 ## Delivery boundary
 
