@@ -9,6 +9,8 @@ export const companyEntries = {
   'company.brand': ['브랜드', 'Product brand', 'ブランド', '产品品牌'],
   'company.representative': ['대표자', 'Representative', '代表者', '代表人'],
   'company.registration': ['사업자등록번호', 'Business registration number (Korea)', '事業者登録番号（韓国）', '营业登记号码（韩国）'],
+  'company.duns': ['D-U-N-S® 번호', 'D-U-N-S® Number', 'D-U-N-S® 番号', 'D-U-N-S® 编号'],
+  'company.dunsTrademark': ['D-U-N-S는 Dun & Bradstreet의 등록상표입니다.', 'D-U-N-S is a registered trademark of Dun & Bradstreet.', 'D-U-N-SはDun & Bradstreetの登録商標です。', 'D-U-N-S 是 Dun & Bradstreet 的注册商标。'],
   'company.opening': ['사업 개시일', 'Date of business start', '事業開始日', '业务开始日期'],
   'company.registrationDate': ['사업자 등록일', 'Date of business registration', '事業者登録日', '营业登记日期'],
   'company.businessType': ['업종', 'Business type', '業種', '行业'],

@@ -9,6 +9,8 @@ export const company = {
   representative: 'LEE SEUNG JOO',
   representativeEnglish: 'LEE SEUNG JOO',
   registrationNumber: '633-28-02044',
+  // D&B issuance email dated 2026-08-13 confirms this number and English name.
+  dunsNumber: '696516219',
   openingDate: '2025-10-17',
   registrationDate: '2025-10-21',
   businessType: 'Information and communication',
@@ -51,6 +53,7 @@ export const organizationSchema = () => ({
   logo: `${company.url}/brand/akra-mark-square.svg`,
   email: company.email,
   taxID: company.registrationNumber,
+  duns: company.dunsNumber,
   ...(company.openingDate ? { foundingDate: company.openingDate } : {}),
   ...(company.registrationNumber ? { identifier: { '@type': 'PropertyValue', propertyID: 'KR Business Registration Number', value: company.registrationNumber } } : {}),
   // Representative does not imply founder, employee count, or corporate status.

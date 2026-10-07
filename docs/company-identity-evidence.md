@@ -34,6 +34,24 @@ it does not substitute the later registration date or imply incorporation.
 The certificate file and issuance identifier are not published. Displaying this
 identity does not assert government verification or program acceptance.
 
+## D-U-N-S identification
+
+On 2026-10-07, the original D&B issuance email dated 2026-08-13 from
+`noreply@dnb.com` was read in the owner's mailbox. It explicitly confirms:
+
+- Legal Business Name: AkraDev Studio.
+- D-U-N-S Number: 696516219.
+
+Only the business identifier is published; the private email, mailbox link and
+case reference are not. D&B's official FAQ, "How should I display and use my
+D-U-N-S Number?", permits including it on a company website:
+https://www.dnb.com/en-us/smb/duns/get-a-duns.html
+
+The number appears as plain business information on all four localized
+home/company pages, in the footer, in llms.txt and in Organization `duns`
+structured data (https://schema.org/duns). A trademark attribution accompanies
+the footer. No registered seal, credit score or certification claim is added.
+
 ## Product and history records
 
 The company page links to the public Play listings for Key Ddal, CallFilm,
@@ -58,7 +76,7 @@ distinguishes them from the opening date and original app release dates.
 
 ## Local verification
 
-- TypeScript, 468 translation keys in four locales, product catalog and brand
+- TypeScript, 470 translation keys in four locales, product catalog and brand
   checks pass. Full `npm run build`, eight-page prerendering and the final
   identity/output check pass with the owner-confirmed fields.
 - Codex in-app browser: company pages render in Korean/English, language links
@@ -68,6 +86,9 @@ distinguishes them from the opening date and original app release dates.
 - Final company pages in all four locales were checked at actual CSS widths
   375, 768 and 1280px: representative, taxpayer ID and both dates are present;
   no horizontal overflow was measured in all 12 combinations.
+- D-U-N-S follow-up: the build checks its visible text and Organization `duns`
+  value on all eight pages and its llms.txt entry. Korean and English company
+  pages also display it at 375px without horizontal overflow or browser errors.
 - React Doctor reports existing product-page/context warnings. The touched
   malformed hash decode was guarded; no performance score is asserted.
 - Deployment is verified separately against the merged source revision and public
