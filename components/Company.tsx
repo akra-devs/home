@@ -9,6 +9,9 @@ const CompanyFacts: React.FC = () => {
     [t('company.representative'), locale === 'ko' ? company.representative : company.representativeEnglish || company.representative],
     [t('company.registration'), company.registrationNumber],
     [t('company.opening'), company.openingDate],
+    [t('company.registrationDate'), company.registrationDate],
+    [t('company.businessType'), t('company.businessTypeValue')],
+    [t('company.businessItem'), t('company.businessItemValue')],
     [t('company.address'), locale === 'ko' ? company.address : company.addressEnglish],
   ];
   return <dl className="company-facts">
@@ -65,6 +68,7 @@ const CompanyPage: React.FC = () => {
         <div><h2 id="company-history">{t('company.history')}</h2><p className="company-section-intro">{t('company.historyNote')}</p></div>
         <ol className="company-history">
           {company.openingDate && <li><time dateTime={company.openingDate}>{company.openingDate}</time><span>{t('company.history.opening')}</span></li>}
+          <li><time dateTime={company.registrationDate}>{company.registrationDate}</time><span>{t('company.history.registration')}</span></li>
           {companyHistory.map((event) => <li key={event.key}><time dateTime={event.date}>{event.date}</time><a href={event.href}>{t(`company.history.${event.key}`)}</a></li>)}
         </ol>
       </section>
