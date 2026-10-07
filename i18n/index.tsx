@@ -45,7 +45,12 @@ export const resolveInitialLocale = (
 const getInitialLocale = (): Locale => {
   if (typeof window === 'undefined') return 'ko';
 
-  const saved = window.localStorage.getItem(LOCALE_STORAGE_KEY);
+  const routeLocale = window.location.pathname.match(/^\/(en|ja|zh)(?:\/|$)/)?.[1];
+  if (routeLocale && isLocale(routeLocale)) return routeLocale;
+  if (window.location.pathname === '/' || /^\/company\/?$/.test(window.location.pathname)) return 'ko';
+
+  let saved: string | null = null;
+  try { saved = window.localStorage.getItem(LOCALE_STORAGE_KEY); } catch { /* Storage is optional. */ }
   const browserLanguages = navigator.languages?.length
     ? navigator.languages
     : [navigator.language];
@@ -53,11 +58,17 @@ const getInitialLocale = (): Locale => {
   return resolveInitialLocale(saved, browserLanguages);
 };
 
-export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) => {
-  const [locale, setLocaleState] = useState<Locale>(getInitialLocale);
+export const I18nProvider: React.FC<React.PropsWithChildren<{ initialLocale?: Locale }>> = ({ children, initialLocale }) => {
+  const [locale, setLocaleState] = useState<Locale>(() => initialLocale ?? getInitialLocale());
 
   const setLocale = useCallback((nextLocale: Locale) => {
     if (localeOptions.some((option) => option.code === nextLocale)) {
+      const pagePath = window.location.pathname.replace(/^\/(en|ja|zh)(?=\/|$)/, '') || '/';
+      if (/^\/(company\/?)?$/.test(pagePath)) {
+        const prefix = nextLocale === 'ko' ? '' : `/${nextLocale}`;
+        window.location.assign(`${prefix}${pagePath}${window.location.search}${window.location.hash}`);
+        return;
+      }
       setLocaleState(nextLocale);
     }
   }, []);
@@ -69,7 +80,7 @@ export const I18nProvider: React.FC<React.PropsWithChildren> = ({ children }) =>
 
   useEffect(() => {
     document.documentElement.lang = htmlLanguageByLocale[locale];
-    window.localStorage.setItem(LOCALE_STORAGE_KEY, locale);
+    try { window.localStorage.setItem(LOCALE_STORAGE_KEY, locale); } catch { /* Storage is optional. */ }
   }, [locale]);
 
   const value = useMemo(

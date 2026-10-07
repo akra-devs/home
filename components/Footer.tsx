@@ -3,13 +3,15 @@ import { Github, Mail } from 'lucide-react';
 import { useTranslation } from '../i18n';
 import BrandMark from './BrandMark';
 import { footerProducts } from '../data/products';
+import { company, companyPath, homePath } from '../data/company';
 
 const Footer: React.FC = () => {
-  const { t } = useTranslation();
+  const { locale, localeOptions, t } = useTranslation();
   const companyLinks = [
-    { label: t('nav.about'), href: '/#philosophy' },
-    { label: t('footer.productsAndWork'), href: '/#showcase' },
-    { label: t('nav.services'), href: '/#services' },
+    { label: t('company.nav'), href: companyPath(locale) },
+    { label: t('nav.about'), href: `${homePath(locale)}#philosophy` },
+    { label: t('footer.productsAndWork'), href: `${homePath(locale)}#showcase` },
+    { label: t('nav.services'), href: `${homePath(locale)}#services` },
     { label: t('footer.mcp'), href: '/mcp/' },
     { label: t('nav.contact'), href: 'mailto:help@akra.kr' },
   ];
@@ -19,7 +21,7 @@ const Footer: React.FC = () => {
       <div className="home-container">
         <div className="footer-layout">
           <div className="footer-brand">
-            <a href="/" className="shell-brand" aria-label={t('footer.homeAria')}><BrandMark className="h-10 w-auto" /></a>
+            <a href={homePath(locale)} className="shell-brand" aria-label={t('footer.homeAria')}><BrandMark className="h-10 w-auto" /></a>
             <p>{t('footer.description')}</p>
             <p className="footer-copyright">{t('footer.copyright', { year: new Date().getFullYear() })}</p>
           </div>
@@ -31,6 +33,15 @@ const Footer: React.FC = () => {
             <h2>{t('footer.companyHeading')}</h2>
             <ul>{companyLinks.map((item) => <li key={item.href}><a href={item.href}>{item.label}</a></li>)}</ul>
           </div>
+        </div>
+        <div className="footer-business">
+          <p>{locale === 'ko' ? company.legalName : `${company.englishName} (${company.legalName})`}{company.representative && ` · ${t('company.representative')}: ${locale === 'ko' ? company.representative : company.representativeEnglish || company.representative}`}</p>
+          {company.registrationNumber && <p>{t('company.registration')}: {company.registrationNumber} · {t('company.opening')}: {company.openingDate}</p>}
+          <p>{locale === 'ko' ? company.address : company.addressEnglish}</p>
+          <a href={companyPath(locale)}>{t('company.more')}</a>
+          <nav className="company-language-links" aria-label={t('language.select')}>
+            {localeOptions.map((option) => <a key={option.code} href={homePath(option.code)} hrefLang={option.code} lang={option.code}>{option.label}</a>)}
+          </nav>
         </div>
         <div className="footer-bottom">
           <div className="footer-policy-links">

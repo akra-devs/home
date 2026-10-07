@@ -124,6 +124,32 @@ Product pages retain the same navigation, typography, and base contrast, then ex
 
 ## Durable Rules
 
+## Company identity and public records
+
+The company overview follows the existing midnight gallery with unboxed editorial
+rows, native links and the shared navigation. It serves a visitor checking who
+operates the products, a partner reading in English, and a crawler reading the
+initial HTML. Company facts appear in a semantic definition list; dated records
+use an ordered list and `time`. The same facts feed the homepage, footer and
+Organization structured data. Business opening dates and product-page publication
+dates must have distinct labels. Never imply registration is government-verified,
+invent funding, customers, team size, or turn concepts into released products.
+
+Reuse the existing 1200px container, 32/20px gutters, 64px section spacing,
+24/32px row spacing, 16px body, 14px supporting text and shared 32–48px headings.
+Company facts use 1fr/2fr columns above 768px and stack below. The overview pairs
+the declaration with the facts above 900px. Dividers use the home divider token;
+links use the home focus token, 44px targets and a visible focus outline. No new
+fonts, images, motion or dependencies. The document owns scrolling.
+
+Korean, English, Japanese and Chinese home/company URLs have visible language
+links, localized titles, canonical and alternate URLs, and prerendered body text.
+The language selector navigates between those URLs. All company information is
+available without JavaScript. Existing product pages retain their own behavior.
+Visual QA covers 375/768/1280px, long English addresses, keyboard links and
+language changes. Existing font-network cost is tracked separately from these
+content changes; no unmeasured performance score is claimed.
+
 1. **The Product Light Rule.** Product-specific color may illuminate media and key controls, but never recolor the entire interface or undermine the shared Akra shell.
 2. **The One Declaration Rule.** Each viewport gets one dominant editorial declaration. For Waxball it is the oversized “WAXBALL” wordmark.
 3. **The Flat-at-Rest Rule.** Surfaces stay quiet at rest. Depth increases only on focus, hover, scroll entry, or the primary product media.

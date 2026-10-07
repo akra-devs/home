@@ -7,6 +7,7 @@ import Showcase from './components/Showcase';
 import Process from './components/Process';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
+import CompanyPage, { CompanySummary } from './components/Company';
 import {
   QuickTranslatePage,
   QuickTranslatePrivacyPage,
@@ -34,22 +35,27 @@ const productRoutes: Record<string, React.ReactNode> = {
   '/quick-translate/support': <QuickTranslateSupportPage />,
 };
 
-function App() {
+function App({ pathname = window.location.pathname }: { pathname?: string }) {
   const { t } = useTranslation();
-  const path = normalizePath(window.location.pathname);
+  const path = normalizePath(pathname.replace(/^\/(en|ja|zh)(?=\/|$)/, '') || '/');
+  const isCompanyRoute = path === '/company';
 
   const isProductRoute = path in productRoutes;
 
   useEffect(() => {
-    if (!isProductRoute) {
+    if (isCompanyRoute) {
+      setPageMetadata(`${t('company.nav')} | Akra Dev`, t('company.description'));
+    } else if (!isProductRoute) {
       setPageMetadata(t('seo.home.title'), t('seo.home.description'));
     }
-  }, [isProductRoute, t]);
+  }, [isProductRoute, isCompanyRoute, t]);
 
   useEffect(() => {
     if (!window.location.hash) return;
 
-    const targetId = decodeURIComponent(window.location.hash.slice(1));
+    let targetId: string;
+    try { targetId = decodeURIComponent(window.location.hash.slice(1)); }
+    catch { return; }
     let secondFrame = 0;
     const firstFrame = window.requestAnimationFrame(() => {
       secondFrame = window.requestAnimationFrame(() => {
@@ -66,11 +72,14 @@ function App() {
   return (
     <div className="min-h-screen bg-zinc-950 text-white selection:bg-primary-500 selection:text-white">
       <Navbar />
-      {isProductRoute ? (
+      {isCompanyRoute ? (
+        <main id="main-content" tabIndex={-1}><CompanyPage /></main>
+      ) : isProductRoute ? (
         <main id="main-content" tabIndex={-1}>{productRoutes[path]}</main>
       ) : (
         <main id="main-content" className="home-page" tabIndex={-1}>
           <Hero />
+          <CompanySummary />
           <Showcase />
           <Philosophy />
           <Services />
