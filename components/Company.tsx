@@ -8,6 +8,7 @@ const CompanyFacts: React.FC = () => {
     [t('company.legalName'), locale === 'ko' ? company.legalName : `${company.englishName} (${company.legalName})`],
     [t('company.representative'), locale === 'ko' ? company.representative : company.representativeEnglish || company.representative],
     [t('company.registration'), company.registrationNumber],
+    [t('company.duns'), company.dunsNumber],
     [t('company.opening'), company.openingDate],
     [t('company.registrationDate'), company.registrationDate],
     [t('company.businessType'), t('company.businessTypeValue')],
