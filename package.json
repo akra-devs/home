@@ -12,7 +12,7 @@
     "typecheck": "tsc --noEmit",
     "prebuild": "npm run check:brand && npm run check:products",
     "build": "vite build",
-    "postbuild": "node scripts/create-static-routes.mjs && node scripts/check-built-brand-assets.mjs",
+    "postbuild": "node scripts/create-static-routes.mjs && node scripts/prerender-company.mjs && node scripts/check-built-brand-assets.mjs && node scripts/check-company-output.mjs",
     "preview": "vite preview",
     "doctor": "react-doctor"
   },

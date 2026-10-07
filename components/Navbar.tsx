@@ -3,16 +3,17 @@ import { Menu, X } from 'lucide-react';
 import { useTranslation } from '../i18n';
 import BrandMark from './BrandMark';
 import { navigationProducts } from '../data/products';
+import { companyPath, homePath } from '../data/company';
 
 const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
   const menuButton = useRef<HTMLButtonElement>(null);
   const { locale, localeOptions, setLocale, t } = useTranslation();
   const navLinks = [
-    { name: t('nav.products'), href: '/#showcase' },
-    { name: t('nav.about'), href: '/#philosophy' },
+    { name: t('nav.products'), href: `${homePath(locale)}#showcase` },
+    { name: t('company.nav'), href: companyPath(locale) },
     ...navigationProducts.map((product) => ({ name: t(product.titleKey), href: product.href })),
-    { name: t('nav.services'), href: '/#services' },
+    { name: t('nav.services'), href: `${homePath(locale)}#services` },
   ];
 
   useEffect(() => {
@@ -50,7 +51,7 @@ const Navbar: React.FC = () => {
       <a className="shell-skip-link" href="#main-content">{t('nav.skip')}</a>
       <header className="shell-header">
         <nav className="shell-nav" aria-label={t('footer.companyHeading')}>
-          <a href="/" className="shell-brand" aria-label="Akra Dev" onClick={() => setIsOpen(false)}>
+          <a href={homePath(locale)} className="shell-brand" aria-label="Akra Dev" onClick={() => setIsOpen(false)}>
             <BrandMark className="h-9 w-auto" />
           </a>
           <div className="shell-desktop-links">

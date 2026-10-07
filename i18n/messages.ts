@@ -1,5 +1,6 @@
 import { stillstampEntries } from './stillstamp';
 import { keyDdalEntries } from './keyDdal';
+import { companyEntries } from './company';
 
 export const locales = ['ko', 'en', 'ja', 'zh'] as const;
 
@@ -17,6 +18,7 @@ type TranslationEntry = readonly [ko: string, en: string, ja: string, zh: string
 // Brand names, product names, technical platforms, and product-material names stay in English
 // when that is the product's intended display name.
 const entries = {
+  ...companyEntries,
   ...stillstampEntries,
   ...keyDdalEntries,
   'products.callfilm.title': ['통화필름', 'CallFilm', 'CallFilm', 'CallFilm'],
